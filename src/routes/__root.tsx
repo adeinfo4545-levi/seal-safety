@@ -84,7 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "SEAL Training Center menyediakan pelatihan HSE, Oil & Gas, Marine Safety, dan Industrial Safety berstandar industri untuk individu dan perusahaan di Indonesia.",
       },
       { name: "author", content: "SEAL Training Center" },
-      { property: "og:title", content: "SEAL Training Center — Pelatihan HSE & Oil & Gas" },
+      { property: "og:title", content: "SEAL Training Center — Pelatihan HSE & Oil & Gas Indonesia" },
       {
         property: "og:description",
         content:
@@ -92,6 +92,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "SEAL Training Center — Pelatihan HSE & Oil & Gas Indonesia" },
+      { name: "description", content: "SEAL Safety Hub provides premium HSE and Oil & Gas training for businesses." },
+      { property: "og:description", content: "SEAL Safety Hub provides premium HSE and Oil & Gas training for businesses." },
+      { name: "twitter:description", content: "SEAL Safety Hub provides premium HSE and Oil & Gas training for businesses." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bfe7cb7c-469a-4bce-a8f2-aa4a02fb7cbd/id-preview-a9a7b214--343f5e5f-349e-4a17-9589-7530ce1c9e54.lovable.app-1781582255489.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bfe7cb7c-469a-4bce-a8f2-aa4a02fb7cbd/id-preview-a9a7b214--343f5e5f-349e-4a17-9589-7530ce1c9e54.lovable.app-1781582255489.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
