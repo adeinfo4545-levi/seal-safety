@@ -30,6 +30,7 @@ import t3 from "@/assets/t3.jpg";
 import blog1 from "@/assets/blog1.jpg";
 import blog2 from "@/assets/blog2.jpg";
 import blog3 from "@/assets/blog3.jpg";
+import logoImg from "@/assets/logo.png";
 import { useT, LanguageToggle } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
@@ -182,13 +183,8 @@ function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
       <div className="container-swiss flex h-16 items-center justify-between gap-4">
-        <a href="#top" className="flex items-center gap-2.5">
-          <span className="grid h-9 w-9 place-items-center bg-charcoal text-safety">
-            <ShieldAlert size={18} strokeWidth={2.5} />
-          </span>
-          <span className="text-[15px] font-extrabold tracking-tight text-charcoal">
-            SEAL<span className="text-midgray font-medium"> Training Center</span>
-          </span>
+        <a href="#top" className="flex items-center">
+          <img src={logoImg} alt="SEAL Training Center" className="h-10 w-auto object-contain" />
         </a>
         <nav className="hidden items-center gap-8 lg:flex">
           <a href="#why" className="text-sm font-medium text-darkgray hover:text-charcoal">
@@ -968,13 +964,8 @@ function Footer() {
       <div className="container-swiss">
         <div className="grid grid-cols-2 gap-10 border-b border-white/10 pb-12 lg:grid-cols-12">
           <div className="col-span-2 lg:col-span-5">
-            <div className="flex items-center gap-2.5">
-              <span className="grid h-9 w-9 place-items-center bg-safety text-charcoal">
-                <ShieldAlert size={18} strokeWidth={2.5} />
-              </span>
-              <span className="text-base font-extrabold tracking-tight text-white">
-                SEAL Training Center
-              </span>
+            <div className="flex items-center">
+              <img src={logoImg} alt="SEAL Training Center" className="h-10 w-auto bg-white p-1.5 rounded object-contain" />
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed">
               {t(
