@@ -28,9 +28,11 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  --color-safety: #ff6b00;
-  --color-safety-foreground: #ffffff;
-  --color-turquoise: #00b7c2;
+  --color-safety: #6edfe1;
+  --color-safety-foreground: #1f2937;
+  --color-turquoise: #6edfe1;
+  --color-lime: #7ef22a;
+  --color-lime-foreground: #1f2937;
   --color-charcoal: #1f2937;
   --color-darkgray: #374151;
   --color-midgray: #6b7280;
@@ -50,20 +52,21 @@
   --card-foreground: #1f2937;
   --popover: #ffffff;
   --popover-foreground: #1f2937;
-  --primary: #ff6b00;
-  --primary-foreground: #ffffff;
+  --primary: #6edfe1;
+  --primary-foreground: #1f2937;
   --secondary: #f5f7fa;
   --secondary-foreground: #1f2937;
   --muted: #f5f7fa;
   --muted-foreground: #6b7280;
-  --accent: #00b7c2;
-  --accent-foreground: #ffffff;
+  --accent: #7ef22a;
+  --accent-foreground: #1f2937;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
   --border: #e5e7eb;
   --input: #e5e7eb;
-  --ring: #ff6b00;
+  --ring: #6edfe1;
 }
+
 
 @layer base {
   * {
@@ -80,9 +83,10 @@
     font-feature-settings: "ss01", "cv11";
   }
   ::selection {
-    background: var(--color-safety);
+    background: var(--color-charcoal);
     color: white;
   }
+
 }
 
 @utility container-swiss {
