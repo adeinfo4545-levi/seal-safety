@@ -67,22 +67,22 @@ type Program = {
 };
 
 const programs: Program[] = [
-  { name: "H2S Awareness & Safety", nameEn: "H2S Awareness & Safety", desc: "Pengenalan bahaya gas H2S, deteksi, dan respons darurat di area Oil & Gas.", descEn: "H2S hazard awareness, detection, and emergency response in Oil & Gas areas.", dur: "2 Hari", durEn: "2 Days", cert: "BNSP / Industri", certEn: "BNSP / Industry", icon: Wind },
-  { name: "Confined Space Entry (CSE)", nameEn: "Confined Space Entry (CSE)", desc: "Prosedur entry, rescue, dan kontrol bahaya pada ruang terbatas.", descEn: "Entry procedures, rescue, and hazard control in confined spaces.", dur: "3 Hari", durEn: "3 Days", cert: "Kemnaker", certEn: "Kemnaker", icon: ShieldAlert },
-  { name: "Authorized Gas Tester (AGT)", nameEn: "Authorized Gas Tester (AGT)", desc: "Kompetensi pengukuran gas untuk hot work dan confined space.", descEn: "Gas measurement competency for hot work and confined space entry.", dur: "3 Hari", durEn: "3 Days", cert: "Migas", certEn: "Migas", icon: Gauge },
-  { name: "First Aid", nameEn: "First Aid", desc: "Pertolongan pertama pada kecelakaan kerja dan CPR sesuai standar internasional.", descEn: "First aid for workplace incidents and CPR per international standards.", dur: "2 Hari", durEn: "2 Days", cert: "Internasional", certEn: "International", icon: HeartPulse },
-  { name: "Fire Fighting", nameEn: "Fire Fighting", desc: "Teknik pemadaman, klasifikasi kebakaran, dan emergency response industri.", descEn: "Extinguishing techniques, fire classification, and industrial emergency response.", dur: "3 Hari", durEn: "3 Days", cert: "Kemnaker", certEn: "Kemnaker", icon: Flame },
-  { name: "Basic Sea Survival", nameEn: "Basic Sea Survival", desc: "Survival laut, evakuasi, dan penggunaan life-saving appliances.", descEn: "Sea survival, evacuation, and use of life-saving appliances.", dur: "2 Hari", durEn: "2 Days", cert: "Marine", certEn: "Marine", icon: LifeBuoy },
-  { name: "Working at Height", nameEn: "Working at Height", desc: "Bekerja aman di ketinggian, fall protection, dan rescue plan.", descEn: "Safe work at height, fall protection, and rescue planning.", dur: "2 Hari", durEn: "2 Days", cert: "Kemnaker", certEn: "Kemnaker", icon: HardHat },
-  { name: "Permit to Work", nameEn: "Permit to Work", desc: "Sistem izin kerja, JSA, dan kontrol bahaya operasional.", descEn: "Permit-to-work system, JSA, and operational hazard control.", dur: "1 Hari", durEn: "1 Day", cert: "Industri", certEn: "Industry", icon: FileCheck },
+  { name: "H2S Awareness & Safety", nameEn: "H2S Awareness & Safety", desc: "Pengenalan bahaya gas H2S, deteksi, dan respons darurat di area Oil & Gas.", descEn: "H2S hazard awareness, detection, and emergency response in Oil & Gas areas.", dur: "2 Hari", durEn: "2 Days", cert: "BNSP", certEn: "BNSP", icon: Wind },
+  { name: "Confined Space Entry (CSE)", nameEn: "Confined Space Entry (CSE)", desc: "Prosedur entry, rescue, dan kontrol bahaya pada ruang terbatas.", descEn: "Entry procedures, rescue, and hazard control in confined spaces.", dur: "3 Hari", durEn: "3 Days", cert: "BNSP", certEn: "BNSP", icon: ShieldAlert },
+  { name: "Authorized Gas Tester (AGT)", nameEn: "Authorized Gas Tester (AGT)", desc: "Kompetensi pengukuran gas untuk hot work dan confined space.", descEn: "Gas measurement competency for hot work and confined space entry.", dur: "3 Hari", durEn: "3 Days", cert: "BNSP", certEn: "BNSP", icon: Gauge },
+  { name: "First Aid", nameEn: "First Aid", desc: "Pertolongan pertama pada kecelakaan kerja dan CPR sesuai standar internasional.", descEn: "First aid for workplace incidents and CPR per international standards.", dur: "2 Hari", durEn: "2 Days", cert: "BNSP / KEMENAKER", certEn: "BNSP / KEMENAKER", icon: HeartPulse },
+  { name: "Petugas Peran Kebakaran (Kelas D)", nameEn: "Fire Fighting Officer (Class D)", desc: "Teknik pemadaman, klasifikasi kebakaran, dan emergency response industri.", descEn: "Extinguishing techniques, fire classification, and industrial emergency response.", dur: "3 Hari", durEn: "3 Days", cert: "Kemnaker", certEn: "Kemnaker", icon: Flame },
+  { name: "Basic Sea Survival", nameEn: "Basic Sea Survival", desc: "Survival laut, evakuasi, dan penggunaan life-saving appliances.", descEn: "Sea survival, evacuation, and use of life-saving appliances.", dur: "2 Hari", durEn: "2 Days", cert: "BNSP", certEn: "BNSP", icon: LifeBuoy },
+  { name: "Tenaga Kerja Pada Ketinggian Tingkat 1 (TKPK)", nameEn: "Working at Height Level 1 (TKPK)", desc: "Bekerja aman di ketinggian, fall protection, dan rescue plan.", descEn: "Safe work at height, fall protection, and rescue planning.", dur: "2 Hari", durEn: "2 Days", cert: "BNSP / KEMENAKER", certEn: "BNSP / KEMENAKER", icon: HardHat },
+  { name: "Tenaga Kerja Bangunan Tinggi Tingkat 2 (TKBT)", nameEn: "Working on High Buildings Level 2 (TKBT)", desc: "Sistem izin kerja, JSA, dan kontrol bahaya operasional.", descEn: "Permit-to-work system, JSA, and operational hazard control.", dur: "1 Hari", durEn: "1 Day", cert: "BNSP / KEMENAKER", certEn: "BNSP / KEMENAKER", icon: FileCheck },
 ];
 
 const schedule = [
   { p: "H2S Awareness & Safety", pEn: "H2S Awareness & Safety", t: "08 Jul 2026", tEn: "08 Jul 2026", l: "Jakarta", lEn: "Jakarta", k: "12 / 16", s: "Tersedia", sEn: "Available" },
   { p: "Confined Space Entry", pEn: "Confined Space Entry", t: "14 Jul 2026", tEn: "14 Jul 2026", l: "Balikpapan", lEn: "Balikpapan", k: "14 / 16", s: "Tersedia", sEn: "Available" },
   { p: "Authorized Gas Tester", pEn: "Authorized Gas Tester", t: "21 Jul 2026", tEn: "21 Jul 2026", l: "Cilegon", lEn: "Cilegon", k: "16 / 16", s: "Penuh", sEn: "Full" },
-  { p: "Fire Fighting", pEn: "Fire Fighting", t: "29 Jul 2026", tEn: "29 Jul 2026", l: "Jakarta", lEn: "Jakarta", k: "9 / 20", s: "Tersedia", sEn: "Available" },
-  { p: "Working at Height", pEn: "Working at Height", t: "05 Agu 2026", tEn: "05 Aug 2026", l: "Surabaya", lEn: "Surabaya", k: "11 / 18", s: "Tersedia", sEn: "Available" },
+  { p: "Petugas Peran Kebakaran (Kelas D)", pEn: "Fire Fighting Officer (Class D)", t: "29 Jul 2026", tEn: "29 Jul 2026", l: "Jakarta", lEn: "Jakarta", k: "9 / 20", s: "Tersedia", sEn: "Available" },
+  { p: "Tenaga Kerja Pada Ketinggian Tingkat 1 (TKPK)", pEn: "Working at Height Level 1 (TKPK)", t: "05 Agu 2026", tEn: "05 Aug 2026", l: "Surabaya", lEn: "Surabaya", k: "11 / 18", s: "Tersedia", sEn: "Available" },
   { p: "Basic Sea Survival", pEn: "Basic Sea Survival", t: "12 Agu 2026", tEn: "12 Aug 2026", l: "Batam", lEn: "Batam", k: "6 / 14", s: "Tersedia", sEn: "Available" },
 ];
 
@@ -350,7 +350,7 @@ function Hero() {
               height={1280}
             />
             <div className="absolute left-0 top-6 bg-lime px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-charcoal">
-              Fire Fighting · {t("Latihan Langsung", "Live Drill")}
+              {t("Petugas Peran Kebakaran (Kelas D)", "Fire Fighting Officer (Class D)")} · {t("Latihan Langsung", "Live Drill")}
             </div>
           </div>
           <div className="absolute -bottom-8 -left-4 grid w-[280px] grid-cols-3 border border-border bg-background shadow-xl sm:-left-8 sm:w-[340px]">
