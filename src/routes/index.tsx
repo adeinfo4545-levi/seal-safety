@@ -297,9 +297,11 @@ function Hero() {
             <br />
             {t("Keselamatan Kerja", "Workplace Safety")}
             <br />
+            {t("Bersama ", "With ")}
             <span className="bg-lime px-3 text-charcoal">
-              {t("Bersama SEAL.", "With SEAL.")}
+              SEAL
             </span>
+            .
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-darkgray">
             {t(
