@@ -596,9 +596,9 @@ function Certification() {
                 setMsg(
                   cert.trim()
                     ? t(
-                        `Nomor sertifikat "${cert.trim()}" sedang diproses. Hasil verifikasi akan ditampilkan di sini.`,
-                        `Certificate number "${cert.trim()}" is being processed. Verification result will appear here.`,
-                      )
+                      `Nomor sertifikat "${cert.trim()}" sedang diproses. Hasil verifikasi akan ditampilkan di sini.`,
+                      `Certificate number "${cert.trim()}" is being processed. Verification result will appear here.`,
+                    )
                     : t("Mohon masukkan nomor sertifikat.", "Please enter a certificate number."),
                 );
               }}
@@ -719,9 +719,8 @@ function Schedule() {
                     <td className="py-5 pr-4 text-darkgray">{r.k}</td>
                     <td className="py-5 pr-4">
                       <span
-                        className={`inline-block px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider ${
-                          full ? "bg-lightgray text-midgray" : "bg-lime text-charcoal"
-                        }`}
+                        className={`inline-block px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider ${full ? "bg-lightgray text-midgray" : "bg-lime text-charcoal"
+                          }`}
                       >
                         {t(r.s, r.sEn)}
                       </span>
@@ -729,9 +728,8 @@ function Schedule() {
                     <td className="py-5 text-right">
                       <a
                         href="#contact"
-                        className={`inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider ${
-                          full ? "text-midgray" : "text-charcoal hover:underline"
-                        }`}
+                        className={`inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider ${full ? "text-midgray" : "text-charcoal hover:underline"
+                          }`}
                       >
                         {full ? t("Waiting List", "Waiting List") : t("Daftar Sekarang", "Register Now")} <ArrowRight size={12} />
                       </a>
@@ -966,7 +964,7 @@ function Footer() {
         <div className="grid grid-cols-2 gap-10 border-b border-white/10 pb-12 lg:grid-cols-12">
           <div className="col-span-2 lg:col-span-5">
             <div className="flex items-center">
-              <img src={logoWhiteImg} alt="SEAL Training Center" className="h-24 w-auto object-contain" />
+              <img src={logoWhiteImg} alt="SEAL Training Center" className="h-15 w-auto object-contain" />
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed">
               {t(
