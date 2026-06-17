@@ -54,7 +54,7 @@ export const Route = createFileRoute("/")({
   component: Landing,
 });
 
-const WA = "https://wa.me/6281234567890";
+const WA = "https://wa.me/6287777265623";
 
 type Program = {
   name: string;
@@ -852,10 +852,10 @@ function Contact() {
             <h3 className="text-lg font-bold text-charcoal">{t("Informasi Kontak", "Contact Information")}</h3>
             <ul className="mt-6 space-y-5 text-sm">
               {[
-                { i: Phone, l: t("Telepon", "Phone"), v: "+62 21 5000 1234" },
-                { i: MessageCircle, l: "WhatsApp", v: "+62 812 3456 7890" },
+                { i: Phone, l: t("Telepon", "Phone"), v: "+62 21 75676868" },
+                { i: MessageCircle, l: "WhatsApp", v: "+62 87777265623" },
                 { i: Mail, l: "Email", v: "training@seal-center.co.id" },
-                { i: MapPin, l: t("Alamat", "Address"), v: "Jl. Industri Raya No. 12, Jakarta Selatan 12950" },
+                { i: MapPin, l: t("Alamat", "Address"), v: "Boulevard Tekno Blok C No. 5, Jalan Tekno Widya, Serpong Tangerang  Selatan - Banten 15314, Indonesia" },
               ].map((c) => (
                 <li key={c.l} className="flex gap-4">
                   <span className="grid h-10 w-10 shrink-0 place-items-center border border-border bg-safety text-charcoal">
@@ -873,7 +873,7 @@ function Contact() {
             <div className="mt-8 aspect-[16/10] w-full overflow-hidden border border-border">
               <iframe
                 title={t("Lokasi SEAL Training Center", "SEAL Training Center Location")}
-                src="https://www.google.com/maps?q=Jakarta&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.4916017831806!2d106.67749417459102!3d-6.330292061939303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e55fc5beae9d%3A0xcbac4697569661be!2sSEAL%20Training%20%26%20Consulting!5e0!3m2!1sid!2sid!4v1781677034663!5m2!1sid!2sid"
                 className="h-full w-full grayscale"
                 loading="lazy"
               />
