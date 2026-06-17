@@ -31,6 +31,7 @@ import blog1 from "@/assets/blog1.jpg";
 import blog2 from "@/assets/blog2.jpg";
 import blog3 from "@/assets/blog3.jpg";
 import logoImg from "@/assets/logo.png";
+import logoWhiteImg from "@/assets/logo-white.png";
 import { useT, LanguageToggle } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
@@ -965,7 +966,7 @@ function Footer() {
         <div className="grid grid-cols-2 gap-10 border-b border-white/10 pb-12 lg:grid-cols-12">
           <div className="col-span-2 lg:col-span-5">
             <div className="flex items-center">
-              <img src={logoImg} alt="SEAL Training Center" className="h-12 w-auto bg-white py-1 px-3 rounded object-contain" />
+              <img src={logoWhiteImg} alt="SEAL Training Center" className="h-10 w-auto object-contain" />
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed">
               {t(
