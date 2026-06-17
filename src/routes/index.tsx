@@ -965,7 +965,7 @@ function Footer() {
         <div className="grid grid-cols-2 gap-10 border-b border-white/10 pb-12 lg:grid-cols-12">
           <div className="col-span-2 lg:col-span-5">
             <div className="flex items-center">
-              <img src={logoImg} alt="SEAL Training Center" className="h-10 w-auto bg-white p-1.5 rounded object-contain" />
+              <img src={logoImg} alt="SEAL Training Center" className="h-12 w-auto bg-white py-1 px-3 rounded object-contain" />
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed">
               {t(
