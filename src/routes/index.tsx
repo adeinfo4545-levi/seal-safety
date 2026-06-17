@@ -32,6 +32,12 @@ import blog2 from "@/assets/blog2.jpg";
 import blog3 from "@/assets/blog3.jpg";
 import logoImg from "@/assets/logo.png";
 import logoWhiteImg from "@/assets/logo-white.png";
+import logomedco from "@/assets/logo_medco.png";
+import logochevron from "@/assets/logo-chevron.png";
+import logofreeport from "@/assets/logo-freeport.png";
+import logopertamina from "@/assets/logo-pertamina.png";
+import logophe from "@/assets/logo-phe.png";
+import logovale from "@/assets/logo-vale.png";
 import { useT, LanguageToggle } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
@@ -668,15 +674,54 @@ function Testimonials() {
             </figure>
           ))}
         </div>
-        <div className="mt-12 grid grid-cols-2 gap-px border border-border bg-border sm:grid-cols-3 lg:grid-cols-6">
-          {["PERTAMINA", "PHE ONWJ", "MEDCO", "CHEVRON", "VALE", "FREEPORT"].map((c) => (
-            <div
-              key={c}
-              className="bg-background py-6 text-center text-[11px] font-bold tracking-[0.2em] text-midgray"
-            >
-              {c}
-            </div>
-          ))}
+        <div className="mt-12 overflow-hidden border-y border-border py-6 relative w-full bg-lightgray/30">
+          {/* Gradient overlay for fade effects on edges */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-lightgray to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-lightgray to-transparent z-10" />
+
+          {(() => {
+            const clientLogos = [
+              { name: "PERTAMINA", img: logopertamina },
+              { name: "PHE ONWJ", img: logophe },
+              { name: "MEDCO", img: logomedco },
+              { name: "CHEVRON", img: logochevron },
+              { name: "VALE", img: logovale },
+              { name: "FREEPORT", img: logofreeport },
+            ];
+
+            return (
+              <div className="flex w-max animate-marquee">
+                {/* First set of items */}
+                <div className="flex shrink-0">
+                  {clientLogos.map((c, idx) => (
+                    <div key={c.name + idx} className="px-4">
+                      <div className="bg-background border border-border px-6 py-3 text-center min-w-[240px] h-[96px] flex items-center justify-center shadow-sm">
+                        <img
+                          src={c.img}
+                          alt={c.name}
+                          className="h-14 max-w-[190px] w-auto object-contain transition-all duration-300 hover:scale-105"
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                {/* Second set of items for seamless loop */}
+                <div className="flex shrink-0" aria-hidden="true">
+                  {clientLogos.map((c, idx) => (
+                    <div key={c.name + "-clone-" + idx} className="px-4">
+                      <div className="bg-background border border-border px-6 py-3 text-center min-w-[240px] h-[96px] flex items-center justify-center shadow-sm">
+                        <img
+                          src={c.img}
+                          alt={c.name}
+                          className="h-14 max-w-[190px] w-auto object-contain transition-all duration-300 hover:scale-105"
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })()}
         </div>
       </div>
     </section>
@@ -874,7 +919,7 @@ function Contact() {
               <iframe
                 title={t("Lokasi SEAL Training Center", "SEAL Training Center Location")}
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.4916017831806!2d106.67749417459102!3d-6.330292061939303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e55fc5beae9d%3A0xcbac4697569661be!2sSEAL%20Training%20%26%20Consulting!5e0!3m2!1sid!2sid!4v1781677034663!5m2!1sid!2sid"
-                className="h-full w-full grayscale"
+                className="h-full w-full"
                 loading="lazy"
               />
             </div>
