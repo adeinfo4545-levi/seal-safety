@@ -72,16 +72,19 @@
   * {
     border-color: var(--color-border);
   }
+
   html {
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-feature-settings: "ss01", "cv11";
   }
+
   ::selection {
     background: var(--color-charcoal);
     color: white;
@@ -94,6 +97,7 @@
   max-width: 1280px;
   margin-inline: auto;
   padding-inline: 1.5rem;
+
   @media (min-width: 1024px) {
     padding-inline: 2.5rem;
   }
@@ -104,6 +108,7 @@
     opacity: 0;
     transform: translateY(24px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -113,6 +118,7 @@
 .reveal {
   opacity: 0;
 }
+
 .reveal.in {
   animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
@@ -121,6 +127,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
