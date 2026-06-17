@@ -1057,7 +1057,7 @@ function Footer() {
               {t("Kontak", "Contact")}
             </div>
             <ul className="space-y-2 text-sm">
-              <li>+62 21 5000 1234</li>
+              <li>+62 21 75676868</li>
               <li>training@seal-center.co.id</li>
               <li>Jakarta Selatan</li>
             </ul>
