@@ -356,7 +356,7 @@ function Hero() {
               {t("Petugas Peran Kebakaran (Kelas D)", "Fire Fighting Officer (Class D)")} · {t("Latihan Langsung", "Live Drill")}
             </div>
           </div>
-          <div className="absolute -bottom-8 -left-4 grid w-[280px] grid-cols-3 border border-border bg-background shadow-xl sm:-left-8 sm:w-[340px]">
+          <div className="absolute -bottom-8 -left-4 grid w-[320px] grid-cols-3 border border-border bg-background shadow-xl sm:-left-8 sm:w-[420px]">
             {[
               { v: 5000, s: "+", l: t("Peserta Terlatih", "Trained Participants") },
               { v: 100, s: "+", l: t("Perusahaan Klien", "Client Companies") },
@@ -364,7 +364,7 @@ function Hero() {
             ].map((m, i) => (
               <div
                 key={m.l}
-                className={`p-4 ${i < 2 ? "border-r border-border" : ""}`}
+                className={`px-3 py-4 sm:p-4 ${i < 2 ? "border-r border-border" : ""}`}
               >
                 <div className="text-2xl font-black tracking-tight text-charcoal sm:text-3xl">
                   <Counter to={m.v} suffix={m.s} />
@@ -975,7 +975,7 @@ function Contact() {
                     "Permintaan Anda telah kami terima. Tim konsultan SEAL akan segera menghubungi Anda. Untuk respons lebih cepat, silakan",
                     "We've received your request. The SEAL consulting team will reach out shortly. For faster response, please",
                   )}{" "}
-                  <a href={WA} className="font-semibold text-charcoal underline">
+                  <a href={WA} target="_blank" className="font-semibold text-charcoal underline">
                     {t("chat via WhatsApp", "chat via WhatsApp")}
                   </a>
                   .
