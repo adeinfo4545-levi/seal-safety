@@ -597,16 +597,31 @@ function Certification() {
               </h3>
             </div>
             <form
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault();
-                setMsg(
-                  cert.trim()
-                    ? t(
-                      `Nomor sertifikat "${cert.trim()}" sedang diproses. Hasil verifikasi akan ditampilkan di sini.`,
-                      `Certificate number "${cert.trim()}" is being processed. Verification result will appear here.`,
-                    )
-                    : t("Mohon masukkan nomor sertifikat.", "Please enter a certificate number."),
-                );
+                const trimmedCert = cert.trim();
+                if (!trimmedCert) {
+                  setMsg(t("Mohon masukkan nomor sertifikat.", "Please enter a certificate number."));
+                  return;
+                }
+                setMsg(t("Sedang memverifikasi...", "Verifying..."));
+                try {
+                  const response = await fetch(`http://localhost/Project-seal-ssh/api/verifikasi_sertifikat.php?nomor=${encodeURIComponent(trimmedCert)}`);
+                  const result = await response.json();
+                  if (result.status === "success") {
+                    const d = result.data;
+                    setMsg(
+                      t(
+                        `Sertifikat VALID! Nama: ${d.nama_peserta} | Program: ${d.nama_program} | Tanggal Terbit: ${d.tanggal_terbit} | Status: ${d.status}`,
+                        `Certificate VALID! Name: ${d.nama_peserta} | Program: ${d.nama_program} | Date: ${d.tanggal_terbit} | Status: ${d.status}`
+                      )
+                    );
+                  } else {
+                    setMsg(t(result.message || "Sertifikat tidak terdaftar.", result.message || "Certificate not registered."));
+                  }
+                } catch (err) {
+                  setMsg(t("Gagal menghubungi server verifikasi.", "Failed to connect to the verification server."));
+                }
               }}
               className="grid grid-cols-1 gap-3 sm:grid-cols-[1fr_auto] lg:col-span-7"
             >
@@ -877,9 +892,35 @@ function LeadCTA() {
 function Contact() {
   const { t } = useT();
   const [sent, setSent] = useState(false);
-  const submit = (e: FormEvent<HTMLFormElement>) => {
+  const submit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSent(true);
+    const formData = new FormData(e.currentTarget);
+    const payload = {
+      nama: formData.get("nama"),
+      perusahaan: formData.get("perusahaan"),
+      email: formData.get("email"),
+      hp: formData.get("hp"),
+      jenis: formData.get("jenis"),
+      pesan: formData.get("pesan"),
+    };
+
+    try {
+      const response = await fetch("http://localhost/Project-seal-ssh/api/simpan_permintaan.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json();
+      if (result.status === "success") {
+        setSent(true);
+      } else {
+        alert(t("Gagal menyimpan permintaan: ", "Failed to submit request: ") + result.message);
+      }
+    } catch (err) {
+      alert(t("Gagal menghubungkan ke database server.", "Failed to connect to the database server."));
+    }
   };
   return (
     <section id="contact" className="border-b border-border bg-background py-24">
