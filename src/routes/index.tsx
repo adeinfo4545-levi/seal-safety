@@ -21,6 +21,7 @@ import {
   Users,
   Building2,
   Target,
+  Shield,
 } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
 import t1 from "@/assets/t1.jpg";
@@ -86,17 +87,274 @@ type Program = {
   cert: string;
   certEn: string;
   icon: typeof Wind;
+  syllabus: string[];
+  syllabusEn: string[];
+  target: string;
+  targetEn: string;
 };
 
 const programs: Program[] = [
-  { name: "H2S Awareness & Safety", nameEn: "H2S Awareness & Safety", desc: "Pengenalan bahaya gas H2S, deteksi, dan respons darurat di area Oil & Gas.", descEn: "H2S hazard awareness, detection, and emergency response in Oil & Gas areas.", dur: "2 Hari", durEn: "2 Days", cert: "BNSP", certEn: "BNSP", icon: Wind },
-  { name: "Confined Space Entry (CSE)", nameEn: "Confined Space Entry (CSE)", desc: "Prosedur entry, rescue, dan kontrol bahaya pada ruang terbatas.", descEn: "Entry procedures, rescue, and hazard control in confined spaces.", dur: "3 Hari", durEn: "3 Days", cert: "BNSP", certEn: "BNSP", icon: ShieldAlert },
-  { name: "Authorized Gas Tester (AGT)", nameEn: "Authorized Gas Tester (AGT)", desc: "Kompetensi pengukuran gas untuk hot work dan confined space.", descEn: "Gas measurement competency for hot work and confined space entry.", dur: "3 Hari", durEn: "3 Days", cert: "BNSP", certEn: "BNSP", icon: Gauge },
-  { name: "First Aid", nameEn: "First Aid", desc: "Pertolongan pertama pada kecelakaan kerja dan CPR sesuai standar internasional.", descEn: "First aid for workplace incidents and CPR per international standards.", dur: "2 Hari", durEn: "2 Days", cert: "BNSP / KEMENAKER", certEn: "BNSP / KEMENAKER", icon: HeartPulse },
-  { name: "Petugas Peran Kebakaran (Kelas D)", nameEn: "Fire Fighting Officer (Class D)", desc: "Teknik pemadaman, klasifikasi kebakaran, dan emergency response industri.", descEn: "Extinguishing techniques, fire classification, and industrial emergency response.", dur: "3 Hari", durEn: "3 Days", cert: "Kemnaker", certEn: "Kemnaker", icon: Flame },
-  { name: "Basic Sea Survival", nameEn: "Basic Sea Survival", desc: "Survival laut, evakuasi, dan penggunaan life-saving appliances.", descEn: "Sea survival, evacuation, and use of life-saving appliances.", dur: "2 Hari", durEn: "2 Days", cert: "BNSP", certEn: "BNSP", icon: LifeBuoy },
-  { name: "Tenaga Kerja Pada Ketinggian Tingkat 1 (TKPK)", nameEn: "Working at Height Level 1 (TKPK)", desc: "Bekerja aman di ketinggian, fall protection, dan rescue plan.", descEn: "Safe work at height, fall protection, and rescue planning.", dur: "2 Hari", durEn: "2 Days", cert: "BNSP / KEMENAKER", certEn: "BNSP / KEMENAKER", icon: HardHat },
-  { name: "Tenaga Kerja Bangunan Tinggi Tingkat 2 (TKBT)", nameEn: "Working on High Buildings Level 2 (TKBT)", desc: "Sistem izin kerja, JSA, dan kontrol bahaya operasional.", descEn: "Permit-to-work system, JSA, and operational hazard control.", dur: "1 Hari", durEn: "1 Day", cert: "BNSP / KEMENAKER", certEn: "BNSP / KEMENAKER", icon: FileCheck },
+  {
+    name: "H2S Awareness & Safety",
+    nameEn: "H2S Awareness & Safety",
+    desc: "Pengenalan bahaya gas H2S, deteksi, dan respons darurat di area Oil & Gas.",
+    descEn: "H2S hazard awareness, detection, and emergency response in Oil & Gas areas.",
+    dur: "2 Hari",
+    durEn: "2 Days",
+    cert: "BNSP",
+    certEn: "BNSP",
+    icon: Wind,
+    syllabus: [
+      "Sifat fisik dan kimia gas H2S (Hidrogen Sulfida)",
+      "Efek kesehatan paparan gas H2S berdasarkan konsentrasi (ppm)",
+      "Karakteristik daerah bahaya dan klasifikasi area kerja",
+      "Penggunaan detektor gas personal dan sistem alarm",
+      "Penggunaan Self-Contained Breathing Apparatus (SCBA)",
+      "Rencana tanggap darurat dan teknik penyelamatan korban gas H2S"
+    ],
+    syllabusEn: [
+      "Physical and chemical properties of H2S gas (Hydrogen Sulfide)",
+      "Health effects of H2S exposure based on concentration (ppm)",
+      "Hazardous area characteristics and work area classification",
+      "Use of personal gas detectors and alarm systems",
+      "Use of Self-Contained Breathing Apparatus (SCBA)",
+      "Emergency response planning and rescue techniques for H2S victims"
+    ],
+    target: "Pekerja lapangan, operator, supervisor, dan personel keselamatan di industri minyak & gas bumi (hulu & hilir).",
+    targetEn: "Field workers, operators, supervisors, and safety personnel in the oil & gas industry (upstream & downstream)."
+  },
+  {
+    name: "Confined Space Entry (CSE)",
+    nameEn: "Confined Space Entry (CSE)",
+    desc: "Prosedur entry, rescue, dan kontrol bahaya pada ruang terbatas.",
+    descEn: "Entry procedures, rescue, and hazard control in confined spaces.",
+    dur: "3 Hari",
+    durEn: "3 Days",
+    cert: "BNSP",
+    certEn: "BNSP",
+    icon: ShieldAlert,
+    syllabus: [
+      "Identifikasi dan klasifikasi ruang terbatas (confined space)",
+      "Analisis potensi bahaya (kekurangan oksigen, gas beracun, dll.)",
+      "Prosedur izin masuk kerja aman (Permit to Work)",
+      "Teknik ventilasi dan pembersihan gas (purging)",
+      "Tugas dan tanggung jawab Safety Watch / Standby Person",
+      "Peralatan keselamatan, APD khusus, dan prosedur penyelamatan darurat"
+    ],
+    syllabusEn: [
+      "Identification and classification of confined spaces",
+      "Potential hazard analysis (oxygen deficiency, toxic gases, etc.)",
+      "Safe entry permit procedures (Permit to Work)",
+      "Ventilation techniques and gas purging",
+      "Duties and responsibilities of the Safety Watch / Standby Person",
+      "Safety equipment, specialized PPE, and emergency rescue procedures"
+    ],
+    target: "Teknisi pemeliharaan, petugas keselamatan, pekerja tangki, dan supervisor industri manufaktur, kimia, dan migas.",
+    targetEn: "Maintenance technicians, safety officers, tank entry workers, and supervisors in manufacturing, chemical, and oil & gas industries."
+  },
+  {
+    name: "Authorized Gas Tester (AGT)",
+    nameEn: "Authorized Gas Tester (AGT)",
+    desc: "Kompetensi pengukuran gas untuk hot work dan confined space.",
+    descEn: "Gas measurement competency for hot work and confined space entry.",
+    dur: "3 Hari",
+    durEn: "3 Days",
+    cert: "BNSP",
+    certEn: "BNSP",
+    icon: Gauge,
+    syllabus: [
+      "Teori atmosfer gas mudah terbakar, beracun, dan oksigen",
+      "Pengenalan, kalibrasi, dan pengoperasian peralatan deteksi gas (gas detector)",
+      "Teknik dan strategi pengambilan sampel gas secara aman",
+      "Interpretasi hasil pengukuran dan pencatatan dokumentasi",
+      "Penilaian bahaya sebelum pekerjaan panas (hot work) atau masuk ruang terbatas",
+      "Studi kasus kecelakaan akibat kegagalan pengujian gas"
+    ],
+    syllabusEn: [
+      "Atmospheric theory of flammable, toxic gases, and oxygen levels",
+      "Introduction, calibration, and operation of gas detection equipment",
+      "Safe gas sampling techniques and strategies",
+      "Interpretation of measurement results and documentation logging",
+      "Hazard assessment before hot work or confined space entry",
+      "Case studies of accidents due to gas testing failure"
+    ],
+    target: "Safety inspector, permit issuer, gas tester, dan personel K3 yang bertanggung jawab atas pengujian gas atmosfer.",
+    targetEn: "Safety inspectors, permit issuers, gas testers, and HSE personnel responsible for atmospheric gas testing."
+  },
+  {
+    name: "First Aid",
+    nameEn: "First Aid",
+    desc: "Pertolongan pertama pada kecelakaan kerja dan CPR sesuai standar internasional.",
+    descEn: "First aid for workplace incidents and CPR per international standards.",
+    dur: "2 Hari",
+    durEn: "2 Days",
+    cert: "BNSP / KEMENAKER",
+    certEn: "BNSP / KEMENAKER",
+    icon: HeartPulse,
+    syllabus: [
+      "Prinsip dasar tindakan pertolongan pertama (First Aid)",
+      "Resusitasi Jantung Paru (RJP / CPR) dan penggunaan AED",
+      "Penanganan luka bakar, perdarahan, patah tulang, dan syok",
+      "Penanganan kondisi medis darurat (serangan jantung, asma, pingsan)",
+      "Teknik pemindahan dan evakuasi korban secara aman",
+      "Pengelolaan kotak P3K dan pelaporan insiden medis"
+    ],
+    syllabusEn: [
+      "Basic principles of first aid response",
+      "Cardiopulmonary Resuscitation (CPR) and AED operation",
+      "Handling burns, bleeding, fractures, and shock",
+      "Managing medical emergencies (heart attacks, asthma, fainting)",
+      "Safe victim transfer and evacuation techniques",
+      "First aid kit management and medical incident reporting"
+    ],
+    target: "Tim tanggap darurat (ERT), petugas P3K di tempat kerja, supervisor, dan karyawan umum di semua sektor industri.",
+    targetEn: "Emergency Response Teams (ERT), workplace first aiders, supervisors, and general employees in all industrial sectors."
+  },
+  {
+    name: "Petugas Peran Kebakaran (Kelas D)",
+    nameEn: "Fire Fighting Officer (Class D)",
+    desc: "Teknik pemadaman, klasifikasi kebakaran, dan emergency response industri.",
+    descEn: "Extinguishing techniques, fire classification, and industrial emergency response.",
+    dur: "3 Hari",
+    durEn: "3 Days",
+    cert: "Kemnaker",
+    certEn: "Kemnaker",
+    icon: Flame,
+    syllabus: [
+      "Teori Segitiga Api dan klasifikasi kebakaran",
+      "Pengenalan dan praktik penggunaan APAR (Alat Pemadam Api Ringan)",
+      "Prosedur pencegahan dan inspeksi bahaya kebakaran di tempat kerja",
+      "Sistem proteksi kebakaran aktif dan pasif (sprinkler, hidran, detektor)",
+      "Rencana evakuasi darurat kebakaran dan penanganan histeria massa",
+      "Organisasi penanggulangan kebakaran di lingkungan kerja"
+    ],
+    syllabusEn: [
+      "Fire Triangle theory and fire classification",
+      "Introduction and practice in using portable fire extinguishers (APAR)",
+      "Fire hazard prevention and inspection procedures in the workplace",
+      "Active and passive fire protection systems (sprinklers, hydrants, detectors)",
+      "Fire emergency evacuation plans and managing crowd panic",
+      "Fire prevention organization in the workplace environment"
+    ],
+    target: "Anggota tim pemadam kebakaran internal perusahaan, petugas K3, dan personel penanggung jawab keselamatan gedung.",
+    targetEn: "Members of company internal firefighting teams, HSE officers, and building safety personnel."
+  },
+  {
+    name: "Basic Sea Survival",
+    nameEn: "Basic Sea Survival",
+    desc: "Survival laut, evakuasi, dan penggunaan life-saving appliances.",
+    descEn: "Sea survival, evacuation, and use of life-saving appliances.",
+    dur: "2 Hari",
+    durEn: "2 Days",
+    cert: "BNSP",
+    certEn: "BNSP",
+    icon: LifeBuoy,
+    syllabus: [
+      "Prinsip bertahan hidup di laut (sea survival)",
+      "Pengenalan peralatan keselamatan kapal dan platform lepas pantai (life jacket, life raft, lifeboat)",
+      "Teknik melompat ke air secara aman dari ketinggian",
+      "Teknik bertahan hidup berkelompok dan pencegahan hipotermia",
+      "Prosedur penyelamatan oleh helikopter (heli hoist rescue)",
+      "Penggunaan perangkat sinyal darurat (flare, cermin, radio)"
+    ],
+    syllabusEn: [
+      "Sea survival principles and mindset",
+      "Introduction to safety equipment on vessels and offshore platforms (life jackets, life rafts, lifeboats)",
+      "Safe water entry techniques from heights",
+      "Group survival techniques and hypothermia prevention",
+      "Helicopter rescue procedures (heli hoist rescue)",
+      "Use of emergency signaling devices (flares, mirrors, radio)"
+    ],
+    target: "Kru kapal, pekerja platform lepas pantai (offshore rig), surveyor maritim, dan personel industri perkapalan.",
+    targetEn: "Vessel crew, offshore platform workers, marine surveyors, and shipping industry personnel."
+  },
+  {
+    name: "Tenaga Kerja Pada Ketinggian Tingkat 1 (TKPK)",
+    nameEn: "Working at Height Level 1 (TKPK)",
+    desc: "Bekerja aman di ketinggian, fall protection, dan rescue plan.",
+    descEn: "Safe work at height, fall protection, and rescue planning.",
+    dur: "2 Hari",
+    durEn: "2 Days",
+    cert: "BNSP / KEMENAKER",
+    certEn: "BNSP / KEMENAKER",
+    icon: HardHat,
+    syllabus: [
+      "Regulasi K3 bekerja di ketinggian (Kemnaker & standar internasional)",
+      "Pengenalan, pemeriksaan, dan perawatan Alat Pelindung Jatuh (Full Body Harness, Lanyard, Anchor)",
+      "Teknik memanjat aman (climbing techniques) menggunakan double lanyard",
+      "Pemasangan dan penggunaan sistem pengaman jatuh (fall arrest system)",
+      "Prosedur penyelamatan darurat sederhana pada ketinggian",
+      "Identifikasi bahaya jatuh dan penilaian risiko (Risk Assessment)"
+    ],
+    syllabusEn: [
+      "HSE regulations for working at height (Kemnaker & international standards)",
+      "Introduction, inspection, and maintenance of Fall Protection Equipment (Full Body Harness, Lanyard, Anchor)",
+      "Safe climbing techniques using double lanyards",
+      "Installation and use of fall arrest systems",
+      "Simple emergency rescue procedures at height",
+      "Fall hazard identification and Risk Assessment"
+    ],
+    target: "Pekerja konstruksi, teknisi telekomunikasi (tower climber), pemeliharaan gedung, dan pekerja akses tali pemula.",
+    targetEn: "Construction workers, telecommunication technicians (tower climbers), building maintenance staff, and rope access beginners."
+  },
+  {
+    name: "Tenaga Kerja Bangunan Tinggi Tingkat 2 (TKBT)",
+    nameEn: "Working on High Buildings Level 2 (TKBT)",
+    desc: "Sistem izin kerja, JSA, dan kontrol bahaya operasional.",
+    descEn: "Permit-to-work system, JSA, and operational hazard control.",
+    dur: "1 Hari",
+    durEn: "1 Day",
+    cert: "BNSP / KEMENAKER",
+    certEn: "BNSP / KEMENAKER",
+    icon: FileCheck,
+    syllabus: [
+      "Struktur sistem manajemen keselamatan bekerja di bangunan tinggi",
+      "Pembuatan Analisis Keselamatan Pekerjaan (Job Safety Analysis - JSA)",
+      "Sistem izin kerja aman dan pengawasan pekerjaan tinggi kompleks",
+      "Teknik penyelamatan canggih pada ketinggian (high angle rescue)",
+      "Pemasangan lintasan pengaman sementara dan permanen (lifeline)",
+      "Evaluasi kesehatan pekerja dan kesiapan tim sebelum bekerja"
+    ],
+    syllabusEn: [
+      "Safety management system structure for high building work",
+      "Job Safety Analysis (JSA) preparation for heights",
+      "Safe permit-to-work systems and supervision of complex high-altitude work",
+      "Advanced rescue techniques at height (high angle rescue)",
+      "Installation of temporary and permanent safety lifelines",
+      "Worker health evaluations and pre-work team readiness"
+    ],
+    target: "Supervisor pekerjaan di ketinggian, manajer K3, insinyur konstruksi, dan penyelamat (rescue team) profesional.",
+    targetEn: "Supervisors for work at heights, HSE managers, construction engineers, and professional rescue teams."
+  },
+  {
+    name: "Pelatihan Security (Gada Pratama)",
+    nameEn: "Security Officer Training (Gada Pratama)",
+    desc: "Sertifikasi K3 dan kompetensi dasar satuan pengamanan untuk memenuhi standar industri dan regulasi Kepolisian.",
+    descEn: "Basic security guard competency training and certification to meet police regulations and industrial security standards.",
+    dur: "10 Hari",
+    durEn: "10 Days",
+    cert: "POLRI",
+    certEn: "POLRI",
+    icon: Shield,
+    syllabus: [
+      "Peranan, Tugas Pokok, dan Fungsi Satpam (Tupoksi)",
+      "Kemampuan interpersonal dan etika profesi pengamanan",
+      "Teknik patroli, penjagaan, pengawalan, dan Turjawali",
+      "Pencegahan bahaya kebakaran tingkat dasar dan K3",
+      "Bela diri praktis militer/satpam dan penggunaan tongkat/borgol",
+      "Tindakan Pertama di Tempat Kejadian Perkara (TPTKP)"
+    ],
+    syllabusEn: [
+      "Role, Core Duties, and Functions of Security Guards (Tupoksi)",
+      "Interpersonal skills and professional security ethics",
+      "Patrolling, guarding, escorting, and Turjawali techniques",
+      "Basic fire prevention and workplace health & safety",
+      "Practical martial arts for security and use of batons/handcuffs",
+      "First Action at the Crime Scene (TPTKP)"
+    ],
+    target: "Calon anggota satpam baru, anggota satpam aktif yang belum tersertifikasi, dan koordinator keamanan industri.",
+    targetEn: "Aspiring security guards, active guards needing certification, and industrial security coordinators."
+  }
 ];
 
 const schedule = [
@@ -136,22 +394,47 @@ const steps = [
 ];
 
 function useReveal() {
+  // Scroll reveal animations are now handled by the React-native <Reveal /> component
+}
+
+function Reveal({
+  children,
+  className = "",
+  as: Tag = "div",
+}: {
+  children: React.ReactNode;
+  className?: string;
+  as?: any;
+}) {
+  const ref = useRef<HTMLElement>(null);
+  const [revealed, setRevealed] = useState(false);
+
   useEffect(() => {
-    const els = document.querySelectorAll<HTMLElement>(".reveal");
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add("in");
-            io.unobserve(e.target);
-          }
-        });
+    const el = ref.current;
+    if (!el || revealed) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setRevealed(true);
+          observer.disconnect();
+        }
       },
-      { threshold: 0.12 },
+      { threshold: 0.1 }
     );
-    els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
-  }, []);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [revealed]);
+
+  return (
+    <Tag
+      ref={ref}
+      className={`${className} transition-all duration-700 ease-out ${
+        revealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+      }`}
+    >
+      {children}
+    </Tag>
+  );
 }
 
 function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
@@ -397,7 +680,7 @@ function Hero() {
 
 function SectionLabel({ kicker, title, sub }: { kicker: string; title: string; sub?: string }) {
   return (
-    <div className="reveal mb-14 grid grid-cols-1 gap-6 lg:grid-cols-12">
+    <Reveal className="mb-14 grid grid-cols-1 gap-6 lg:grid-cols-12">
       <div className="lg:col-span-4">
         <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-charcoal">
           <span className="h-px w-10 bg-charcoal" />
@@ -410,7 +693,7 @@ function SectionLabel({ kicker, title, sub }: { kicker: string; title: string; s
         </h2>
         {sub && <p className="mt-5 max-w-2xl text-base text-darkgray sm:text-lg">{sub}</p>}
       </div>
-    </div>
+    </Reveal>
   );
 }
 
@@ -429,13 +712,13 @@ function WhyUs() {
         />
         <div className="grid grid-cols-1 gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">
           {whyUs.map((w) => (
-            <div key={w.t} className="reveal bg-background p-8">
+            <Reveal key={w.t} className="bg-background p-8">
               <div className="mb-5 border-t-2 border-safety pt-5">
                 <w.icon size={28} className="text-charcoal" strokeWidth={1.5} />
               </div>
               <h3 className="text-lg font-bold leading-tight text-charcoal">{t(w.t, w.tEn)}</h3>
               <p className="mt-3 text-sm leading-relaxed text-midgray">{t(w.d, w.dEn)}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
@@ -445,6 +728,8 @@ function WhyUs() {
 
 function Programs() {
   const { t } = useT();
+  const [selectedProgram, setSelectedProgram] = useState<Program | null>(null);
+
   return (
     <section id="programs" className="border-b border-border bg-lightgray py-24">
       <div className="container-swiss">
@@ -452,15 +737,16 @@ function Programs() {
           kicker={t("Program Pelatihan", "Training Programs")}
           title={t("Program Pelatihan Unggulan", "Flagship Training Programs")}
           sub={t(
-            "Delapan program inti untuk kompetensi keselamatan kerja sektor Oil & Gas, Marine, dan Industrial.",
-            "Eight core programs for safety competency across Oil & Gas, Marine, and Industrial sectors.",
+            "Sembilan program inti untuk kompetensi keselamatan kerja sektor Oil & Gas, Marine, dan Industrial.",
+            "Nine core programs for safety competency across Oil & Gas, Marine, and Industrial sectors.",
           )}
         />
         <div className="grid grid-cols-1 gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">
           {programs.map((p) => (
-            <article
+            <Reveal
               key={p.name}
-              className="reveal group flex flex-col justify-between bg-background p-7 transition-colors hover:bg-charcoal"
+              as="article"
+              className="group flex flex-col justify-between bg-background p-7 transition-colors hover:bg-charcoal"
             >
               <div>
                 <div className="mb-6 flex items-center justify-between border-b border-border pb-5 group-hover:border-white/20">
@@ -480,17 +766,36 @@ function Programs() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-midgray group-hover:text-white/60">
                   {t(p.dur, p.durEn)}
                 </span>
-                <a
-                  href="#contact"
-                  className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-charcoal group-hover:text-safety"
+                <button
+                  onClick={() => setSelectedProgram(p)}
+                  className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-charcoal group-hover:text-safety cursor-pointer text-left focus:outline-none"
                 >
                   {t("Detail", "Detail")} <ArrowRight size={12} />
-                </a>
+                </button>
               </div>
-            </article>
+            </Reveal>
           ))}
         </div>
       </div>
+
+      {selectedProgram && (
+        <ProgramModal
+          program={selectedProgram}
+          onClose={() => setSelectedProgram(null)}
+          onRegister={() => {
+            const selectEl = document.querySelector<HTMLSelectElement>("select[name='jenis']");
+            if (selectEl) {
+              selectEl.value = selectedProgram.name;
+              selectEl.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+            setSelectedProgram(null);
+            const contactSection = document.getElementById("contact");
+            if (contactSection) {
+              contactSection.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+        />
+      )}
     </section>
   );
 }
@@ -510,12 +815,12 @@ function Process() {
         />
         <div className="relative grid grid-cols-1 gap-px bg-border sm:grid-cols-2 lg:grid-cols-5">
           {steps.map((s) => (
-            <div key={s.n} className="reveal bg-background p-7">
+            <Reveal key={s.n} className="bg-background p-7">
               <div className="text-5xl font-black tracking-tight text-charcoal">{s.n}</div>
               <div className="mt-6 h-px w-10 bg-safety" />
               <h3 className="mt-5 text-base font-bold text-charcoal">{t(s.t, s.tEn)}</h3>
               <p className="mt-2 text-sm leading-relaxed text-midgray">{t(s.d, s.dEn)}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
@@ -576,7 +881,18 @@ function Corporate() {
 function Certification() {
   const { t } = useT();
   const [cert, setCert] = useState("");
-  const [msg, setMsg] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [verifyResult, setVerifyResult] = useState<{
+    status: "success" | "error";
+    message?: string;
+    data?: {
+      nama_peserta: string;
+      nama_program: string;
+      tanggal_terbit: string;
+      status: string;
+    };
+  } | null>(null);
+
   return (
     <section className="border-b border-border bg-background py-24">
       <div className="container-swiss">
@@ -600,65 +916,144 @@ function Certification() {
             ),
           )}
         </div>
-        <div className="reveal mt-16 border-2 border-charcoal p-8 sm:p-10">
-          <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-end">
-            <div className="lg:col-span-5">
-              <div className="text-xs font-semibold uppercase tracking-wider text-charcoal">
+        <Reveal className="mt-16 border-2 border-charcoal p-8 sm:p-10 bg-background">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-start">
+            <div className="lg:col-span-5 flex flex-col justify-start">
+              <div className="text-xs font-bold uppercase tracking-wider text-midgray">
                 {t("Verifikasi Sertifikat", "Certificate Verification")}
               </div>
-              <h3 className="mt-2 text-2xl font-bold text-charcoal">
+              <h3 className="mt-2.5 text-2xl font-black tracking-tight text-charcoal sm:text-3xl leading-tight">
                 {t("Cek keaslian sertifikat SEAL secara online.", "Verify SEAL certificate authenticity online.")}
               </h3>
+              <p className="mt-3 text-sm leading-relaxed text-midgray">
+                {t("Masukkan nomor registrasi sertifikat resmi Anda untuk memverifikasi data kompetensi peserta di database SEAL.", "Enter your official certificate registration number to verify participant competency details in the SEAL database.")}
+              </p>
             </div>
-            <form
-              onSubmit={async (e) => {
-                e.preventDefault();
-                const trimmedCert = cert.trim();
-                if (!trimmedCert) {
-                  setMsg(t("Mohon masukkan nomor sertifikat.", "Please enter a certificate number."));
-                  return;
-                }
-                setMsg(t("Sedang memverifikasi...", "Verifying..."));
-                try {
-                  const response = await fetch(`http://localhost/Project-seal-ssh/api/verifikasi_sertifikat.php?nomor=${encodeURIComponent(trimmedCert)}`);
-                  const result = await response.json();
-                  if (result.status === "success") {
-                    const d = result.data;
-                    setMsg(
-                      t(
-                        `Sertifikat VALID! Nama: ${d.nama_peserta} | Program: ${d.nama_program} | Tanggal Terbit: ${d.tanggal_terbit} | Status: ${d.status}`,
-                        `Certificate VALID! Name: ${d.nama_peserta} | Program: ${d.nama_program} | Date: ${d.tanggal_terbit} | Status: ${d.status}`
-                      )
-                    );
-                  } else {
-                    setMsg(t(result.message || "Sertifikat tidak terdaftar.", result.message || "Certificate not registered."));
+            
+            <div className="lg:col-span-7 flex flex-col justify-start">
+              <form
+                onSubmit={async (e) => {
+                  e.preventDefault();
+                  const trimmedCert = cert.trim();
+                  if (!trimmedCert) {
+                    setVerifyResult({
+                      status: "error",
+                      message: t("Mohon masukkan nomor sertifikat.", "Please enter a certificate number.")
+                    });
+                    return;
                   }
-                } catch (err) {
-                  setMsg(t("Gagal menghubungi server verifikasi.", "Failed to connect to the verification server."));
-                }
-              }}
-              className="grid grid-cols-1 gap-3 sm:grid-cols-[1fr_auto] lg:col-span-7"
-            >
-              <input
-                value={cert}
-                onChange={(e) => setCert(e.target.value)}
-                placeholder={t("Masukkan Nomor Sertifikat", "Enter certificate number")}
-                className="border border-charcoal bg-background px-5 py-4 text-sm font-medium text-charcoal placeholder:text-midgray focus:outline-none focus:ring-2 focus:ring-safety"
-              />
-              <button
-                type="submit"
-                className="bg-charcoal px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-safety hover:text-charcoal"
+                  setLoading(true);
+                  setVerifyResult(null);
+                  try {
+                    const response = await fetch(`http://localhost/Project-seal-ssh/api/verifikasi_sertifikat.php?nomor=${encodeURIComponent(trimmedCert)}`);
+                    const result = await response.json();
+                    if (result.status === "success") {
+                      setVerifyResult({
+                        status: "success",
+                        data: result.data
+                      });
+                    } else {
+                      setVerifyResult({
+                        status: "error",
+                        message: t(result.message || "Sertifikat tidak terdaftar.", result.message || "Certificate not registered.")
+                      });
+                    }
+                  } catch (err) {
+                    setVerifyResult({
+                      status: "error",
+                      message: t("Gagal menghubungi server verifikasi.", "Failed to connect to the verification server.")
+                    });
+                  } finally {
+                    setLoading(false);
+                  }
+                }}
+                className="flex flex-col gap-3 sm:flex-row"
               >
-                {t("Verifikasi", "Verify")}
-              </button>
-              {msg && (
-                <div className="border-l-2 border-safety bg-lightgray p-3 text-sm text-darkgray sm:col-span-2">
-                  {msg}
-                </div>
-              )}
-            </form>
+                <input
+                  value={cert}
+                  onChange={(e) => setCert(e.target.value)}
+                  placeholder={t("Masukkan Nomor Sertifikat (cth: CERT-XXXX)", "Enter certificate number (e.g., CERT-XXXX)")}
+                  className="flex-1 border border-charcoal bg-background px-5 py-4 text-sm font-semibold text-charcoal placeholder:text-midgray focus:outline-none focus:ring-2 focus:ring-safety"
+                />
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="bg-charcoal px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-safety hover:text-charcoal disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer focus:outline-none min-w-[140px]"
+                >
+                  {loading ? t("Memproses...", "Processing...") : t("Verifikasi", "Verify")}
+                </button>
+              </form>
+
+              {/* Verification Result Area - styled as a premium dashboard card */}
+              <div className="mt-4 min-h-[40px]">
+                {loading && (
+                  <div className="flex items-center gap-2.5 py-3 text-sm font-semibold text-midgray animate-pulse">
+                    <span className="h-4 w-4 animate-spin border-2 border-charcoal border-t-transparent rounded-full" />
+                    {t("Menghubungi database server...", "Connecting to database server...")}
+                  </div>
+                )}
+
+                {verifyResult && (
+                  <div className="animate-modal-backdrop">
+                    {verifyResult.status === "success" && verifyResult.data ? (
+                      <div className="border border-border bg-lightgray p-5 shadow-sm">
+                        {/* Success Badge */}
+                        <div className="flex items-center gap-2 text-emerald-600 font-bold text-xs uppercase tracking-wider mb-4">
+                          <span className="grid h-6 w-6 place-items-center bg-emerald-100 text-emerald-700 rounded-full">
+                            <Check size={14} strokeWidth={3} />
+                          </span>
+                          {t("Sertifikat Valid & Terverifikasi", "Certificate Valid & Verified")}
+                        </div>
+
+                        {/* Details Grid */}
+                        <div className="grid grid-cols-1 gap-y-3 gap-x-4 border-t border-border/60 pt-4 text-sm sm:grid-cols-2">
+                          <div>
+                            <span className="block text-[9px] font-bold uppercase tracking-wider text-midgray">
+                              {t("Nama Peserta", "Participant Name")}
+                            </span>
+                            <span className="font-bold text-charcoal block mt-0.5">{verifyResult.data.nama_peserta}</span>
+                          </div>
+                          <div>
+                            <span className="block text-[9px] font-bold uppercase tracking-wider text-midgray">
+                              {t("Program Pelatihan", "Training Program")}
+                            </span>
+                            <span className="font-bold text-charcoal block mt-0.5">{verifyResult.data.nama_program}</span>
+                          </div>
+                          <div>
+                            <span className="block text-[9px] font-bold uppercase tracking-wider text-midgray">
+                              {t("Tanggal Terbit", "Date Issued")}
+                            </span>
+                            <span className="font-bold text-charcoal block mt-0.5">{verifyResult.data.tanggal_terbit}</span>
+                          </div>
+                          <div>
+                            <span className="block text-[9px] font-bold uppercase tracking-wider text-midgray">
+                              {t("Status Keaktifan", "Active Status")}
+                            </span>
+                            <span className="inline-flex items-center mt-1 px-2.5 py-0.5 text-[10px] font-bold uppercase bg-safety text-safety-foreground">
+                              {verifyResult.data.status}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="border border-red-200 bg-red-50/50 p-5">
+                        <div className="flex items-center gap-2 text-red-600 font-bold text-xs uppercase tracking-wider">
+                          <span className="grid h-6 w-6 place-items-center bg-red-100 text-red-700 rounded-full">
+                            <X size={14} strokeWidth={3} />
+                          </span>
+                          {t("Sertifikat Tidak Valid / Terdaftar", "Invalid / Unregistered Certificate")}
+                        </div>
+                        <p className="mt-2.5 text-sm text-red-700 font-medium">
+                          {verifyResult.message}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
@@ -679,7 +1074,7 @@ function Testimonials() {
         />
         <div className="grid grid-cols-1 gap-px bg-border md:grid-cols-3">
           {testimonials.map((tt) => (
-            <figure key={tt.name} className="reveal flex flex-col justify-between bg-background p-8">
+            <Reveal key={tt.name} as="figure" className="flex flex-col justify-between bg-background p-8">
               <blockquote className="text-base leading-relaxed text-charcoal">
                 <span className="mb-4 block text-3xl font-black leading-none text-charcoal">“</span>
                 {t(tt.q, tt.qEn)}
@@ -700,7 +1095,7 @@ function Testimonials() {
                   </div>
                 </div>
               </figcaption>
-            </figure>
+            </Reveal>
           ))}
         </div>
         <div className="mt-12 overflow-hidden border-y border-border py-6 relative w-full bg-lightgray/30">
@@ -770,7 +1165,7 @@ function Schedule() {
             "Public classes in cities that serve as bases for national energy operations.",
           )}
         />
-        <div className="reveal -mx-6 overflow-x-auto px-6 lg:mx-0 lg:px-0">
+        <Reveal className="-mx-6 overflow-x-auto px-6 lg:mx-0 lg:px-0">
           <table className="w-full min-w-[720px] border-collapse text-left">
             <thead>
               <tr className="border-b-2 border-charcoal text-[11px] font-bold uppercase tracking-[0.15em] text-charcoal">
@@ -813,7 +1208,7 @@ function Schedule() {
               })}
             </tbody>
           </table>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
@@ -834,7 +1229,7 @@ function Blog() {
         />
         <div className="grid grid-cols-1 gap-px bg-border md:grid-cols-3">
           {articles.map((a) => (
-            <article key={a.t} className="reveal group flex flex-col bg-background">
+            <Reveal key={a.t} as="article" className="group flex flex-col bg-background">
               <div className="aspect-[4/3] overflow-hidden bg-lightgray">
                 <img
                   src={a.img}
@@ -858,7 +1253,7 @@ function Blog() {
                   {t("Baca Artikel", "Read Article")} <ArrowRight size={12} />
                 </a>
               </div>
-            </article>
+            </Reveal>
           ))}
         </div>
       </div>
@@ -900,6 +1295,151 @@ function LeadCTA() {
         </div>
       </div>
     </section>
+  );
+}
+
+function ProgramModal({ program, onClose, onRegister }: { program: Program; onClose: () => void; onRegister: () => void }) {
+  const { t } = useT();
+  const Icon = program.icon;
+
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = "unset"; };
+  }, []);
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
+      <div className="absolute inset-0 bg-charcoal/60 backdrop-blur-sm animate-modal-backdrop" onClick={onClose} />
+      <div className="relative z-10 w-full max-w-2xl border border-border bg-background p-6 shadow-2xl animate-modal-content sm:p-8">
+        <button onClick={onClose} className="absolute right-4 top-4 text-midgray hover:text-charcoal cursor-pointer focus:outline-none"><X size={20} /></button>
+        <div className="flex items-start gap-4 border-b border-border pb-6 sm:gap-5">
+          <span className="grid h-12 w-12 shrink-0 place-items-center border border-border bg-safety text-charcoal sm:h-14 sm:w-14"><Icon size={24} /></span>
+          <div>
+            <span className="inline-block bg-safety px-2.5 py-0.5 text-[10px] font-black uppercase tracking-wider text-safety-foreground">{t(program.cert, program.certEn)}</span>
+            <h2 className="mt-2 text-xl font-bold tracking-tight text-charcoal sm:text-2xl">{t(program.name, program.nameEn)}</h2>
+            <div className="mt-2 text-xs font-semibold text-midgray">{t("Durasi Pelatihan:", "Training Duration:")} <span className="text-charcoal font-bold">{t(program.dur, program.durEn)}</span></div>
+          </div>
+        </div>
+        <div className="mt-6 space-y-6 max-h-[60vh] overflow-y-auto pr-1">
+          <div>
+            <h4 className="text-[10px] font-bold uppercase tracking-wider text-midgray">{t("Deskripsi Program", "Program Description")}</h4>
+            <p className="mt-2 text-sm leading-relaxed text-darkgray">{t(program.desc, program.descEn)}</p>
+          </div>
+          <div>
+            <h4 className="text-[10px] font-bold uppercase tracking-wider text-midgray">{t("Materi Utama (Syllabus)", "Key Syllabus Topics")}</h4>
+            <ul className="mt-3 grid grid-cols-1 gap-2.5 text-sm sm:grid-cols-2">
+              {(t(program.syllabus, program.syllabusEn) as string[]).map((item, idx) => (
+                <li key={idx} className="flex items-start gap-2.5 text-darkgray"><Check size={16} className="mt-0.5 shrink-0 text-charcoal" strokeWidth={3} /><span>{item}</span></li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-[10px] font-bold uppercase tracking-wider text-midgray">{t("Target Peserta", "Target Audience")}</h4>
+            <p className="mt-2 text-sm leading-relaxed text-darkgray font-medium">{t(program.target, program.targetEn)}</p>
+          </div>
+        </div>
+        <div className="mt-8 flex flex-col gap-3 border-t border-border pt-6 sm:flex-row sm:justify-end">
+          <button onClick={onClose} className="inline-flex items-center justify-center border border-border px-5 py-3 text-xs font-bold uppercase tracking-wider text-charcoal hover:bg-lightgray transition-colors cursor-pointer focus:outline-none">{t("Kembali", "Back")}</button>
+          <button onClick={onRegister} className="inline-flex items-center justify-center bg-charcoal px-7 py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-safety hover:text-charcoal transition-colors cursor-pointer focus:outline-none">{t("Daftar Sekarang", "Register Now")}</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Footer() {
+  const { t } = useT();
+  return (
+    <footer className="bg-charcoal py-16 text-white/75">
+      <div className="container-swiss">
+        <div className="grid grid-cols-2 gap-10 border-b border-white/10 pb-12 lg:grid-cols-12">
+          <div className="col-span-2 lg:col-span-5">
+            <div className="flex items-center">
+              <img src={logoWhiteImg} alt="SEAL Training Center" className="h-15 w-auto object-contain" />
+            </div>
+            <p className="mt-5 max-w-sm text-sm leading-relaxed">
+              {t(
+                "Institusi pelatihan HSE, Oil & Gas, dan Industrial Safety berbasis di Indonesia. Membentuk kompetensi keselamatan kerja untuk industri energi nasional.",
+                "An HSE, Oil & Gas, and Industrial Safety training institution based in Indonesia. Building workplace safety competency for the national energy industry.",
+              )}
+            </p>
+          </div>
+          <div className="lg:col-span-2">
+            <div className="mb-4 text-[11px] font-bold uppercase tracking-[0.18em] text-white">
+              {t("Tautan Cepat", "Quick Links")}
+            </div>
+            <ul className="space-y-2 text-sm">
+              {[
+                t("Tentang", "About"),
+                t("Program", "Programs"),
+                t("Jadwal", "Schedule"),
+                t("Corporate", "Corporate"),
+                t("Kontak", "Contact"),
+              ].map((x) => (
+                <li key={x}>
+                  <a href="#" className="hover:text-safety">
+                    {x}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="lg:col-span-3">
+            <div className="mb-4 text-[11px] font-bold uppercase tracking-[0.18em] text-white">
+              {t("Program Pelatihan", "Training Programs")}
+            </div>
+            <ul className="space-y-2 text-sm">
+              {programs.slice(0, 5).map((p) => (
+                <li key={p.name}>
+                  <a href="#programs" className="hover:text-safety">
+                    {t(p.name, p.nameEn)}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="lg:col-span-2">
+            <div className="mb-4 text-[11px] font-bold uppercase tracking-[0.18em] text-white">
+              {t("Kontak", "Contact")}
+            </div>
+            <ul className="space-y-2 text-sm">
+              <li>+62 21 75676868</li>
+              <li>training@seal-center.co.id</li>
+              <li>Jakarta Selatan</li>
+            </ul>
+          </div>
+        </div>
+        <div className="flex flex-col items-start justify-between gap-3 pt-8 text-xs text-white/55 sm:flex-row sm:items-center">
+          <div>© {new Date().getFullYear()} SEAL Training Center. {t("Semua hak dilindungi.", "All rights reserved.")}</div>
+          <div className="flex gap-5">
+            <a href="#" className="hover:text-safety">
+              LinkedIn
+            </a>
+            <a href="#" className="hover:text-safety">
+              Instagram
+            </a>
+            <a href="#" className="hover:text-safety">
+              YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+function WhatsAppFAB() {
+  const { t } = useT();
+  return (
+    <a
+      href={WA}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={t("Hubungi via WhatsApp", "Contact via WhatsApp")}
+      className="fixed bottom-6 right-6 z-40 grid h-14 w-14 place-items-center bg-charcoal text-safety shadow-2xl transition-transform hover:-translate-y-1"
+    >
+      <WhatsappIcon size={24} />
+    </a>
   );
 }
 
@@ -1026,9 +1566,9 @@ function Contact() {
                   >
                     <option value="">{t("Pilih program pelatihan…", "Select a training program…")}</option>
                     {programs.map((p) => (
-                      <option key={p.name}>{t(p.name, p.nameEn)}</option>
+                      <option key={p.name} value={p.name}>{t(p.name, p.nameEn)}</option>
                     ))}
-                    <option>{t("Customized / Corporate Training", "Customized / Corporate Training")}</option>
+                    <option value="Customized / Corporate Training">{t("Customized / Corporate Training", "Customized / Corporate Training")}</option>
                   </select>
                 </label>
                 <label className="block sm:col-span-2">
@@ -1053,102 +1593,6 @@ function Contact() {
         </div>
       </div>
     </section>
-  );
-}
-
-function Footer() {
-  const { t } = useT();
-  return (
-    <footer className="bg-charcoal py-16 text-white/75">
-      <div className="container-swiss">
-        <div className="grid grid-cols-2 gap-10 border-b border-white/10 pb-12 lg:grid-cols-12">
-          <div className="col-span-2 lg:col-span-5">
-            <div className="flex items-center">
-              <img src={logoWhiteImg} alt="SEAL Training Center" className="h-15 w-auto object-contain" />
-            </div>
-            <p className="mt-5 max-w-sm text-sm leading-relaxed">
-              {t(
-                "Institusi pelatihan HSE, Oil & Gas, dan Industrial Safety berbasis di Indonesia. Membentuk kompetensi keselamatan kerja untuk industri energi nasional.",
-                "An HSE, Oil & Gas, and Industrial Safety training institution based in Indonesia. Building workplace safety competency for the national energy industry.",
-              )}
-            </p>
-          </div>
-          <div className="lg:col-span-2">
-            <div className="mb-4 text-[11px] font-bold uppercase tracking-[0.18em] text-white">
-              {t("Tautan Cepat", "Quick Links")}
-            </div>
-            <ul className="space-y-2 text-sm">
-              {[
-                t("Tentang", "About"),
-                t("Program", "Programs"),
-                t("Jadwal", "Schedule"),
-                t("Corporate", "Corporate"),
-                t("Kontak", "Contact"),
-              ].map((x) => (
-                <li key={x}>
-                  <a href="#" className="hover:text-safety">
-                    {x}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="lg:col-span-3">
-            <div className="mb-4 text-[11px] font-bold uppercase tracking-[0.18em] text-white">
-              {t("Program Pelatihan", "Training Programs")}
-            </div>
-            <ul className="space-y-2 text-sm">
-              {programs.slice(0, 5).map((p) => (
-                <li key={p.name}>
-                  <a href="#programs" className="hover:text-safety">
-                    {t(p.name, p.nameEn)}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="lg:col-span-2">
-            <div className="mb-4 text-[11px] font-bold uppercase tracking-[0.18em] text-white">
-              {t("Kontak", "Contact")}
-            </div>
-            <ul className="space-y-2 text-sm">
-              <li>+62 21 75676868</li>
-              <li>training@seal-center.co.id</li>
-              <li>Jakarta Selatan</li>
-            </ul>
-          </div>
-        </div>
-        <div className="flex flex-col items-start justify-between gap-3 pt-8 text-xs text-white/55 sm:flex-row sm:items-center">
-          <div>© {new Date().getFullYear()} SEAL Training Center. {t("Semua hak dilindungi.", "All rights reserved.")}</div>
-          <div className="flex gap-5">
-            <a href="#" className="hover:text-safety">
-              LinkedIn
-            </a>
-            <a href="#" className="hover:text-safety">
-              Instagram
-            </a>
-            <a href="#" className="hover:text-safety">
-              YouTube
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-}
-
-function WhatsAppFAB() {
-  const { t } = useT();
-  return (
-    <a
-      href={WA}
-      target="_blank"
-      rel="noreferrer"
-      aria-label={t("Hubungi via WhatsApp", "Contact via WhatsApp")}
-      className="fixed bottom-6 right-6 z-40 grid h-14 w-14 place-items-center bg-charcoal text-safety shadow-2xl transition-transform hover:-translate-y-1"
-    >
-      <WhatsappIcon size={24} />
-    </a>
   );
 }
 
