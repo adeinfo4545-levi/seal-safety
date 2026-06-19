@@ -889,9 +889,29 @@ function Certification() {
       nama_peserta: string;
       nama_program: string;
       tanggal_terbit: string;
+      tanggal_expired: string;
       status: string;
     };
   } | null>(null);
+
+  const formatDate = (dateStr: string) => {
+    if (!dateStr) return "";
+    const parts = dateStr.split("-");
+    if (parts.length === 3) {
+      const [year, month, day] = parts;
+      const shortYear = year.slice(-2);
+      return `${day}/${month}/${shortYear}`;
+    }
+    return dateStr;
+  };
+
+  const getTodayString = () => {
+    const d = new Date();
+    const year = d.getFullYear();
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  };
 
   return (
     <section className="border-b border-border bg-background py-24">
@@ -1023,15 +1043,31 @@ function Certification() {
                             <span className="block text-[9px] font-bold uppercase tracking-wider text-midgray">
                               {t("Tanggal Terbit", "Date Issued")}
                             </span>
-                            <span className="font-bold text-charcoal block mt-0.5">{verifyResult.data.tanggal_terbit}</span>
+                            <span className="font-bold text-charcoal block mt-0.5">{formatDate(verifyResult.data.tanggal_terbit)}</span>
                           </div>
                           <div>
                             <span className="block text-[9px] font-bold uppercase tracking-wider text-midgray">
+                              {t("Tanggal Kadaluarsa", "Expired Date")}
+                            </span>
+                            <span className="font-bold text-charcoal block mt-0.5">{formatDate(verifyResult.data.tanggal_expired)}</span>
+                          </div>
+                          <div className="sm:col-span-2">
+                            <span className="block text-[9px] font-bold uppercase tracking-wider text-midgray">
                               {t("Status Keaktifan", "Active Status")}
                             </span>
-                            <span className="inline-flex items-center mt-1 px-2.5 py-0.5 text-[10px] font-bold uppercase bg-safety text-safety-foreground">
-                              {verifyResult.data.status}
-                            </span>
+                            {(() => {
+                              const todayStr = getTodayString();
+                              const isActive = !verifyResult.data.tanggal_expired || verifyResult.data.tanggal_expired >= todayStr;
+                              return (
+                                <span className={`inline-flex items-center mt-1 px-2.5 py-0.5 text-[10px] font-bold uppercase ${
+                                  isActive
+                                    ? "bg-safety text-safety-foreground"
+                                    : "bg-red-600 text-white"
+                                }`}>
+                                  {isActive ? t("Aktif", "Active") : t("Expired", "Expired")}
+                                </span>
+                              );
+                            })()}
                           </div>
                         </div>
                       </div>
