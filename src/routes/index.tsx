@@ -1362,7 +1362,7 @@ function ProgramModal({ program, onClose, onRegister }: { program: Program; onCl
           <div>
             <h4 className="text-[10px] font-bold uppercase tracking-wider text-midgray">{t("Materi Utama (Syllabus)", "Key Syllabus Topics")}</h4>
             <ul className="mt-3 grid grid-cols-1 gap-2.5 text-sm sm:grid-cols-2">
-              {(t(program.syllabus, program.syllabusEn) as unknown as string[]).map((item, idx) => (
+              {t(program.syllabus, program.syllabusEn).map((item, idx) => (
                 <li key={idx} className="flex items-start gap-2.5 text-darkgray"><Check size={16} className="mt-0.5 shrink-0 text-charcoal" strokeWidth={3} /><span>{item}</span></li>
               ))}
             </ul>
