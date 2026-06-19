@@ -877,6 +877,8 @@ function Corporate() {
   );
 }
 
+
+
 function Certification() {
   const { t } = useT();
   const [cert, setCert] = useState("");
@@ -890,6 +892,7 @@ function Certification() {
       tanggal_terbit: string;
       tanggal_expired: string;
       status: string;
+      nomor_sertifikat: string;
     };
   } | null>(null);
 
@@ -969,7 +972,10 @@ function Certification() {
                     if (result.status === "success") {
                       setVerifyResult({
                         status: "success",
-                        data: result.data
+                        data: {
+                          ...result.data,
+                          nomor_sertifikat: trimmedCert
+                        }
                       });
                     } else {
                       setVerifyResult({
@@ -1059,8 +1065,8 @@ function Certification() {
                               const isActive = !verifyResult.data.tanggal_expired || verifyResult.data.tanggal_expired >= todayStr;
                               return (
                                 <span className={`inline-flex items-center mt-1 px-2.5 py-0.5 text-[10px] font-bold uppercase ${isActive
-                                    ? "bg-safety text-safety-foreground"
-                                    : "bg-red-600 text-white"
+                                  ? "bg-safety text-safety-foreground"
+                                  : "bg-red-600 text-white"
                                   }`}>
                                   {isActive ? t("Aktif", "Active") : t("Expired", "Expired")}
                                 </span>
@@ -1068,6 +1074,7 @@ function Certification() {
                             })()}
                           </div>
                         </div>
+
                       </div>
                     ) : (
                       <div className="border border-red-200 bg-red-50/50 p-5">
