@@ -428,9 +428,8 @@ function Reveal({
   return (
     <Tag
       ref={ref}
-      className={`${className} transition-all duration-700 ease-out ${
-        revealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-      }`}
+      className={`${className} transition-all duration-700 ease-out ${revealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+        }`}
     >
       {children}
     </Tag>
@@ -949,7 +948,7 @@ function Certification() {
                 {t("Masukkan nomor registrasi sertifikat resmi Anda untuk memverifikasi data kompetensi peserta di database SEAL.", "Enter your official certificate registration number to verify participant competency details in the SEAL database.")}
               </p>
             </div>
-            
+
             <div className="lg:col-span-7 flex flex-col justify-start">
               <form
                 onSubmit={async (e) => {
@@ -1059,11 +1058,10 @@ function Certification() {
                               const todayStr = getTodayString();
                               const isActive = !verifyResult.data.tanggal_expired || verifyResult.data.tanggal_expired >= todayStr;
                               return (
-                                <span className={`inline-flex items-center mt-1 px-2.5 py-0.5 text-[10px] font-bold uppercase ${
-                                  isActive
+                                <span className={`inline-flex items-center mt-1 px-2.5 py-0.5 text-[10px] font-bold uppercase ${isActive
                                     ? "bg-safety text-safety-foreground"
                                     : "bg-red-600 text-white"
-                                }`}>
+                                  }`}>
                                   {isActive ? t("Aktif", "Active") : t("Expired", "Expired")}
                                 </span>
                               );
@@ -1364,7 +1362,7 @@ function ProgramModal({ program, onClose, onRegister }: { program: Program; onCl
           <div>
             <h4 className="text-[10px] font-bold uppercase tracking-wider text-midgray">{t("Materi Utama (Syllabus)", "Key Syllabus Topics")}</h4>
             <ul className="mt-3 grid grid-cols-1 gap-2.5 text-sm sm:grid-cols-2">
-              {(t(program.syllabus, program.syllabusEn) as string[]).map((item, idx) => (
+              {(t(program.syllabus, program.syllabusEn) as unknown as string[]).map((item, idx) => (
                 <li key={idx} className="flex items-start gap-2.5 text-darkgray"><Check size={16} className="mt-0.5 shrink-0 text-charcoal" strokeWidth={3} /><span>{item}</span></li>
               ))}
             </ul>

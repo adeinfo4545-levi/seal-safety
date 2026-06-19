@@ -5,7 +5,7 @@ export type Lang = "id" | "en";
 type Ctx = {
   lang: Lang;
   setLang: (l: Lang) => void;
-  t: (id: string, en: string) => string;
+  t: <T>(id: T, en: T) => T;
 };
 
 const LangCtx = createContext<Ctx | null>(null);
@@ -33,7 +33,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     } catch {}
   };
 
-  const t = (id: string, en: string) => (lang === "id" ? id : en);
+  const t = <T,>(id: T, en: T): T => (lang === "id" ? id : en);
 
   return <LangCtx.Provider value={{ lang, setLang, t }}>{children}</LangCtx.Provider>;
 }
