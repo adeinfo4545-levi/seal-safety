@@ -428,9 +428,8 @@ function Reveal({
   return (
     <Tag
       ref={ref}
-      className={`${className} transition-all duration-700 ease-out ${
-        revealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-      }`}
+      className={`${className} transition-all duration-700 ease-out ${revealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+        }`}
     >
       {children}
     </Tag>
@@ -878,6 +877,8 @@ function Corporate() {
   );
 }
 
+
+
 function Certification() {
   const { t } = useT();
   const [cert, setCert] = useState("");
@@ -889,9 +890,30 @@ function Certification() {
       nama_peserta: string;
       nama_program: string;
       tanggal_terbit: string;
+      tanggal_expired: string;
       status: string;
+      nomor_sertifikat: string;
     };
   } | null>(null);
+
+  const formatDate = (dateStr: string) => {
+    if (!dateStr) return "";
+    const parts = dateStr.split("-");
+    if (parts.length === 3) {
+      const [year, month, day] = parts;
+      const shortYear = year.slice(-2);
+      return `${day}/${month}/${shortYear}`;
+    }
+    return dateStr;
+  };
+
+  const getTodayString = () => {
+    const d = new Date();
+    const year = d.getFullYear();
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  };
 
   return (
     <section className="border-b border-border bg-background py-24">
@@ -929,7 +951,7 @@ function Certification() {
                 {t("Masukkan nomor registrasi sertifikat resmi Anda untuk memverifikasi data kompetensi peserta di database SEAL.", "Enter your official certificate registration number to verify participant competency details in the SEAL database.")}
               </p>
             </div>
-            
+
             <div className="lg:col-span-7 flex flex-col justify-start">
               <form
                 onSubmit={async (e) => {
@@ -950,7 +972,10 @@ function Certification() {
                     if (result.status === "success") {
                       setVerifyResult({
                         status: "success",
-                        data: result.data
+                        data: {
+                          ...result.data,
+                          nomor_sertifikat: trimmedCert
+                        }
                       });
                     } else {
                       setVerifyResult({
@@ -1023,17 +1048,33 @@ function Certification() {
                             <span className="block text-[9px] font-bold uppercase tracking-wider text-midgray">
                               {t("Tanggal Terbit", "Date Issued")}
                             </span>
-                            <span className="font-bold text-charcoal block mt-0.5">{verifyResult.data.tanggal_terbit}</span>
+                            <span className="font-bold text-charcoal block mt-0.5">{formatDate(verifyResult.data.tanggal_terbit)}</span>
                           </div>
                           <div>
                             <span className="block text-[9px] font-bold uppercase tracking-wider text-midgray">
+                              {t("Tanggal Kadaluarsa", "Expired Date")}
+                            </span>
+                            <span className="font-bold text-charcoal block mt-0.5">{formatDate(verifyResult.data.tanggal_expired)}</span>
+                          </div>
+                          <div className="sm:col-span-2">
+                            <span className="block text-[9px] font-bold uppercase tracking-wider text-midgray">
                               {t("Status Keaktifan", "Active Status")}
                             </span>
-                            <span className="inline-flex items-center mt-1 px-2.5 py-0.5 text-[10px] font-bold uppercase bg-safety text-safety-foreground">
-                              {verifyResult.data.status}
-                            </span>
+                            {(() => {
+                              const todayStr = getTodayString();
+                              const isActive = !verifyResult.data.tanggal_expired || verifyResult.data.tanggal_expired >= todayStr;
+                              return (
+                                <span className={`inline-flex items-center mt-1 px-2.5 py-0.5 text-[10px] font-bold uppercase ${isActive
+                                  ? "bg-safety text-safety-foreground"
+                                  : "bg-red-600 text-white"
+                                  }`}>
+                                  {isActive ? t("Aktif", "Active") : t("Expired", "Expired")}
+                                </span>
+                              );
+                            })()}
                           </div>
                         </div>
+
                       </div>
                     ) : (
                       <div className="border border-red-200 bg-red-50/50 p-5">
@@ -1328,7 +1369,7 @@ function ProgramModal({ program, onClose, onRegister }: { program: Program; onCl
           <div>
             <h4 className="text-[10px] font-bold uppercase tracking-wider text-midgray">{t("Materi Utama (Syllabus)", "Key Syllabus Topics")}</h4>
             <ul className="mt-3 grid grid-cols-1 gap-2.5 text-sm sm:grid-cols-2">
-              {(t(program.syllabus, program.syllabusEn) as string[]).map((item, idx) => (
+              {t(program.syllabus, program.syllabusEn).map((item, idx) => (
                 <li key={idx} className="flex items-start gap-2.5 text-darkgray"><Check size={16} className="mt-0.5 shrink-0 text-charcoal" strokeWidth={3} /><span>{item}</span></li>
               ))}
             </ul>
