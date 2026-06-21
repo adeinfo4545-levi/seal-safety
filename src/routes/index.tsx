@@ -333,8 +333,8 @@ const programs: Program[] = [
     descEn: "Basic security guard competency training and certification to meet police regulations and industrial security standards.",
     dur: "10 Hari",
     durEn: "10 Days",
-    cert: "POLRI",
-    certEn: "POLRI",
+    cert: "Security",
+    certEn: "Security",
     icon: Shield,
     syllabus: [
       "Peranan, Tugas Pokok, dan Fungsi Satpam (Tupoksi)",
