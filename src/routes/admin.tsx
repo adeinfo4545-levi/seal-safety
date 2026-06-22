@@ -715,11 +715,26 @@ const generateCertificatePDF = async (cert: any): Promise<Blob> => {
     if (sigResponse.ok) {
       const sigBytes = await sigResponse.arrayBuffer();
       const sigImage = await pdfDoc.embedPng(sigBytes);
+      // Dynamically scale signature while preserving its original aspect ratio
+      const maxBoxWidth = 400;
+      const maxBoxHeight = 210;
+      
+      const imgWidth = sigImage.width;
+      const imgHeight = sigImage.height;
+      const scaleRatio = Math.min(maxBoxWidth / imgWidth, maxBoxHeight / imgHeight);
+      
+      const drawWidth = imgWidth * scaleRatio;
+      const drawHeight = imgHeight * scaleRatio;
+      
+      // Center horizontally on trainer name (xCenter = 945.7) and vertically in the signature space
+      const drawX = 945.7 - (drawWidth / 2);
+      const drawY = 120 + (maxBoxHeight - drawHeight) / 2;
+
       page.drawImage(sigImage, {
-        x: 755.7, // Centered above trainer name centered at 945.7 (945.7 - 380/2 = 755.7)
-        y: 120,   // Placed vertically above trainer name
-        width: 400,
-        height: 210,
+        x: drawX,
+        y: drawY,
+        width: drawWidth,
+        height: drawHeight,
       });
     }
   } catch {
