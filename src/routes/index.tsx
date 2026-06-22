@@ -1477,7 +1477,7 @@ function WhatsAppFAB() {
       target="_blank"
       rel="noreferrer"
       aria-label={t("Hubungi via WhatsApp", "Contact via WhatsApp")}
-      className="fixed bottom-6 right-6 z-40 grid h-14 w-14 place-items-center bg-charcoal text-safety shadow-2xl transition-transform hover:-translate-y-1"
+      className="fixed bottom-6 right-6 z-40 grid h-14 w-14 place-items-center bg-[#25D366] text-white rounded-[12px] shadow-2xl transition-transform hover:-translate-y-1"
     >
       <WhatsappIcon size={24} />
     </a>
