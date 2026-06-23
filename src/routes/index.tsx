@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type FormEvent } from "react";
+import { z } from "zod";
 import {
   ArrowRight,
   Check,
@@ -39,6 +40,8 @@ import logopertamina from "@/assets/logo-pertamina.png";
 import logophe from "@/assets/logo-phe.png";
 import logovale from "@/assets/logo-vale.png";
 import { useT, LanguageToggle } from "@/lib/i18n";
+
+const API_BASE_URL = import.meta.env.VITE_API_URL || "/api";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -967,7 +970,7 @@ function Certification() {
                   setLoading(true);
                   setVerifyResult(null);
                   try {
-                    const response = await fetch(`http://localhost/Project-seal-ssh/api/verifikasi_sertifikat.php?nomor=${encodeURIComponent(trimmedCert)}`);
+                    const response = await fetch(`${API_BASE_URL}/verifikasi_sertifikat.php?nomor=${encodeURIComponent(trimmedCert)}`);
                     const result = await response.json();
                     if (result.status === "success") {
                       setVerifyResult({
@@ -1487,34 +1490,101 @@ function WhatsAppFAB() {
 function Contact() {
   const { t } = useT();
   const [sent, setSent] = useState(false);
+  
+  // CAPTCHA State
+  const [captchaNum1, setCaptchaNum1] = useState(0);
+  const [captchaNum2, setCaptchaNum2] = useState(0);
+  const [captchaAns, setCaptchaAns] = useState("");
+  const [captchaError, setCaptchaError] = useState("");
+  const [validationErrors, setValidationErrors] = useState<Record<string, string>>({});
+
+  const generateCaptcha = () => {
+    setCaptchaNum1(Math.floor(Math.random() * 9) + 1);
+    setCaptchaNum2(Math.floor(Math.random() * 9) + 1);
+    setCaptchaAns("");
+    setCaptchaError("");
+  };
+
+  useEffect(() => {
+    generateCaptcha();
+  }, []);
+
+  const contactSchema = z.object({
+    nama: z.string()
+      .min(2, t("Nama minimal 2 karakter", "Name must be at least 2 characters"))
+      .max(100, t("Nama maksimal 100 karakter", "Name must be at most 100 characters"))
+      .regex(/^[a-zA-Z\s'.]+$/, t("Nama hanya boleh mengandung huruf, spasi, tanda kutip, atau titik", "Name can only contain letters, spaces, quotes, or periods")),
+    perusahaan: z.string()
+      .min(2, t("Nama perusahaan minimal 2 karakter", "Company name must be at least 2 characters"))
+      .max(100, t("Nama perusahaan maksimal 100 karakter", "Company name must be at most 100 characters")),
+    email: z.string().email(t("Format email tidak valid", "Invalid email format")),
+    hp: z.string().regex(/^(\+62|62|0)[0-9]{8,15}$/, t("Nomor HP tidak valid (e.g. 08123456789)", "Invalid phone number (e.g. 08123456789)")),
+    jenis: z.string().min(1, t("Silakan pilih jenis pelatihan", "Please select a training course")),
+    pesan: z.string().max(1000, t("Pesan maksimal 1000 karakter", "Message can be at most 1000 characters")).optional(),
+  });
+
   const submit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setValidationErrors({});
+    setCaptchaError("");
+
     const formData = new FormData(e.currentTarget);
     const payload = {
-      nama: formData.get("nama"),
-      perusahaan: formData.get("perusahaan"),
-      email: formData.get("email"),
-      hp: formData.get("hp"),
-      jenis: formData.get("jenis"),
-      pesan: formData.get("pesan"),
+      nama: formData.get("nama") as string,
+      perusahaan: formData.get("perusahaan") as string,
+      email: formData.get("email") as string,
+      hp: formData.get("hp") as string,
+      jenis: formData.get("jenis") as string,
+      pesan: (formData.get("pesan") as string) || "",
     };
 
+    // Zod validation
+    const parsed = contactSchema.safeParse(payload);
+    if (!parsed.success) {
+      const fieldErrors: Record<string, string> = {};
+      parsed.error.issues.forEach((issue) => {
+        if (issue.path[0]) {
+          fieldErrors[issue.path[0] as string] = issue.message;
+        }
+      });
+      setValidationErrors(fieldErrors);
+      return;
+    }
+
+    // CAPTCHA validation
+    const parsedAns = parseInt(captchaAns, 10);
+    if (isNaN(parsedAns) || parsedAns !== captchaNum1 + captchaNum2) {
+      setCaptchaError(t("Jawaban verifikasi salah!", "Security answer is incorrect!"));
+      generateCaptcha();
+      return;
+    }
+
     try {
-      const response = await fetch("http://localhost/Project-seal-ssh/api/simpan_permintaan.php", {
+      const response = await fetch(`${API_BASE_URL}/simpan_permintaan.php`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({
+          ...payload,
+          captcha_n1: captchaNum1,
+          captcha_n2: captchaNum2,
+          captcha_ans: parsedAns,
+        }),
       });
       const result = await response.json();
       if (result.status === "success") {
         setSent(true);
       } else {
         alert(t("Gagal menyimpan permintaan: ", "Failed to submit request: ") + result.message);
+        generateCaptcha();
       }
     } catch (err) {
+      if (import.meta.env.DEV) {
+        console.error(err);
+      }
       alert(t("Gagal menghubungkan ke database server.", "Failed to connect to the database server."));
+      generateCaptcha();
     }
   };
   return (
@@ -1592,8 +1662,13 @@ function Contact() {
                       type={f.t}
                       name={f.n}
                       required={f.req}
-                      className="mt-2 w-full border border-border bg-background px-4 py-3 text-sm text-charcoal focus:border-charcoal focus:outline-none focus:ring-2 focus:ring-safety"
+                      className={`mt-2 w-full border bg-background px-4 py-3 text-sm text-charcoal focus:outline-none focus:ring-2 focus:ring-safety ${
+                        validationErrors[f.n] ? "border-destructive focus:border-destructive focus:ring-destructive/30" : "border-border focus:border-charcoal"
+                      }`}
                     />
+                    {validationErrors[f.n] && (
+                      <span className="text-xs text-destructive mt-1 font-semibold block">{validationErrors[f.n]}</span>
+                    )}
                   </label>
                 ))}
                 <label className="block sm:col-span-2">
@@ -1603,7 +1678,9 @@ function Contact() {
                   <select
                     name="jenis"
                     required
-                    className="mt-2 w-full border border-border bg-background px-4 py-3 text-sm text-charcoal focus:border-charcoal focus:outline-none focus:ring-2 focus:ring-safety"
+                    className={`mt-2 w-full border bg-background px-4 py-3 text-sm text-charcoal focus:outline-none focus:ring-2 focus:ring-safety ${
+                      validationErrors.jenis ? "border-destructive focus:border-destructive focus:ring-destructive/30" : "border-border focus:border-charcoal"
+                    }`}
                   >
                     <option value="">{t("Pilih program pelatihan…", "Select a training program…")}</option>
                     {programs.map((p) => (
@@ -1611,6 +1688,9 @@ function Contact() {
                     ))}
                     <option value="Customized / Corporate Training">{t("Customized / Corporate Training", "Customized / Corporate Training")}</option>
                   </select>
+                  {validationErrors.jenis && (
+                    <span className="text-xs text-destructive mt-1 font-semibold block">{validationErrors.jenis}</span>
+                  )}
                 </label>
                 <label className="block sm:col-span-2">
                   <span className="block text-[11px] font-bold uppercase tracking-wider text-midgray">
@@ -1619,8 +1699,36 @@ function Contact() {
                   <textarea
                     name="pesan"
                     rows={4}
-                    className="mt-2 w-full resize-none border border-border bg-background px-4 py-3 text-sm text-charcoal focus:border-charcoal focus:outline-none focus:ring-2 focus:ring-safety"
+                    className={`mt-2 w-full resize-none border bg-background px-4 py-3 text-sm text-charcoal focus:outline-none focus:ring-2 focus:ring-safety ${
+                      validationErrors.pesan ? "border-destructive focus:border-destructive focus:ring-destructive/30" : "border-border focus:border-charcoal"
+                    }`}
                   />
+                  {validationErrors.pesan && (
+                    <span className="text-xs text-destructive mt-1 font-semibold block">{validationErrors.pesan}</span>
+                  )}
+                </label>
+                
+                {/* Visual CAPTCHA Field */}
+                <label className="block sm:col-span-2">
+                  <span className="block text-[11px] font-bold uppercase tracking-wider text-midgray flex items-center justify-between">
+                    <span>{t("Verifikasi Keamanan (CAPTCHA)", "Security Verification (CAPTCHA)")}</span>
+                    <span className="text-safety bg-charcoal px-2 py-0.5 font-bold font-mono">
+                      {captchaNum1} + {captchaNum2} = ?
+                    </span>
+                  </span>
+                  <input
+                    type="number"
+                    value={captchaAns}
+                    onChange={(e) => setCaptchaAns(e.target.value)}
+                    required
+                    placeholder={t("Berapa hasil penjumlahan di atas?", "What is the sum of the numbers above?")}
+                    className={`mt-2 w-full border bg-background px-4 py-3 text-sm text-charcoal focus:outline-none focus:ring-2 focus:ring-safety ${
+                      captchaError ? "border-destructive focus:border-destructive focus:ring-destructive/30" : "border-border focus:border-charcoal"
+                    }`}
+                  />
+                  {captchaError && (
+                    <span className="text-xs text-destructive mt-1 font-semibold block">{captchaError}</span>
+                  )}
                 </label>
                 <button
                   type="submit"
