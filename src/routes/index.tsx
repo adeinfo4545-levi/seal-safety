@@ -1627,6 +1627,8 @@ function Contact() {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.4916017831806!2d106.67749417459102!3d-6.330292061939303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e55fc5beae9d%3A0xcbac4697569661be!2sSEAL%20Training%20%26%20Consulting!5e0!3m2!1sid!2sid!4v1781677034663!5m2!1sid!2sid"
                 className="h-full w-full"
                 loading="lazy"
+                sandbox="allow-scripts allow-same-origin"
+                referrerPolicy="no-referrer"
               />
             </div>
           </div>
