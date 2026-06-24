@@ -622,10 +622,12 @@ export function Nav() {
         <div className="hidden items-center gap-3 lg:flex">
           <LanguageToggle />
           <a
-            href="/#contact"
-            className="inline-flex items-center gap-2 bg-charcoal px-5 py-2.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+            href={WA}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 bg-[#25D366] px-5 py-2.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
           >
-            {t("Jadwalkan Pelatihan", "Schedule Training")} <ArrowRight size={14} />
+            {t("Konsultasi Gratis", "Free Consultation")} <WhatsappIcon size={14} />
           </a>
         </div>
         <div className="flex items-center gap-3 lg:hidden">
@@ -652,11 +654,13 @@ export function Nav() {
               </a>
             ))}
             <a
-              href="/#contact"
+              href={WA}
+              target="_blank"
+              rel="noreferrer"
               onClick={() => setOpen(false)}
-              className="mt-4 bg-charcoal px-5 py-3 text-center text-sm font-semibold text-white"
+              className="mt-4 bg-[#25D366] px-5 py-3 text-center text-sm font-semibold text-white"
             >
-              {t("Jadwalkan Pelatihan", "Schedule Training")}
+              {t("Konsultasi Gratis", "Free Consultation")}
             </a>
           </div>
         </div>
@@ -694,16 +698,18 @@ function Hero() {
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a
-              href="#contact"
-              className="inline-flex items-center gap-2 bg-charcoal px-7 py-4 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+              href={WA}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 bg-[#25D366] px-7 py-4 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
             >
-              {t("Jadwalkan Pelatihan", "Schedule Training")} <ArrowRight size={16} />
+              {t("Konsultasi Gratis", "Free Consultation")} <WhatsappIcon size={16} />
             </a>
             <a
-              href="#programs"
+              href="#schedule"
               className="inline-flex items-center gap-2 border border-charcoal px-7 py-4 text-sm font-semibold text-charcoal transition-colors hover:bg-charcoal hover:text-white"
             >
-              {t("Lihat Program Training", "View Training Programs")}
+              {t("Jadwal Pelatihan Terdekat", "Upcoming Training Schedule")}
             </a>
           </div>
           <ul className="mt-12 grid grid-cols-1 gap-3 border-t border-border pt-8 sm:grid-cols-2">
@@ -1414,7 +1420,7 @@ function LeadCTA() {
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 border border-charcoal px-7 py-4 text-sm font-semibold text-charcoal transition-colors hover:bg-charcoal hover:text-white"
+            className="inline-flex items-center gap-2 bg-white border border-charcoal px-7 py-4 text-sm font-semibold text-charcoal transition-colors hover:bg-charcoal hover:text-white"
           >
             {t("Request Proposal", "Request Proposal")} <ArrowRight size={16} />
           </a>
