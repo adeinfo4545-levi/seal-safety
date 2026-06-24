@@ -1,5 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type FormEvent } from "react";
+import { articles } from "@/data/articles";
 import { z } from "zod";
 import {
   ArrowRight,
@@ -28,9 +29,6 @@ import heroImg from "@/assets/hero.jpg";
 import t1 from "@/assets/t1.jpg";
 import t2 from "@/assets/t2.jpg";
 import t3 from "@/assets/t3.jpg";
-import blog1 from "@/assets/blog1.jpg";
-import blog2 from "@/assets/blog2.jpg";
-import blog3 from "@/assets/blog3.jpg";
 import logoImg from "@/assets/logo.png";
 import logoWhiteImg from "@/assets/logo-white.png";
 import logomedco from "@/assets/logo_medco.png";
@@ -375,11 +373,7 @@ const testimonials = [
   { img: t3, name: "Bambang Setiawan", pos: "Operations Lead", posEn: "Operations Lead", co: "PT Migas Sentosa", q: "Customized training yang fleksibel dan sesuai shift operasional. Dokumentasi sertifikasi rapi dan auditable.", qEn: "Customized training flexible to operational shifts. Certification records are tidy and auditable." },
 ];
 
-const articles = [
-  { img: blog1, t: "Pelatihan H2S untuk Industri Migas", tEn: "H2S Training for the Oil & Gas Industry", e: "Mengapa kompetensi penanganan H2S menjadi syarat mutlak di lapangan Oil & Gas modern.", eEn: "Why H2S competency is a non-negotiable in modern Oil & Gas field operations." },
-  { img: blog2, t: "Pentingnya Authorized Gas Tester", tEn: "The Importance of the Authorized Gas Tester", e: "Peran AGT dalam memastikan keselamatan pekerjaan panas dan entry ruang terbatas.", eEn: "The AGT's role in safeguarding hot work and confined space entry." },
-  { img: blog3, t: "Strategi Mencegah Kecelakaan Kerja", tEn: "Strategies to Prevent Workplace Incidents", e: "Pendekatan budaya safety berbasis observasi, leading indicator, dan training berkelanjutan.", eEn: "A safety culture approach built on observation, leading indicators, and continuous training." },
-];
+
 
 const whyUs = [
   { icon: Users, t: "Instruktur Praktisi Industri", tEn: "Industry Practitioner Instructors", d: "Instruktur berasal dari sektor Oil & Gas, Petrochemical, Mining, dan Marine dengan pengalaman lapangan lebih dari 15 tahun.", dEn: "Instructors come from Oil & Gas, Petrochemical, Mining, and Marine sectors with 15+ years of field experience." },
@@ -476,24 +470,24 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
   );
 }
 
-function Nav() {
+export function Nav() {
   const { t } = useT();
   const [open, setOpen] = useState(false);
   const [mega, setMega] = useState(false);
   const links: [string, string, string][] = [
-    ["#why", t("Tentang", "About")],
-    ["#schedule", t("Jadwal", "Schedule")],
-    ["#corporate", t("Corporate", "Corporate")],
-    ["#contact", t("Kontak", "Contact")],
+    ["/#why", t("Tentang", "About")],
+    ["/#schedule", t("Jadwal", "Schedule")],
+    ["/#corporate", t("Corporate", "Corporate")],
+    ["/#contact", t("Kontak", "Contact")],
   ].map(([h, l]) => [h, l, l]) as [string, string, string][];
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
       <div className="container-swiss flex h-16 items-center justify-between gap-4">
-        <a href="#top" className="flex items-center">
+        <a href="/#top" className="flex items-center">
           <img src={logoImg} alt="SEAL Training Center" className="h-10 w-auto object-contain" />
         </a>
         <nav className="hidden items-center gap-8 lg:flex">
-          <a href="#why" className="text-sm font-medium text-darkgray hover:text-charcoal">
+          <a href="/#why" className="text-sm font-medium text-darkgray hover:text-charcoal">
             {t("Tentang", "About")}
           </a>
           <div
@@ -510,7 +504,7 @@ function Nav() {
                   {programs.map((p) => (
                     <a
                       key={p.name}
-                      href="#programs"
+                      href="/#programs"
                       className="group flex items-start gap-3 border-l-2 border-transparent pl-3 transition-colors hover:border-safety"
                     >
                       <p.icon size={18} className="mt-0.5 shrink-0 text-charcoal" />
@@ -528,20 +522,20 @@ function Nav() {
               </div>
             )}
           </div>
-          <a href="#schedule" className="text-sm font-medium text-darkgray hover:text-charcoal">
+          <a href="/#schedule" className="text-sm font-medium text-darkgray hover:text-charcoal">
             {t("Jadwal", "Schedule")}
           </a>
-          <a href="#corporate" className="text-sm font-medium text-darkgray hover:text-charcoal">
+          <a href="/#corporate" className="text-sm font-medium text-darkgray hover:text-charcoal">
             {t("Corporate", "Corporate")}
           </a>
-          <a href="#contact" className="text-sm font-medium text-darkgray hover:text-charcoal">
+          <a href="/#contact" className="text-sm font-medium text-darkgray hover:text-charcoal">
             {t("Kontak", "Contact")}
           </a>
         </nav>
         <div className="hidden items-center gap-3 lg:flex">
           <LanguageToggle />
           <a
-            href="#contact"
+            href="/#contact"
             className="inline-flex items-center gap-2 bg-charcoal px-5 py-2.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
           >
             {t("Jadwalkan Pelatihan", "Schedule Training")} <ArrowRight size={14} />
@@ -571,7 +565,7 @@ function Nav() {
               </a>
             ))}
             <a
-              href="#contact"
+              href="/#contact"
               onClick={() => setOpen(false)}
               className="mt-4 bg-charcoal px-5 py-3 text-center text-sm font-semibold text-white"
             >
@@ -1290,12 +1284,13 @@ function Blog() {
                 </div>
                 <h3 className="mt-3 text-lg font-bold leading-snug text-charcoal">{t(a.t, a.tEn)}</h3>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-midgray">{t(a.e, a.eEn)}</p>
-                <a
-                  href="#"
+                <Link
+                  to="/artikel/$id"
+                  params={{ id: a.id }}
                   className="mt-5 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-charcoal group-hover:text-charcoal/70"
                 >
                   {t("Baca Artikel", "Read Article")} <ArrowRight size={12} />
-                </a>
+                </Link>
               </div>
             </Reveal>
           ))}
@@ -1391,7 +1386,7 @@ function ProgramModal({ program, onClose, onRegister }: { program: Program; onCl
   );
 }
 
-function Footer() {
+export function Footer() {
   const { t } = useT();
   return (
     <footer className="bg-charcoal py-16 text-white/75">
@@ -1472,7 +1467,7 @@ function Footer() {
   );
 }
 
-function WhatsAppFAB() {
+export function WhatsAppFAB() {
   const { t } = useT();
   return (
     <a
