@@ -40,7 +40,7 @@ const securityMiddleware = createMiddleware().server(async ({ next }) => {
       ["Referrer-Policy", "strict-origin-when-cross-origin"],
       ["X-XSS-Protection", "1; mode=block"],
       ["Permissions-Policy", "camera=(), microphone=(), geolocation=()"],
-      ["Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com;"],
+      ["Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com; connect-src 'self' http://localhost http://127.0.0.1 ws://localhost:* ws://127.0.0.1:* http://localhost:* http://127.0.0.1:*;"],
     ];
 
     for (const [name, value] of secHeaders) {

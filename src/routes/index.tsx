@@ -39,7 +39,7 @@ import logophe from "@/assets/logo-phe.png";
 import logovale from "@/assets/logo-vale.png";
 import { useT, LanguageToggle } from "@/lib/i18n";
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "/api";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1/Project-seal-ssh/api";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -1665,7 +1665,7 @@ function Contact() {
       if (import.meta.env.DEV) {
         console.error(err);
       }
-      alert(t("Gagal menghubungkan ke database server.", "Failed to connect to the database server."));
+      alert(t(`Gagal menghubungkan ke database server.\nURL API: ${API_BASE_URL}/simpan_permintaan.php\nError sistem: ` + (err instanceof Error ? err.message : String(err)), `Failed to connect to the database server.\nAPI URL: ${API_BASE_URL}/simpan_permintaan.php\nSystem error: ` + String(err)));
       generateCaptcha();
     }
   };
