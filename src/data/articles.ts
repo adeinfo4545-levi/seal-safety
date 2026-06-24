@@ -101,42 +101,17 @@ Ini adalah alasan paling fundamental. Setiap tahun, insiden yang melibatkan H2S 
 
 Program pelatihan H2S yang komprehensif umumnya mencakup modul-modul berikut:
 
-### Modul 1: Pengenalan H2S dan Sifat-Sifatnya
-- Karakteristik fisik dan kimia H2S
-- Sumber-sumber H2S di lingkungan migas
-- Batas paparan yang aman (TLV, STEL, IDLH)
-- Efek H2S terhadap kesehatan manusia
+**Modul 1**: Pengenalan H2S dan Sifat-Sifatnya - Karakteristik fisik dan kimia H2S - Sumber-sumber H2S di lingkungan migas - Batas paparan yang aman (TLV, STEL, IDLH) - Efek H2S terhadap kesehatan manusia
 
-### Modul 2: Deteksi dan Pemantauan H2S
-- Cara kerja alat deteksi gas (fixed detector dan portable detector)
-- Kalibrasi dan pengujian alat deteksi
-- Interpretasi alarm dan prosedur respons
-- Sistem peringatan dini di fasilitas migas
+**Modul 2**: Deteksi dan Pemantauan H2S - Cara kerja alat deteksi gas (fixed detector dan portable detector) - Kalibrasi dan pengujian alat deteksi - Interpretasi alarm dan prosedur respons - Sistem peringatan dini di fasilitas migas
 
-### Modul 3: Alat Pelindung Diri (APD) untuk H2S
-- Jenis-jenis respirator dan SCBA (Self-Contained Breathing Apparatus)
-- Cara memakai, melepas, dan memeriksa SCBA dengan benar
-- Pemeliharaan dan penyimpanan APD
-- Donning & doffing drill (latihan menggunakan APD dalam kondisi darurat)
+**Modul 3**: Alat Pelindung Diri (APD) untuk H2S - Jenis-jenis respirator dan SCBA (Self-Contained Breathing Apparatus) - Cara memakai, melepas, dan memeriksa SCBA dengan benar - Pemeliharaan dan penyimpanan APD - Donning & doffing drill (latihan menggunakan APD dalam kondisi darurat)
 
-### Modul 4: Prosedur Keselamatan dan Rencana Tanggap Darurat
-- Sistem izin kerja di area H2S
-- Prosedur memasuki ruang terbatas (confined space entry)
-- Jalur evakuasi dan titik kumpul (muster point)
-- Komunikasi darurat dan sistem radio
-- Koordinasi dengan tim respons darurat
+**Modul 4**: Prosedur Keselamatan dan Rencana Tanggap Darurat - Sistem izin kerja di area H2S - Prosedur memasuki ruang terbatas (confined space entry) - Jalur evakuasi dan titik kumpul (muster point) - Komunikasi darurat dan sistem radio - Koordinasi dengan tim respons darurat
 
-### Modul 5: Pertolongan Pertama pada Korban H2S
-- Prosedur penyelamatan korban pingsan akibat H2S
-- Teknik CPR (Cardiopulmonary Resuscitation)
-- Penggunaan Automated External Defibrillator (AED)
-- Protokol evakuasi medis
+**Modul 5**: Pertolongan Pertama pada Korban H2S - Prosedur penyelamatan korban pingsan akibat H2S - Teknik CPR (Cardiopulmonary Resuscitation) - Penggunaan Automated External Defibrillator (AED) - Protokol evakuasi medis
 
-### Modul 6: Latihan dan Simulasi Lapangan
-- Simulasi skenario kebocoran H2S
-- Latihan evakuasi massal
-- Penggunaan SCBA dalam kondisi simulasi
-- Evaluasi dan debriefing
+**Modul 6**: Latihan dan Simulasi Lapangan - Simulasi skenario kebocoran H2S - Latihan evakuasi massal - Penggunaan SCBA dalam kondisi simulasi - Evaluasi dan debriefing
 
 ## Siapa yang Wajib Mengikuti Pelatihan H2S?
 
@@ -288,42 +263,17 @@ This is the most fundamental reason. H2S-related incidents still occur globally.
 
 A comprehensive H2S training program typically covers the following modules:
 
-### Module 1: Introduction to H2S and its Properties
-- Physical and chemical characteristics of H2S
-- Common sources of H2S in oil and gas operations
-- Safe exposure limits (TLV, STEL, IDLH)
-- Health effects of H2S exposure
+**Module 1**: Introduction to H2S and its Properties - Physical and chemical characteristics of H2S - Common sources of H2S in oil and gas operations - Safe exposure limits (TLV, STEL, IDLH) - Health effects of H2S exposure
 
-### Module 2: Detection and Monitoring
-- Operation of gas detection equipment (fixed and portable detectors)
-- Device calibration and bump testing
-- Alarm interpretation and response protocols
-- Early warning systems in facilities
+**Module 2**: Detection and Monitoring - Operation of gas detection equipment (fixed and portable detectors) - Device calibration and bump testing - Alarm interpretation and response protocols - Early warning systems in facilities
 
-### Module 3: Personal Protective Equipment (PPE)
-- Types of respirators and SCBA (Self-Contained Breathing Apparatus)
-- Correct donning, doffing, and inspection procedures for SCBA
-- PPE maintenance and storage
-- Emergency donning drill practice
+**Module 3**: Personal Protective Equipment (PPE) - Types of respirators and SCBA (Self-Contained Breathing Apparatus) - Correct donning, doffing, and inspection procedures for SCBA - PPE maintenance and storage - Emergency donning drill practice
 
-### Module 4: Safe Work Procedures and Emergency Response
-- Permit-to-Work systems in H2S zones
-- Confined space entry procedures
-- Evacuation routes and muster points
-- Emergency communication and radio systems
-- Coordination with Emergency Response Teams (ERT)
+**Module 4**: Safe Work Procedures and Emergency Response - Permit-to-Work systems in H2S zones - Confined space entry procedures - Evacuation routes and muster points - Emergency communication and radio systems - Coordination with Emergency Response Teams (ERT)
 
-### Module 5: First Aid for H2S Exposure
-- Rescue procedures for unconscious victims
-- CPR (Cardiopulmonary Resuscitation) techniques
-- Automated External Defibrillator (AED) usage
-- Medical evacuation protocols
+**Module 5**: First Aid for H2S Exposure - Rescue procedures for unconscious victims - CPR (Cardiopulmonary Resuscitation) techniques - Automated External Defibrillator (AED) usage - Medical evacuation protocols
 
-### Module 6: Practical Drills and Field Simulations
-- H2S leak scenario simulations
-- Mass evacuation drills
-- SCBA training in simulated hazardous environments
-- Evaluation and debriefing
+**Module 6**: Practical Drills and Field Simulations - H2S leak scenario simulations - Mass evacuation drills - SCBA training in simulated hazardous environments - Evaluation and debriefing
 
 ## Who is Required to Attend H2S Training?
 
