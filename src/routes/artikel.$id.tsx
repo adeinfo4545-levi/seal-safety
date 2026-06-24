@@ -54,6 +54,7 @@ function ArtikelDetail() {
             <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
               <Link
                 to="/"
+                hash="insights"
                 className="inline-flex items-center justify-center gap-2 bg-charcoal px-5 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
               >
                 <ArrowLeft size={16} /> {t("Kembali ke Beranda", "Back to Home")}
@@ -76,7 +77,7 @@ function ArtikelDetail() {
       {/* Breadcrumbs */}
       <div className="border-b border-border bg-lightgray py-4 text-[11px] font-bold uppercase tracking-wider text-midgray">
         <div className="container-swiss flex items-center gap-2">
-          <Link to="/" className="hover:text-charcoal transition-colors">
+          <Link to="/" hash="insights" className="hover:text-charcoal transition-colors">
             HOME
           </Link>
           <span>/</span>
@@ -94,6 +95,7 @@ function ArtikelDetail() {
           {/* Back Button */}
           <Link
             to="/"
+            hash="insights"
             className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-midgray hover:text-charcoal transition-colors mb-8 group"
           >
             <ArrowLeft

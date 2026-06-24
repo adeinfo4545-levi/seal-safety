@@ -1255,7 +1255,7 @@ function Schedule() {
 function Blog() {
   const { t } = useT();
   return (
-    <section className="border-b border-border bg-lightgray py-24">
+    <section id="insights" className="border-b border-border bg-lightgray py-24">
       <div className="container-swiss">
         <SectionLabel
           kicker={t("Insights", "Insights")}
