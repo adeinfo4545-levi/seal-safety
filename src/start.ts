@@ -33,20 +33,24 @@ const securityMiddleware = createMiddleware().server(async ({ next }) => {
       }
     };
 
-    // Apply headers to the root object (if it is a response)
-    setHeaderSafe(result, "X-Frame-Options", "DENY");
-    setHeaderSafe(result, "X-Content-Type-Options", "nosniff");
-    setHeaderSafe(result, "Strict-Transport-Security", "max-age=31536000; includeSubDomains");
-    setHeaderSafe(result, "Referrer-Policy", "strict-origin-when-cross-origin");
-    setHeaderSafe(result, "X-XSS-Protection", "1; mode=block");
+    const secHeaders: [string, string][] = [
+      ["X-Frame-Options", "DENY"],
+      ["X-Content-Type-Options", "nosniff"],
+      ["Strict-Transport-Security", "max-age=31536000; includeSubDomains"],
+      ["Referrer-Policy", "strict-origin-when-cross-origin"],
+      ["X-XSS-Protection", "1; mode=block"],
+      ["Permissions-Policy", "camera=(), microphone=(), geolocation=()"],
+      ["Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com;"],
+    ];
 
-    // Apply headers to the nested response object (if in Vinxi/Nitro context)
+    for (const [name, value] of secHeaders) {
+      setHeaderSafe(result, name, value);
+    }
+
     if (result && result.response) {
-      setHeaderSafe(result.response, "X-Frame-Options", "DENY");
-      setHeaderSafe(result.response, "X-Content-Type-Options", "nosniff");
-      setHeaderSafe(result.response, "Strict-Transport-Security", "max-age=31536000; includeSubDomains");
-      setHeaderSafe(result.response, "Referrer-Policy", "strict-origin-when-cross-origin");
-      setHeaderSafe(result.response, "X-XSS-Protection", "1; mode=block");
+      for (const [name, value] of secHeaders) {
+        setHeaderSafe(result.response, name, value);
+      }
     }
 
     return result;

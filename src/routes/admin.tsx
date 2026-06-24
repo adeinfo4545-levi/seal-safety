@@ -27,8 +27,9 @@ export const Route = createFileRoute("/admin")({
   component: AdminPage,
 });
 
-// Configure API base URL
 const API_BASE_URL = import.meta.env.VITE_API_URL || "/api";
+
+const SESSION_TIMEOUT_MS = 30 * 60 * 1000;
 
 function AdminPage() {
   const { t } = useT();
@@ -144,6 +145,29 @@ function AdminPage() {
 
       return () => clearInterval(intervalId);
     }
+  }, [isLoggedIn]);
+
+  // Session timeout: auto-logout after 30 minutes of inactivity
+  useEffect(() => {
+    if (!isLoggedIn) return;
+
+    let lastActivity = Date.now();
+    const resetActivity = () => { lastActivity = Date.now(); };
+    const checkTimeout = () => {
+      if (Date.now() - lastActivity > SESSION_TIMEOUT_MS) {
+        handleLogout();
+      }
+    };
+
+    const timer = setInterval(checkTimeout, 60_000);
+    window.addEventListener("click", resetActivity);
+    window.addEventListener("keydown", resetActivity);
+
+    return () => {
+      clearInterval(timer);
+      window.removeEventListener("click", resetActivity);
+      window.removeEventListener("keydown", resetActivity);
+    };
   }, [isLoggedIn]);
 
   // File Upload States
