@@ -335,26 +335,426 @@ Make sure your H2S certification remains active and always choose reputable, ind
     tEn: "The Importance of the Authorized Gas Tester",
     e: "Peran AGT dalam memastikan keselamatan pekerjaan panas dan entry ruang terbatas.",
     eEn: "The AGT's role in safeguarding hot work and confined space entry.",
-    readTime: "6 menit",
-    readTimeEn: "6 min read",
-    metaTitle: "Pentingnya Authorized Gas Tester (AGT) dalam K3 Migas",
-    metaTitleEn: "The Importance of Authorized Gas Tester (AGT) in Oil & Gas safety",
-    metaDesc: "Pelajari mengapa peran AGT (Authorized Gas Tester) sangat vital dalam mendeteksi gas beracun dan mudah terbakar sebelum pekerjaan panas dimulai.",
-    metaDescEn: "Learn why the role of AGT (Authorized Gas Tester) is vital in detecting toxic and flammable gases before starting hot work.",
-    content: `# Pentingnya Authorized Gas Tester (AGT) dalam K3 Migas
+    readTime: "8 menit",
+    readTimeEn: "8 min read",
+    metaTitle: "Authorized Gas Tester: Pentingnya & Peran Krusialnya di Industri",
+    metaTitleEn: "Authorized Gas Tester: Its Importance & Crucial Role in Industry",
+    metaDesc: "Pelajari pentingnya Authorized Gas Tester dalam keselamatan kerja industri, regulasi yang berlaku, tugas, dan cara mendapatkan sertifikasinya.",
+    metaDescEn: "Learn about the importance of the Authorized Gas Tester in industrial workplace safety, applicable regulations, duties, and how to obtain certification.",
+    content: `# Authorized Gas Tester: Pengertian, Pentingnya, dan Peran Krusialnya dalam Keselamatan Industri
 
-Halaman artikel lengkap untuk **Pentingnya Authorized Gas Tester** sedang dalam persiapan. 
+Di lingkungan kerja industri — mulai dari kilang minyak, pabrik kimia, pertambangan, hingga fasilitas pengolahan gas — bahaya tidak selalu terlihat dengan mata telanjang. Gas beracun, gas mudah terbakar, atau kondisi kekurangan oksigen bisa hadir tanpa tanda yang jelas, namun mematikan dalam hitungan menit.
 
-Peran Authorized Gas Tester (AGT) sangat krusial dalam menguji atmosfer udara di ruang terbatas (confined space) maupun area kerja panas (hot work) guna mendeteksi adanya akumulasi gas beracun, gas mudah meledak (flammable gas), maupun kadar oksigen yang tidak aman.
+Di sinilah peran **Authorized Gas Tester (AGT)** menjadi sangat vital. Bukan sekadar seseorang yang membawa alat ukur, melainkan seorang profesional bersertifikat yang memiliki pengetahuan, kompetensi, dan kewenangan resmi untuk memastikan bahwa atmosfer di area kerja aman sebelum siapa pun memasuki atau memulai pekerjaan di dalamnya.
 
-*Kembali lagi dalam waktu dekat untuk membaca ulasan lengkap mengenai kompetensi, tanggung jawab, dan sertifikasi AGT.*`,
-    contentEn: `# The Importance of the Authorized Gas Tester (AGT) in Oil & Gas Safety
+Artikel ini membahas secara menyeluruh mengapa Authorized Gas Tester adalah elemen tak tergantikan dalam sistem Keselamatan dan Kesehatan Kerja (K3), apa risikonya bila diabaikan, regulasi apa yang mengaturnya, serta bagaimana seseorang dapat memperoleh sertifikasi tersebut.
 
-The detailed article for **The Importance of the Authorized Gas Tester** is currently in preparation.
+---
 
-The role of an Authorized Gas Tester (AGT) is critical in testing the atmospheric air in confined spaces or hot work areas to detect accumulation of toxic gases, flammable gases, or unsafe oxygen levels.
+## Apa Itu Authorized Gas Tester?
 
-*Check back soon for the full review on AGT competencies, responsibilities, and certifications.*`,
+**Authorized Gas Tester (AGT)** adalah individu yang telah mendapatkan pelatihan khusus, lulus uji kompetensi, dan memiliki kewenangan resmi untuk melakukan pengujian atmosfer di area kerja terbatas (*confined space*), area berbahaya, atau lokasi yang berpotensi mengandung gas berbahaya.
+
+Seorang AGT bertugas menggunakan alat deteksi gas (*gas detector*) yang terkalibrasi untuk mengukur:
+
+- **Konsentrasi oksigen (O2)** — untuk memastikan kadar O2 berada di rentang aman (19,5%–23,5%)
+- **Gas mudah terbakar (LEL/LFL)** — untuk mencegah risiko ledakan atau kebakaran
+- **Gas beracun** — seperti H2S, CO, CO2, SO2, dan senyawa berbahaya lainnya
+
+Tanpa otorisasi resmi, seseorang tidak boleh melakukan pengujian gas yang hasilnya digunakan sebagai dasar keputusan keselamatan kerja.
+
+---
+
+## Mengapa Authorized Gas Tester Sangat Penting?
+
+### 1. Melindungi Nyawa Pekerja
+
+Ini adalah alasan paling mendasar dan tidak bisa dikompromikan. Data dari International Labour Organization (ILO) menunjukkan bahwa kecelakaan di *confined space* akibat atmosfer berbahaya menempati posisi teratas penyebab kematian kerja di sektor industri berat.
+
+Seorang AGT yang kompeten akan memastikan bahwa sebelum pekerja memasuki ruang tertutup, seluruh parameter atmosfer telah diuji dan dinyatakan aman — atau memberikan rekomendasi tindakan korektif sebelum pekerjaan dimulai.
+
+### 2. Menjamin Validitas Hasil Pengujian
+
+Tidak semua orang yang memegang gas detector berarti mampu menginterpretasikan hasilnya dengan benar. AGT telah dilatih untuk:
+
+- Memahami karakteristik berbagai jenis gas berbahaya
+- Mengoperasikan dan mengkalibrasi alat deteksi gas dengan benar
+- Menginterpretasikan pembacaan alat secara akurat
+- Menentukan apakah kondisi atmosfer layak untuk pekerjaan tertentu
+
+Hasil pengujian yang salah interpretasi sama berbahayanya dengan tidak melakukan pengujian sama sekali.
+
+### 3. Dasar Hukum dan Kepatuhan Regulasi
+
+Di Indonesia, penggunaan Authorized Gas Tester bukan sekadar praktik baik (*best practice*) — ini adalah **kewajiban hukum**. Perusahaan yang mengabaikan persyaratan ini dapat menghadapi sanksi administratif, denda, pencabutan izin operasional, hingga tuntutan pidana jika terjadi kecelakaan.
+
+### 4. Mengurangi Risiko Kerugian Finansial
+
+Satu insiden ledakan atau keracunan gas di fasilitas industri bisa mengakibatkan kerugian miliaran rupiah — mulai dari kerusakan aset, biaya kompensasi korban, penghentian produksi, hingga kerusakan reputasi perusahaan. Investasi dalam AGT yang kompeten jauh lebih murah dibandingkan biaya akibat satu kecelakaan serius.
+
+### 5. Membangun Budaya K3 yang Kuat
+
+Kehadiran AGT di lapangan mengirimkan pesan yang kuat kepada seluruh tim: keselamatan adalah prioritas utama, bukan formalitas. Ini mendorong kesadaran K3 yang lebih tinggi di seluruh lini organisasi.
+
+---
+
+## Risiko Nyata Menggunakan Gas Tester Tidak Bersertifikat
+
+Banyak perusahaan, terutama yang berukuran kecil hingga menengah, masih meremehkan pentingnya sertifikasi AGT dengan alasan efisiensi biaya. Namun risiko yang ditanggung jauh lebih besar:
+
+### Kesalahan Interpretasi Data
+Seseorang tanpa pelatihan yang memadai mungkin saja melihat angka di layar gas detector, tetapi tidak memahami konteks dan implikasinya. Misalnya, gas H2S dapat membius indera penciuman dalam konsentrasi tinggi — pekerja tanpa pengetahuan AGT mungkin merasa "tidak berbau" sebagai tanda aman, padahal kondisinya sudah sangat berbahaya.
+
+### Alat Tidak Terkalibrasi
+AGT bersertifikat memahami pentingnya kalibrasi alat sebelum digunakan. Alat yang tidak terkalibrasi bisa memberikan pembacaan yang salah — baik terlalu rendah (false safe) maupun terlalu tinggi (false alarm).
+
+### Tidak Memahami Prosedur Pengujian yang Benar
+Pengujian gas di *confined space* harus dilakukan dari berbagai titik ketinggian (atas, tengah, bawah) karena gas yang berbeda memiliki densitas berbeda. Pengujian yang tidak sistematis bisa melewatkan kantong gas berbahaya yang tidak terdeteksi.
+
+### Tanggung Jawab Hukum Perusahaan
+Jika terjadi kecelakaan dan investigasi menemukan bahwa pengujian dilakukan oleh personel yang tidak berwenang, perusahaan dapat menghadapi konsekuensi hukum yang jauh lebih berat karena terbukti lalai secara administratif.
+
+---
+
+## Regulasi dan Standar yang Mengatur Authorized Gas Tester di Indonesia
+
+Indonesia memiliki kerangka regulasi yang cukup komprehensif terkait keselamatan kerja di area berbahaya, termasuk kewajiban pengujian gas:
+
+### Peraturan Kementerian Ketenagakerjaan
+- **Permenaker No. 5 Tahun 1996** tentang Sistem Manajemen K3 — mewajibkan identifikasi bahaya dan pengendalian risiko, termasuk bahaya gas
+- **Permenaker No. 9 Tahun 2016** tentang K3 dalam Pekerjaan pada Ketinggian — relevan untuk pekerjaan di area terbatas
+
+### Standar Industri Internasional yang Diadopsi
+Banyak perusahaan multinasional dan BUMN di Indonesia mengadopsi standar internasional seperti:
+- **OSHA 1910.146** — Confined Space Entry Standard (Amerika Serikat)
+- **EN 60079** — Standar Eropa untuk atmosfer eksplosif
+- **API RP 500/505** — American Petroleum Institute untuk industri migas
+
+### Regulasi Sektor Migas
+- **Peraturan Menteri ESDM** dan ketentuan **SKK Migas** secara spesifik mengatur persyaratan kompetensi untuk personel yang bekerja di fasilitas produksi minyak dan gas, termasuk kewajiban pengujian gas oleh personel yang kompeten dan berwenang.
+
+---
+
+## Tugas dan Tanggung Jawab Authorized Gas Tester
+
+Seorang AGT memikul tanggung jawab yang besar dan spesifik. Berikut adalah lingkup tugasnya:
+
+### Sebelum Pekerjaan Dimulai
+- Melakukan **pre-entry testing** pada area yang akan dimasuki
+- Memastikan semua alat deteksi gas dalam kondisi baik dan terkalibrasi
+- Berkoordinasi dengan Permit-to-Work (PTW) coordinator terkait hasil pengujian
+- Memberikan **clearance** (izin masuk) atau **rejection** (penolakan) berdasarkan hasil pengujian
+
+### Selama Pekerjaan Berlangsung
+- Melakukan **continuous monitoring** atau pengujian berkala sesuai prosedur
+- Waspada terhadap perubahan kondisi atmosfer yang tiba-tiba
+- Memiliki otoritas untuk **menghentikan pekerjaan** dan mengevakuasi area jika kondisi atmosfer berubah menjadi berbahaya
+- Mendokumentasikan seluruh hasil pengujian secara akurat
+
+### Setelah Pekerjaan Selesai
+- Mendokumentasikan seluruh data pengujian untuk keperluan audit dan pelaporan
+- Melaporkan anomali atau kondisi tidak normal kepada supervisor
+- Merawat dan menyimpan alat deteksi gas dengan benar
+
+---
+
+## Jenis Gas Berbahaya yang Wajib Diketahui AGT
+
+Seorang AGT harus hafal dan memahami karakteristik gas-gas berikut:
+
+| Gas | Simbol | Bahaya Utama | Batas Aman (ACGIH TWA) |
+|-----|--------|--------------|------------------------|
+| Hidrogen Sulfida | H2S | Beracun, mematikan pada kadar rendah | 1 ppm |
+| Karbon Monoksida | CO | Beracun, tidak berbau, tidak berwarna | 25 ppm |
+| Karbon Dioksida | CO2 | Sesak napas, displaces O2 | 5.000 ppm |
+| Metana | CH4 | Mudah terbakar, ledakan | LEL 5% |
+| Amonia | NH3 | Beracun, korosif | 25 ppm |
+| Klorida | Cl2 | Sangat beracun, gas perang | 0,5 ppm |
+
+---
+
+## Cara Mendapatkan Sertifikasi Authorized Gas Tester
+
+Bagi profesional yang ingin menjadi AGT bersertifikat, berikut adalah jalur yang umumnya ditempuh:
+
+### 1. Ikuti Pelatihan dari Lembaga Terakreditasi
+Carilah pelatihan AGT dari lembaga yang diakui oleh:
+- **BNSP (Badan Nasional Sertifikasi Profesi)**
+- **Kementerian Ketenagakerjaan RI**
+- Lembaga sertifikasi internasional yang diakui di industri (misalnya OPITO, LEEA, dll.)
+
+### 2. Kuasai Materi Pelatihan
+Materi standar pelatihan AGT mencakup:
+- Teori gas dan sifat-sifat kimia gas berbahaya
+- Prinsip kerja dan pengoperasian gas detector
+- Prosedur kalibrasi dan bump test
+- Teknik pengujian atmosfer yang benar
+- Peraturan dan standar K3 yang relevan
+- Prosedur darurat dan evakuasi
+
+### 3. Lulus Ujian Kompetensi
+Setelah pelatihan, peserta wajib mengikuti ujian kompetensi yang mencakup aspek teori dan praktik langsung di lapangan.
+
+### 4. Dapatkan Sertifikat dan Otorisasi
+Setelah lulus, sertifikat diterbitkan dengan masa berlaku tertentu (biasanya 1–3 tahun). **Otorisasi dari perusahaan** juga diperlukan — sertifikat saja tidak cukup tanpa penunjukan resmi dari manajemen.
+
+### 5. Renewal dan Continuous Learning
+AGT wajib memperbarui sertifikasinya sebelum masa berlaku habis dan mengikuti perkembangan regulasi serta teknologi terbaru dalam deteksi gas.
+
+---
+
+## Perbedaan Authorized Gas Tester vs. Gas Tester Biasa
+
+| Aspek | Authorized Gas Tester | Gas Tester Tanpa Otorisasi |
+|-------|-----------------------|---------------------------|
+| Pelatihan | Terstruktur & terstandar | Tidak formal / on-the-job |
+| Sertifikasi | Resmi dari lembaga terakreditasi | Tidak ada |
+| Kewenangan | Diakui secara hukum | Tidak diakui |
+| Tanggung Jawab Hukum | Terlindungi secara prosedural | Berisiko tinggi |
+| Interpretasi Hasil | Kompeten dan terlatih | Tidak terstandar |
+| Validitas Dokumen | Sah untuk audit & regulasi | Tidak sah |
+
+---
+
+## FAQ: Pertanyaan Umum tentang Authorized Gas Tester
+
+**Q: Apakah setiap perusahaan wajib memiliki Authorized Gas Tester?**
+A: Setiap perusahaan yang melibatkan pekerjaan di area terbatas, fasilitas penyimpanan atau distribusi gas, industri petrokimia, tambang, dan sejenisnya wajib memiliki AGT berlisensi. Kewajiban ini diatur dalam berbagai peraturan K3 yang berlaku di Indonesia.
+
+**Q: Berapa lama masa berlaku sertifikasi AGT?**
+A: Masa berlaku sertifikasi AGT bervariasi tergantung lembaga penerbit, umumnya antara 1–3 tahun. Perpanjangan (*renewal*) dilakukan melalui pelatihan penyegaran dan ujian ulang.
+
+**Q: Bisakah seorang AGT merangkap sebagai pengawas keselamatan biasa?**
+A: Secara teknis bisa, namun dalam praktik terbaik industri, keduanya sebaiknya merupakan peran yang terpisah agar tidak terjadi konflik kepentingan, terutama di area kerja berisiko tinggi.
+
+**Q: Apakah gas detector portabel biasa cukup untuk digunakan AGT?**
+A: Alat yang digunakan harus sesuai dengan gas yang berpotensi ada di lokasi kerja, dalam kondisi terkalibrasi, dan memiliki sertifikat kalibrasi yang masih berlaku. AGT bertanggung jawab memverifikasi kelayakan alat sebelum digunakan.
+
+**Q: Apa yang terjadi jika seorang non-AGT melakukan pengujian gas dan terjadi kecelakaan?**
+A: Perusahaan dapat dikenai sanksi pidana dan administratif karena terbukti lalai dalam menerapkan prosedur K3. Individu yang melakukan pengujian tanpa otorisasi juga dapat dimintai pertanggungjawaban hukum secara pribadi.
+
+---
+
+## Kesimpulan
+
+**Authorized Gas Tester bukan sekadar jabatan atau formalitas** — ini adalah garis pertahanan pertama yang membedakan antara lingkungan kerja yang aman dan tragedi yang bisa dicegah. Di industri yang bekerja berdampingan dengan gas berbahaya setiap harinya, kompetensi dan otoritas resmi seorang AGT adalah investasi keselamatan yang tidak bisa ditawar.
+
+Bagi perusahaan: pastikan Anda selalu memiliki AGT bersertifikat yang aktif di setiap operasi berisiko tinggi. Bagi profesional K3: sertifikasi AGT adalah penambah nilai kompetensi yang signifikan dalam karier Anda.
+
+> **Keselamatan dimulai dari pengetahuan yang tepat, dilaksanakan oleh orang yang berwenang.**
+
+Ingin mengetahui lebih lanjut tentang pelatihan dan sertifikasi AGT yang sesuai untuk kebutuhan perusahaan Anda? Konsultasikan dengan lembaga pelatihan K3 terakreditasi di wilayah Anda.
+
+---
+
+*Artikel ini ditulis untuk tujuan edukasi K3 dan tidak menggantikan konsultasi langsung dengan profesional keselamatan kerja bersertifikat.*`,
+    contentEn: `# Authorized Gas Tester: Definition, Importance, and Its Crucial Role in Industrial Safety
+
+In industrial work environments — from oil refineries and chemical plants to mining operations and gas processing facilities — hazards are not always visible to the naked eye. Toxic gases, flammable gases, or oxygen-deficient conditions can be present without any obvious signs, yet prove fatal within minutes.
+
+This is where the role of the **Authorized Gas Tester (AGT)** becomes critically important. Not merely someone carrying a measuring device, but a certified professional with the knowledge, competence, and official authority to ensure the atmosphere in a work area is safe before anyone enters or begins work.
+
+This article provides a comprehensive overview of why the Authorized Gas Tester is an irreplaceable element in Occupational Health and Safety (OHS) systems, the risks of neglecting this role, the regulations governing it, and how to obtain certification.
+
+---
+
+## What Is an Authorized Gas Tester?
+
+An **Authorized Gas Tester (AGT)** is an individual who has received specialized training, passed competency assessments, and holds official authorization to conduct atmospheric testing in confined spaces, hazardous areas, or locations potentially containing dangerous gases.
+
+An AGT uses calibrated gas detection equipment to measure:
+
+- **Oxygen concentration (O2)** — ensuring O2 levels are within the safe range (19.5%–23.5%)
+- **Flammable gases (LEL/LFL)** — to prevent explosion or fire risks
+- **Toxic gases** — such as H2S, CO, CO2, SO2, and other hazardous compounds
+
+Without official authorization, no one should perform gas testing whose results are used as the basis for workplace safety decisions.
+
+---
+
+## Why Is the Authorized Gas Tester So Important?
+
+### 1. Protecting Workers' Lives
+
+This is the most fundamental and non-negotiable reason. Data from the International Labour Organization (ILO) shows that confined space accidents due to hazardous atmospheres rank among the top causes of workplace fatalities in heavy industry.
+
+A competent AGT ensures that before workers enter an enclosed space, all atmospheric parameters have been tested and confirmed safe — or provides corrective action recommendations before work commences.
+
+### 2. Ensuring Validity of Test Results
+
+Not everyone holding a gas detector can correctly interpret its readings. AGTs are trained to:
+
+- Understand the characteristics of various types of hazardous gases
+- Properly operate and calibrate gas detection equipment
+- Accurately interpret instrument readings
+- Determine whether atmospheric conditions are suitable for specific work
+
+Misinterpreted test results are just as dangerous as not conducting any testing at all.
+
+### 3. Legal Basis and Regulatory Compliance
+
+In Indonesia, employing an Authorized Gas Tester is not merely a best practice — it is a **legal obligation**. Companies that ignore this requirement face administrative sanctions, fines, revocation of operating licenses, and even criminal prosecution if an accident occurs.
+
+### 4. Reducing Financial Risk
+
+A single explosion or gas poisoning incident at an industrial facility can result in losses amounting to billions of rupiah — from asset damage, victim compensation, production shutdowns, to reputational damage. Investing in competent AGTs is far less costly than the consequences of one serious accident.
+
+### 5. Building a Strong Safety Culture
+
+The presence of AGTs in the field sends a powerful message to the entire team: safety is the top priority, not a formality. This promotes higher safety awareness across all levels of the organization.
+
+---
+
+## Real Risks of Using Uncertified Gas Testers
+
+Many companies, particularly small to medium-sized ones, still underestimate the importance of AGT certification citing cost efficiency. However, the risks far outweigh the savings:
+
+### Data Misinterpretation
+Someone without adequate training may see numbers on a gas detector display but fail to understand their context and implications. For example, H2S can paralyze the sense of smell at high concentrations — a worker without AGT knowledge may interpret "no smell" as a sign of safety, when in fact conditions are already extremely dangerous.
+
+### Uncalibrated Equipment
+Certified AGTs understand the importance of calibrating equipment before use. Uncalibrated instruments can give incorrect readings — either too low (false safe) or too high (false alarm).
+
+### Not Understanding Proper Testing Procedures
+Gas testing in confined spaces must be conducted at various heights (top, middle, bottom) because different gases have different densities. Unsystematic testing can miss pockets of dangerous gas that go undetected.
+
+### Company Legal Liability
+If an accident occurs and investigation reveals that testing was performed by unauthorized personnel, the company faces far more severe legal consequences for proven administrative negligence.
+
+---
+
+## Regulations and Standards Governing Authorized Gas Testers in Indonesia
+
+Indonesia has a fairly comprehensive regulatory framework regarding workplace safety in hazardous areas, including gas testing requirements:
+
+### Ministry of Manpower Regulations
+- **Permenaker No. 5 of 1996** on Occupational Health and Safety Management Systems — requires hazard identification and risk control, including gas hazards
+- **Permenaker No. 9 of 2016** on Occupational Safety and Health in Work at Height — relevant for confined space work
+
+### Adopted International Industry Standards
+Many multinational and state-owned companies in Indonesia adopt international standards such as:
+- **OSHA 1910.146** — Confined Space Entry Standard (United States)
+- **EN 60079** — European Standard for explosive atmospheres
+- **API RP 500/505** — American Petroleum Institute for oil and gas industry
+
+### Oil & Gas Sector Regulations
+- **Ministry of Energy and Mineral Resources (ESDM) regulations** and **SKK Migas** requirements specifically govern competency requirements for personnel working in oil and gas production facilities, including mandatory gas testing by competent and authorized personnel.
+
+---
+
+## Duties and Responsibilities of an Authorized Gas Tester
+
+An AGT bears significant and specific responsibilities. Here is the scope of their duties:
+
+### Before Work Begins
+- Conducting **pre-entry testing** in the area to be entered
+- Ensuring all gas detection equipment is in good condition and calibrated
+- Coordinating with the Permit-to-Work (PTW) coordinator regarding test results
+- Providing **clearance** (entry permit) or **rejection** based on test results
+
+### During Work Operations
+- Performing **continuous monitoring** or periodic testing per procedure
+- Remaining alert to sudden changes in atmospheric conditions
+- Having the authority to **stop work** and evacuate the area if atmospheric conditions become hazardous
+- Accurately documenting all test results
+
+### After Work Completion
+- Documenting all test data for audit and reporting purposes
+- Reporting anomalies or abnormal conditions to supervisors
+- Properly maintaining and storing gas detection equipment
+
+---
+
+## Types of Hazardous Gases Every AGT Must Know
+
+An AGT must memorize and understand the characteristics of the following gases:
+
+| Gas | Symbol | Primary Hazard | Safe Limit (ACGIH TWA) |
+|-----|--------|--------------|------------------------|
+| Hydrogen Sulfide | H2S | Toxic, lethal at low levels | 1 ppm |
+| Carbon Monoxide | CO | Toxic, odorless, colorless | 25 ppm |
+| Carbon Dioxide | CO2 | Suffocation, displaces O2 | 5,000 ppm |
+| Methane | CH4 | Flammable, explosive | LEL 5% |
+| Ammonia | NH3 | Toxic, corrosive | 25 ppm |
+| Chlorine | Cl2 | Highly toxic | 0.5 ppm |
+
+---
+
+## How to Obtain Authorized Gas Tester Certification
+
+For professionals seeking to become a certified AGT, here is the typical pathway:
+
+### 1. Attend Training from an Accredited Institution
+Look for AGT training from institutions recognized by:
+- **BNSP (National Professional Certification Board)**
+- **Ministry of Manpower of the Republic of Indonesia**
+- Internationally recognized certification bodies (e.g., OPITO, LEEA, etc.)
+
+### 2. Master the Training Material
+Standard AGT training material covers:
+- Gas theory and chemical properties of hazardous gases
+- Working principles and operation of gas detectors
+- Calibration and bump test procedures
+- Proper atmospheric testing techniques
+- Relevant OHS regulations and standards
+- Emergency and evacuation procedures
+
+### 3. Pass the Competency Examination
+After training, participants must take a competency assessment covering both theoretical knowledge and practical field skills.
+
+### 4. Obtain Your Certificate and Authorization
+Upon passing, certificates are issued with a specific validity period (typically 1–3 years). **Company authorization** is also required — a certificate alone is not sufficient without an official appointment from management.
+
+### 5. Renewal and Continuous Learning
+AGTs must renew their certification before it expires and stay current with the latest regulations and gas detection technologies.
+
+---
+
+## Authorized Gas Tester vs. Ordinary Gas Tester: Key Differences
+
+| Aspect | Authorized Gas Tester | Unauthorized Gas Tester |
+|-------|-----------------------|---------------------------|
+| Training | Structured & standardized | Informal / on-the-job |
+| Certification | Official from accredited institution | None |
+| Authority | Legally recognized | Not recognized |
+| Legal Liability | Procedurally protected | High risk |
+| Result Interpretation | Competent and trained | Non-standardized |
+| Document Validity | Valid for audits & regulations | Invalid |
+
+---
+
+## FAQ: Frequently Asked Questions About Authorized Gas Testers
+
+**Q: Is every company required to have an Authorized Gas Tester?**
+A: Every company involving work in confined spaces, gas storage or distribution facilities, petrochemical industries, mining, and similar sectors must have a licensed AGT. This obligation is regulated under various OHS regulations in effect in Indonesia.
+
+**Q: How long is an AGT certification valid?**
+A: AGT certification validity varies depending on the issuing body, generally between 1–3 years. Renewal is done through refresher training and re-examination.
+
+**Q: Can an AGT also serve as a regular safety supervisor?**
+A: Technically yes, but industry best practice recommends keeping these roles separate to avoid conflicts of interest, especially in high-risk work areas.
+
+**Q: Is a standard portable gas detector sufficient for AGT use?**
+A: The equipment used must be appropriate for the gases potentially present at the worksite, properly calibrated, and have a valid calibration certificate. The AGT is responsible for verifying equipment readiness before use.
+
+**Q: What happens if a non-AGT performs gas testing and an accident occurs?**
+A: The company can face criminal and administrative penalties for proven negligence in implementing OHS procedures. The individual who performed testing without authorization may also be held personally liable.
+
+---
+
+## Conclusion
+
+**The Authorized Gas Tester is not merely a job title or a formality** — it is the first line of defense between a safe working environment and a preventable tragedy. In industries that work alongside hazardous gases every day, the competence and official authority of an AGT is a safety investment that cannot be compromised.
+
+For companies: ensure you always have certified AGTs active in every high-risk operation. For safety professionals: AGT certification is a significant career enhancer.
+
+> **Safety begins with the right knowledge, executed by authorized personnel.**
+
+Want to learn more about AGT training and certification suited to your company's needs? Consult with an accredited OHS training institution in your area.
+
+---
+
+*This article is written for OHS educational purposes and does not replace direct consultation with certified workplace safety professionals.*`,
   },
   {
     id: "strategi-mencegah-kecelakaan-kerja",
