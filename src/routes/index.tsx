@@ -355,6 +355,93 @@ const programs: Program[] = [
     ],
     target: "Calon anggota satpam baru, anggota satpam aktif yang belum tersertifikasi, dan koordinator keamanan industri.",
     targetEn: "Aspiring security guards, active guards needing certification, and industrial security coordinators."
+  },
+  {
+    name: "Ahli K3 Umum (BNSP)",
+    nameEn: "General OHS Specialist (BNSP)",
+    desc: "Sertifikasi kompetensi untuk merancang, menerapkan, dan mengevaluasi SMK3 di tempat kerja.",
+    descEn: "Competency certification to design, implement, and evaluate the OHS Management System (SMK3) in the workplace.",
+    dur: "12 Hari",
+    durEn: "12 Days",
+    cert: "BNSP",
+    certEn: "BNSP",
+    icon: Award,
+    syllabus: [
+      "Undang-Undang No. 1 Tahun 1970 tentang Keselamatan Kerja",
+      "Penerapan SMK3 berdasarkan Peraturan Pemerintah No. 50 Tahun 2012",
+      "Analisis dan Manajemen Risiko K3 (HAZOPs, JSA, risk register)",
+      "Investigasi, pelaporan, dan analisis statistik kecelakaan kerja",
+      "Pengawasan K3 Lingkungan Kerja, Konstruksi, dan Listrik",
+      "Tugas, tanggung jawab, dan tata cara audit internal SMK3"
+    ],
+    syllabusEn: [
+      "Workplace Safety Act No. 1 of 1970 regulations",
+      "Implementation of SMK3 per Government Regulation No. 50 of 2012",
+      "OHS Risk Analysis and Management (HAZOPs, JSA, risk register)",
+      "Workplace accident investigation, reporting, and statistical analysis",
+      "Supervision of OHS in Work Environments, Construction, and Electrical",
+      "Duties, responsibilities, and procedures for SMK3 internal auditing"
+    ],
+    target: "HSE Officer, anggota P2K3, supervisor, manager, dan praktisi industri yang bertanggung jawab atas penerapan K3 di tempat kerja.",
+    targetEn: "HSE Officers, OHS committee members, supervisors, managers, and industrial practitioners responsible for implementing OHS in the workplace."
+  },
+  {
+    name: "Pelatihan Security (Gada Madya)",
+    nameEn: "Security Supervisor Training (Gada Madya)",
+    desc: "Peningkatan kualifikasi satpam tingkat penyelia dengan kompetensi manajerial lapangan dan taktis.",
+    descEn: "Upgrade qualification for security supervisors focusing on tactical and field managerial competencies.",
+    dur: "7 Hari",
+    durEn: "7 Days",
+    cert: "Security",
+    certEn: "Security",
+    icon: Shield,
+    syllabus: [
+      "Kepemimpinan dan manajemen regu pengamanan lapangan",
+      "Teknik analisis kerawanan area dan asesmen risiko keamanan",
+      "Penanganan konflik, mediasi, dan negosiasi di area kerja",
+      "Prosedur koordinasi dengan aparat kepolisian dan TNI",
+      "Penyusunan Rencana Pengamanan (Renpam) dan contingency plan",
+      "Kemampuan komunikasi taktis dan pelaporan manajerial"
+    ],
+    syllabusEn: [
+      "Leadership and management of field security squads",
+      "Area vulnerability analysis and security risk assessments",
+      "Conflict handling, mediation, and negotiation in the workplace",
+      "Coordination procedures with police and military forces",
+      "Formulation of Security Plans (Renpam) and contingency plans",
+      "Tactical communication skills and managerial reporting"
+    ],
+    target: "Danton, komandan regu (Danru), supervisor keamanan, dan satpam kualifikasi Gada Pratama yang ingin naik jenjang karir.",
+    targetEn: "Platoon leaders, squad leaders (Danru), security supervisors, and Gada Pratama security officers looking to advance their career."
+  },
+  {
+    name: "Pelatihan Security (Gada Utama)",
+    nameEn: "Security Manager Training (Gada Utama)",
+    desc: "Pelatihan tingkat manajer keamanan untuk merancang strategi, kebijakan, dan audit sistem pengamanan.",
+    descEn: "Security manager level training to design security strategies, policies, and security system audits.",
+    dur: "6 Hari",
+    durEn: "6 Days",
+    cert: "Security",
+    certEn: "Security",
+    icon: Shield,
+    syllabus: [
+      "Manajemen risiko keamanan korporasi (Enterprise Security Risk Management)",
+      "Audit Sistem Manajemen Pengamanan (SMP) berdasarkan Perpol No. 7 Tahun 2019",
+      "Penyusunan Standard Operating Procedure (SOP) keamanan perusahaan",
+      "Manajemen krisis, penanggulangan terorisme, dan disaster recovery",
+      "Perencanaan anggaran keamanan (budgeting) dan cost-benefit analysis",
+      "Strategi intelijen bisnis dan mitigasi ancaman internal/eksternal"
+    ],
+    syllabusEn: [
+      "Enterprise Security Risk Management (ESRM) frameworks",
+      "Security Management System (SMP) audit per Police Regulation No. 7 of 2019",
+      "Drafting corporate security Standard Operating Procedures (SOPs)",
+      "Crisis management, counter-terrorism, and disaster recovery planning",
+      "Security budgeting and cost-benefit analysis",
+      "Business intelligence strategies and internal/external threat mitigation"
+    ],
+    target: "Chief Security Officer (CSO), manajer keamanan (Security Manager), direktur pengamanan, dan perwira TNI/Polri purnatugas.",
+    targetEn: "Chief Security Officers (CSO), Security Managers, directors of security, and retired military/police officers."
   }
 ];
 
