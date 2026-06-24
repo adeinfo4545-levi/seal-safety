@@ -37,6 +37,9 @@ import logofreeport from "@/assets/logo-freeport.png";
 import logopertamina from "@/assets/logo-pertamina.png";
 import logophe from "@/assets/logo-phe.png";
 import logovale from "@/assets/logo-vale.png";
+import logoLspPromigas from "@/assets/logo-lsp-promigas.png";
+import logoLspBkk from "@/assets/logo-lsp-bkk.png";
+import logoLspTti from "@/assets/logo-lsp-tti.png";
 import { useT, LanguageToggle } from "@/lib/i18n";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1/Project-seal-ssh/api";
@@ -788,6 +791,12 @@ function SectionLabel({ kicker, title, sub }: { kicker: string; title: string; s
 
 function WhyUs() {
   const { t } = useT();
+  const lspPartners = [
+    { name: "LSP Promigas Indonesia", logo: logoLspPromigas },
+    { name: "LSP BKK", logo: logoLspBkk },
+    { name: "LSP TTI", logo: logoLspTti },
+  ];
+
   return (
     <section id="why" className="border-b border-border bg-background py-24">
       <div className="container-swiss">
@@ -810,6 +819,52 @@ function WhyUs() {
             </Reveal>
           ))}
         </div>
+
+        {/* TUK LSP Section */}
+        <Reveal className="mt-16 border-2 border-charcoal bg-background p-8 sm:p-10">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center">
+            <div className="lg:col-span-5">
+              <div className="mb-4 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-safety">
+                <span className="h-px w-10 bg-safety" />
+                {t("Tempat Uji Kompetensi", "Competency Assessment Center")}
+              </div>
+              <h3 className="text-2xl font-black tracking-tight text-charcoal sm:text-3xl leading-tight">
+                {t("Ditunjuk sebagai TUK Resmi oleh Berbagai LSP", "Officially Appointed as TUK by Multiple LSPs")}
+              </h3>
+              <p className="mt-4 text-sm leading-relaxed text-midgray">
+                {t(
+                  "SEAL Training Center dipercaya dan ditunjuk sebagai Tempat Uji Kompetensi (TUK) oleh berbagai Lembaga Sertifikasi Profesi (LSP) di Indonesia, memastikan peserta mendapatkan sertifikasi kompetensi yang diakui secara nasional.",
+                  "SEAL Training Center is trusted and appointed as a Competency Assessment Center (TUK) by various Professional Certification Bodies (LSP) in Indonesia, ensuring participants receive nationally recognized competency certifications.",
+                )}
+              </p>
+            </div>
+            <div className="lg:col-span-7">
+              <div className="grid grid-cols-3 gap-6">
+                {lspPartners.map((lsp) => (
+                  <div
+                    key={lsp.name}
+                    className="flex flex-col items-center justify-center gap-4 border border-border bg-white p-6 transition-shadow hover:shadow-lg"
+                  >
+                    <img
+                      src={lsp.logo}
+                      alt={lsp.name}
+                      className="h-20 w-auto object-contain sm:h-24"
+                    />
+                    <span className="text-center text-[11px] font-bold uppercase tracking-wider text-charcoal">
+                      {lsp.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-6 text-center text-xs font-semibold text-midgray">
+                {t(
+                  "Sertifikasi kompetensi yang diakui secara nasional oleh BNSP",
+                  "Nationally recognized competency certification by BNSP",
+                )}
+              </p>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
