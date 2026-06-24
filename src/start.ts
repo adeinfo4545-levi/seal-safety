@@ -12,7 +12,17 @@ const errorMiddleware = createMiddleware().server(async ({ next }) => {
     if (import.meta.env.DEV) {
       console.error(error);
     }
-    return new Response(renderErrorPage(), {
+    let errStr = "Unknown SSR Error";
+    if (error instanceof Error) { errStr = error.stack || error.message; }
+    else if (typeof error === "string") { errStr = error; }
+    
+    // Inject error into the HTML output
+    const html = renderErrorPage().replace(
+      "Something went wrong on our end.",
+      `Something went wrong on our end.<br><br><pre style="text-align:left;background:#fee;padding:10px;border:1px solid #fcc;max-width:800px;margin:20px auto;overflow:auto;font-size:12px;color:#a00;">${errStr}</pre>`
+    );
+    
+    return new Response(html, {
       status: 500,
       headers: { "content-type": "text/html; charset=utf-8" },
     });
@@ -61,5 +71,5 @@ const securityMiddleware = createMiddleware().server(async ({ next }) => {
 });
 
 export const startInstance = createStart(() => ({
-  requestMiddleware: [securityMiddleware, errorMiddleware],
+  requestMiddleware: [errorMiddleware],
 }));
