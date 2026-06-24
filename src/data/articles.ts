@@ -140,19 +140,14 @@ Ada beberapa tingkatan sertifikasi H2S yang diakui di industri migas:
 - Cocok untuk: pekerja yang tidak secara langsung terpapar H2S namun bekerja di sekitar area berisiko
 - Materi: pengenalan H2S, bahaya dasar, prosedur evakuasi umum
 
-### H2S Competency (Operator Level)
+### H2S Competency (BNSP)
 - Durasi: 2–3 hari
-- Cocok untuk: pekerja lapangan yang bekerja langsung di area H2S
-- Materi: lengkap, termasuk penggunaan SCBA dan pertolongan pertama
-
-### H2S Supervisor/Lead
-- Durasi: 3–4 hari
-- Cocok untuk: supervisor dan HSE officer
-- Materi: manajemen risiko H2S, incident investigation, dan pelatihan tim
-
-### H2S Trainer Certification
-- Durasi: 5 hari
-- Cocok untuk: profesional yang ingin menjadi instruktur pelatihan H2S bersertifikat
+- Cocok untuk: pekerja lapangan, operator, dan pengawas K3 yang berkegiatan langsung di area dengan potensi bahaya H2S tinggi
+- Unit Kompetensi 1: Mengidentifikasi potensi bahaya gas Hidrogen Sulfida (H2S) di area kerja
+- Unit Kompetensi 2: Mengoperasikan peralatan deteksi gas (gas detector) portable dengan benar
+- Unit Kompetensi 3: Menggunakan Alat Pelindung Pernapasan khusus (SCBA - Self Contained Breathing Apparatus) untuk evakuasi dan penyelamatan
+- Unit Kompetensi 4: Menerapkan prosedur tanggap darurat dan evakuasi mandiri (emergency response & escape)
+- Unit Kompetensi 5: Melakukan pertolongan pertama pada korban yang terpapar gas H2S
 
 ## Cara Memilih Program Pelatihan H2S yang Tepat
 
@@ -302,19 +297,14 @@ There are various certification levels recognized in the industry:
 - Best for: personnel not directly exposed but working near hazard zones
 - Topics: basic H2S facts, hazard identification, general evacuation
 
-### H2S Competency (Operator Level)
+### H2S Competency (BNSP)
 - Duration: 2–3 days
-- Best for: field crews working directly in potential H2S environments
-- Topics: full curriculum including SCBA practice and first aid
-
-### H2S Supervisor/Lead
-- Duration: 3–4 days
-- Best for: supervisors and HSE leads
-- Topics: H2S risk management, incident investigation, and team drill execution
-
-### H2S Trainer Certification
-- Duration: 5 days
-- Best for: professionals seeking to become certified H2S instructors
+- Best for: Field workers, operators, and HSE supervisors operating directly in areas with high potential H2S hazards
+- Competency Unit 1: Identify potential hazards of Hydrogen Sulfide (H2S) gas in the work area
+- Competency Unit 2: Correctly operate portable gas detection equipment
+- Competency Unit 3: Deploy specialized respiratory protective equipment (SCBA - Self Contained Breathing Apparatus) for evacuation and rescue
+- Competency Unit 4: Implement emergency response and escape procedures
+- Competency Unit 5: Apply first aid to victims of H2S gas exposure
 
 ## How to Choose the Right H2S Training Provider
 
