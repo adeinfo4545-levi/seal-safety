@@ -58,8 +58,8 @@ function AdminPage() {
   const [isLoadingList, setIsLoadingList] = useState(false);
 
   // Fetch certificates list from database
-  const fetchCertificates = async (searchVal: string = "") => {
-    setIsLoadingList(true);
+  const fetchCertificates = async (searchVal: string = "", silent: boolean = false) => {
+    if (!silent) setIsLoadingList(true);
     try {
       const token = sessionStorage.getItem("seal_admin_token") || "";
       const response = await fetch(`${API_BASE_URL}/list_sertifikat.php?search=${encodeURIComponent(searchVal)}`, {
@@ -80,7 +80,7 @@ function AdminPage() {
         console.error("Gagal mengambil list sertifikat:", err);
       }
     } finally {
-      setIsLoadingList(false);
+      if (!silent) setIsLoadingList(false);
     }
   };
 
@@ -91,8 +91,8 @@ function AdminPage() {
   const [activeTab, setActiveTab] = useState<"certificates" | "requests">("certificates");
 
   // Fetch training requests list from database
-  const fetchRequests = async (searchVal: string = "") => {
-    setIsLoadingRequests(true);
+  const fetchRequests = async (searchVal: string = "", silent: boolean = false) => {
+    if (!silent) setIsLoadingRequests(true);
     try {
       const token = sessionStorage.getItem("seal_admin_token") || "";
       const response = await fetch(`${API_BASE_URL}/list_permintaan.php?search=${encodeURIComponent(searchVal)}`, {
@@ -113,15 +113,36 @@ function AdminPage() {
         console.error("Gagal mengambil list permintaan pelatihan:", err);
       }
     } finally {
-      setIsLoadingRequests(false);
+      if (!silent) setIsLoadingRequests(false);
     }
   };
 
-  // Load certificates and requests on mount (when logged in)
+  // Simpan nilai search query terbaru agar bisa diakses oleh setInterval
+  const searchCertRef = useRef(searchQuery);
+  const searchReqRef = useRef(searchQueryRequests);
+
+  useEffect(() => {
+    searchCertRef.current = searchQuery;
+  }, [searchQuery]);
+
+  useEffect(() => {
+    searchReqRef.current = searchQueryRequests;
+  }, [searchQueryRequests]);
+
+  // Load certificates and requests on mount and start polling
   useEffect(() => {
     if (isLoggedIn) {
-      fetchCertificates();
-      fetchRequests();
+      // First load (with loading spinner)
+      fetchCertificates(searchCertRef.current);
+      fetchRequests(searchReqRef.current);
+
+      // Polling setiap 0.5 detik (500ms) secara diam-diam (silent)
+      const intervalId = setInterval(() => {
+        fetchCertificates(searchCertRef.current, true);
+        fetchRequests(searchReqRef.current, true);
+      }, 500);
+
+      return () => clearInterval(intervalId);
     }
   }, [isLoggedIn]);
 
@@ -184,7 +205,22 @@ function AdminPage() {
   };
 
   // Handle Logout
-  const handleLogout = () => {
+  const handleLogout = async () => {
+    const token = sessionStorage.getItem("seal_admin_token");
+    if (token) {
+      try {
+        await fetch(`${API_BASE_URL}/logout.php`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+          },
+          body: JSON.stringify({ token })
+        });
+      } catch (err) {
+        // Ignore error on logout
+      }
+    }
     setIsLoggedIn(false);
     sessionStorage.removeItem("seal_admin_token");
   };
