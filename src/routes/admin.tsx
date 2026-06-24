@@ -27,7 +27,7 @@ export const Route = createFileRoute("/admin")({
   component: AdminPage,
 });
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "/api";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1/Project-seal-ssh/api";
 
 const SESSION_TIMEOUT_MS = 30 * 60 * 1000;
 
@@ -224,7 +224,7 @@ function AdminPage() {
       if (import.meta.env.DEV) {
         console.error(err);
       }
-      setLoginError(t("Terjadi kesalahan koneksi ke server.", "A server connection error occurred."));
+      setLoginError(t(`Terjadi kesalahan koneksi ke server. (URL: ${API_BASE_URL}/login.php, Error: ${err instanceof Error ? err.message : String(err)})`, `A server connection error occurred. (URL: ${API_BASE_URL}/login.php, Error: ${String(err)})`));
     }
   };
 
@@ -321,7 +321,7 @@ function AdminPage() {
         console.error(err);
       }
       setManualStatus("error");
-      setManualMessage(t("Terjadi kesalahan koneksi ke server.", "A server connection error occurred."));
+      setManualMessage(t("Error sistem: " + (err instanceof Error ? err.message : String(err)), "System error: " + String(err)));
     }
   };
 
