@@ -782,36 +782,441 @@ For companies: ensure you always have certified AGTs active in every high-risk o
 
 Want to learn more about AGT training and certification suited to your company's needs? Consult with an accredited OHS training institution in your area.
 
----
-
 *This article is written for OHS educational purposes and does not replace direct consultation with certified workplace safety professionals.*`,
   },
   {
-    id: "strategi-mencegah-kecelakaan-kerja",
+    id: "strategi-mencegah-kecelakaan-kerja-di-ruang-terbatas",
     img: blog3,
     t: "Strategi Mencegah Kecelakaan Kerja",
     tEn: "Strategies to Prevent Workplace Incidents",
     e: "Pendekatan budaya safety berbasis observasi, leading indicator, dan training berkelanjutan.",
     eEn: "A safety culture approach built on observation, leading indicators, and continuous training.",
-    readTime: "7 menit",
-    readTimeEn: "7 min read",
-    metaTitle: "Strategi Mencegah Kecelakaan Kerja di Sektor Energi",
-    metaTitleEn: "Strategies to Prevent Workplace Accidents in the Energy Sector",
-    metaDesc: "Temukan pendekatan modern K3 untuk menurunkan angka kecelakaan kerja (zero accident) melalui observasi perilaku, leading indicator, dan training berkala.",
-    metaDescEn: "Discover modern HSE approaches to lower workplace accidents (zero accident) through behavioral observation, leading indicators, and periodic training.",
-    content: `# Strategi Mencegah Kecelakaan Kerja: Budaya Keselamatan Berkelanjutan
+    readTime: "9 menit",
+    readTimeEn: "9 min read",
+    metaTitle: "Strategi Mencegah Kecelakaan Kerja di Ruang Terbatas [Panduan K3]",
+    metaTitleEn: "Strategies to Prevent Workplace Accidents in Confined Spaces [OHS Guide]",
+    metaDesc: "Pelajari strategi efektif mencegah kecelakaan kerja di ruang terbatas: prosedur izin masuk, APD wajib, pengujian atmosfer, hingga regulasi K3 Indonesia.",
+    metaDescEn: "Learn effective strategies to prevent workplace accidents in confined spaces: permit-to-work systems, mandatory PPE, atmospheric testing, and OHS regulations.",
+    content: `# Strategi Mencegah Kecelakaan Kerja di Ruang Terbatas: Panduan Lengkap K3
 
-Halaman artikel lengkap untuk **Strategi Mencegah Kecelakaan Kerja** sedang dalam persiapan.
+Ruang terbatas (*confined space*) adalah salah satu lingkungan kerja paling berbahaya yang ada di industri. Dalam hitungan menit — bahkan detik — kondisi di dalamnya bisa berubah menjadi ancaman maut: oksigen habis, gas beracun menumpuk, atau dinding longsor menimpa pekerja.
 
-Membangun budaya keselamatan kerja (safety culture) yang kuat memerlukan pendekatan yang melampaui kepatuhan dasar (basic compliance). Strategi modern melibatkan observasi perilaku aman (behavior-based safety), analisis indikator pencegahan (leading indicators), serta program pelatihan berkelanjutan untuk seluruh jenjang organisasi.
+Data Kementerian Ketenagakerjaan RI menunjukkan bahwa kecelakaan kerja di ruang terbatas menempati posisi tertinggi dalam angka fatalitas industri manufaktur, migas, dan konstruksi di Indonesia. Yang lebih menyedihkan, sebagian besar kejadian tersebut **seharusnya bisa dicegah** dengan prosedur dan strategi K3 yang tepat.
 
-*Kembali lagi dalam waktu dekat untuk membaca ulasan lengkap mengenai strategi zero accident dan implementasinya di lapangan.*`,
-    contentEn: `# Strategies to Prevent Workplace Incidents: Sustainable Safety Culture
+Artikel ini menyajikan strategi pencegahan kecelakaan kerja di ruang terbatas secara menyeluruh — mulai dari identifikasi bahaya, prosedur izin masuk, penggunaan APD yang benar, hingga regulasi hukum yang wajib Anda ketahui sebagai penanggung jawab K3 di perusahaan.
 
-The detailed article for **Strategies to Prevent Workplace Incidents** is currently in preparation.
+---
 
-Building a strong safety culture requires approaches that go beyond basic compliance. Modern strategies involve behavior-based safety observations, leading indicators analysis, and continuous training programs across all organizational levels.
+## Apa Itu Ruang Terbatas dan Mengapa Sangat Berbahaya?
 
-*Check back soon for the full review on zero accident strategies and field implementations.*`,
+**Ruang terbatas** (*confined space*) didefinisikan sebagai ruang yang memiliki tiga karakteristik utama:
+
+1. **Cukup besar** untuk dimasuki dan bekerja di dalamnya oleh pekerja
+2. **Memiliki bukaan terbatas** untuk masuk atau keluar (tidak dirancang sebagai area kerja permanen)
+3. **Berpotensi mengandung bahaya serius** bagi keselamatan dan kesehatan pekerja
+
+Contoh ruang terbatas yang umum ditemui di industri antara lain:
+- Tangki penyimpanan bahan kimia atau BBM
+- Silo dan hopper
+- Terowongan dan saluran bawah tanah
+- Boiler dan vessel bertekanan
+- Ruang palka kapal
+- Sumur, bak penampungan, dan septic tank
+- Saluran drainase dan gorong-gorong
+
+### Tiga Kategori Bahaya Utama di Ruang Terbatas
+
+#### 1. Bahaya Atmosferik
+
+Ini adalah penyebab kematian paling umum. Bahaya atmosferik mencakup:
+
+- **Kekurangan oksigen (Oxygen Deficiency):** Kadar O₂ di bawah 19,5% sudah berbahaya. Di bawah 16%, pekerja akan kehilangan kesadaran. Normal: 20,9%.
+- **Kelebihan oksigen (Oxygen Enrichment):** Kadar O₂ di atas 23,5% meningkatkan risiko kebakaran dan ledakan secara eksponensial.
+- **Gas mudah terbakar (Flammable Gas):** Metana, hidrogen sulfida (H₂S), dan uap bahan bakar bisa mencapai batas LEL (*Lower Explosive Limit*) yang memicu ledakan.
+- **Gas beracun (Toxic Gas):** CO, H₂S, dan SO₂ bisa membunuh dalam konsentrasi rendah sekalipun.
+
+#### 2. Bahaya Fisik
+
+- Permukaan licin dan gelap
+- Suhu ekstrem (panas atau dingin)
+- Bising yang mengganggu komunikasi
+- Risiko terjebak atau terjepit
+- Bahaya listrik dari kabel yang tidak aman
+
+#### 3. Bahaya Ergonomi dan Proses
+
+- Ruang gerak sempit yang mempersulit evakuasi darurat
+- Material yang bisa runtuh atau mengalir (pasir, biji-bijian, cairan)
+- Aktivitas kerja lain di sekitar ruang yang menghasilkan gas atau panas
+
+---
+
+## Regulasi K3 Ruang Terbatas di Indonesia
+
+Sebelum masuk ke strategi pencegahan, penting untuk memahami landasan hukum yang berlaku di Indonesia:
+
+| Regulasi | Isi Pokok |
+|----------|-----------|
+| **UU No. 1 Tahun 1970** | Undang-Undang Keselamatan Kerja — dasar hukum K3 di Indonesia |
+| **Permenaker No. 9 Tahun 2016** | Keselamatan dan Kesehatan Kerja dalam Pekerjaan pada Ketinggian |
+| **Permenaker No. 5 Tahun 2018** | Keselamatan dan Kesehatan Kerja Lingkungan Kerja — mencakup baku mutu atmosfer ruang kerja |
+| **PP No. 50 Tahun 2012** | Penerapan SMK3 — wajib bagi perusahaan dengan 100+ pekerja atau tingkat risiko tinggi |
+| **SNI ISO 45001:2018** | Sistem Manajemen K3 Internasional yang diadopsi Indonesia |
+
+Pelanggaran terhadap ketentuan K3 dapat berujung pada sanksi pidana berdasarkan Pasal 15 UU No. 1/1970, termasuk denda dan hukuman penjara bagi pengusaha yang lalai.
+
+---
+
+## 8 Strategi Efektif Mencegah Kecelakaan Kerja di Ruang Terbatas
+
+### Strategi 1: Identifikasi dan Klasifikasi Ruang Terbatas
+
+Langkah pertama yang wajib dilakukan adalah **inventarisasi seluruh ruang terbatas** yang ada di area kerja Anda. Tidak semua ruang terbatas memiliki tingkat bahaya yang sama. Oleh karena itu, klasifikasikan menjadi dua kategori:
+
+**Ruang Terbatas Biasa (*Non-Permit Confined Space*):**
+
+- Tidak mengandung bahaya yang bisa menyebabkan kematian atau cedera serius
+- Tidak memerlukan izin khusus untuk masuk
+
+**Ruang Terbatas Berbahaya (*Permit-Required Confined Space / PRCS*):**
+
+- Mengandung atau berpotensi mengandung bahaya atmosferik serius
+- Memiliki risiko seseorang terjebak atau terkubur
+- Mengandung potensi bahaya serius lainnya
+
+Buat **peta atau denah fasilitas** yang menandai semua ruang terbatas beserta kategori bahayanya. Pasang **tanda peringatan permanen** di setiap pintu masuk ruang terbatas.
+
+---
+
+### Strategi 2: Terapkan Sistem Izin Masuk Ruang Terbatas (Permit-to-Entry)
+
+Sistem izin masuk adalah **tulang punggung keselamatan** di ruang terbatas. Tidak ada seorang pun yang boleh memasuki ruang terbatas berbahaya tanpa Surat Izin Masuk (*Entry Permit*) yang sudah disetujui.
+
+**Isi minimal Surat Izin Masuk harus mencakup:**
+
+- Identitas dan tujuan pekerjaan
+- Tanggal, waktu masuk, dan waktu izin berakhir
+- Hasil pengujian atmosfer (O₂, gas mudah terbakar, gas beracun)
+- Prosedur isolasi energi (Lockout/Tagout)
+- Daftar APD yang wajib digunakan
+- Personel yang terlibat: *Authorized Entrant*, *Attendant*, dan *Entry Supervisor*
+- Prosedur komunikasi dan penyelamatan darurat
+- Tanda tangan persetujuan Entry Supervisor
+
+**Izin masuk harus dicabut segera** apabila:
+- Kondisi atmosfer berubah melampaui batas aman
+- Terjadi insiden atau near-miss di dalam ruang
+- Pekerjaan di luar ruang menciptakan bahaya baru
+- Pekerja meminta dievakuasi
+
+---
+
+### Strategi 3: Lakukan Pengujian Atmosfer Sebelum dan Selama Pekerjaan
+
+Pengujian atmosfer adalah **kewajiban mutlak** sebelum memasuki ruang terbatas. Jangan pernah mengandalkan indera penciuman atau penglihatan untuk mendeteksi gas berbahaya — banyak gas berbahaya tidak berwarna dan tidak berbau.
+
+**Urutan pengujian yang benar menggunakan Gas Detector:**
+
+1. **Oksigen (O₂):** Uji pertama. Pastikan antara 19,5% – 23,5%
+2. **Gas Mudah Terbakar:** Harus di bawah 10% LEL untuk aman masuk
+3. **Karbon Monoksida (CO):** Harus di bawah 25 ppm (TWA)
+4. **Hidrogen Sulfida (H₂S):** Harus di bawah 1 ppm (TWA)
+5. **Gas lain** yang spesifik terhadap jenis ruang/proses
+
+**Pengujian dilakukan dari luar ruang** menggunakan selang sampling panjang — dari atas, tengah, dan bawah — karena distribusi gas berbeda berdasarkan berat molekulnya.
+
+> ⚠️ **Penting:** Pengujian atmosfer harus diulang secara berkala selama pekerjaan berlangsung, terutama setiap 30–60 menit atau ketika kondisi berubah.
+
+---
+
+### Strategi 4: Laksanakan Ventilasi yang Memadai
+
+Jika hasil pengujian atmosfer menunjukkan kondisi tidak aman, **ventilasi paksa** (*forced ventilation*) harus dilakukan sebelum pekerja masuk.
+
+**Jenis ventilasi:**
+
+- **Ventilasi Suplai (*Supply Ventilation*):** Memompa udara segar ke dalam ruang dari sumber udara bersih yang terjamin
+- **Ventilasi Exhaust (*Exhaust Ventilation*):** Mengisap udara dari dalam ruang ke luar
+- **Ventilasi Kombinasi:** Metode terbaik — suplai udara segar di satu sisi, exhaust di sisi lain
+
+**Yang perlu diperhatikan:**
+- Pastikan sumber udara suplai bebas dari kontaminan (jangan ambil udara dari dekat genset, truk, atau sumber gas)
+- Jangan gunakan oksigen murni untuk ventilasi — sangat berbahaya karena meningkatkan risiko kebakaran
+- Lanjutkan ventilasi sepanjang pekerjaan berlangsung
+- Uji ulang atmosfer setelah ventilasi sebelum masuk
+
+---
+
+### Strategi 5: Isolasi Energi dengan Prosedur Lockout/Tagout (LOTO)
+
+Ruang terbatas seringkali terhubung dengan sistem energi berbahaya: pipa bertekanan, kabel listrik, sistem mekanik bergerak. Sebelum memasuki ruang, semua energi berbahaya harus **diisolasi secara total**.
+
+**Prosedur LOTO yang benar:**
+
+1. **Identifikasi** semua sumber energi (listrik, hidrolik, pneumatik, termal, gravitasi)
+2. **Matikan** semua sumber energi melalui titik kontrol yang tepat
+3. **Pasang Lockout** (gembok fisik) pada titik kontrol energi
+4. **Pasang Tagout** (label peringatan) pada semua titik terkait
+5. **Verifikasi** bahwa energi sudah benar-benar terisolasi (coba hidupkan peralatan — pastikan tidak menyala)
+6. **Lepaskan energi residual** (buang tekanan, kuras cairan, blokir bagian bergerak)
+
+> 🔒 **Prinsip LOTO:** Setiap pekerja yang bekerja di dalam ruang harus memasang **gemboknya sendiri**. Gembok hanya boleh dibuka oleh orang yang memasangnya.
+
+---
+
+### Strategi 6: Tetapkan Peran dan Tanggung Jawab yang Jelas
+
+Kecelakaan di ruang terbatas sering terjadi karena **tidak ada koordinasi yang jelas** antar personel. Standar K3 internasional (OSHA 1910.146) mewajibkan tiga peran utama:
+
+#### Authorized Entrant (Pekerja yang Masuk)
+
+- Memahami bahaya di dalam ruang
+- Menggunakan APD yang sesuai
+- Berkomunikasi secara aktif dengan Attendant
+- Segera keluar jika diperintahkan atau kondisi memburuk
+
+#### Attendant (Pengawas Luar)
+
+- **Tidak boleh meninggalkan pos** selama ada pekerja di dalam
+- Memantau kondisi di dalam dan di luar ruang
+- Menghitung jumlah pekerja yang masuk dan keluar
+- Memanggil bantuan darurat jika diperlukan
+- **Tidak boleh masuk** ke dalam ruang untuk menyelamatkan — hubungi tim rescue
+
+#### Entry Supervisor (Penanggung Jawab Izin)
+
+- Memverifikasi semua kondisi sudah aman sebelum mengotorisasi masuk
+- Menandatangani dan mengelola izin masuk
+- Memastikan prosedur darurat siap diaktifkan
+- Mencabut izin jika kondisi berubah
+
+---
+
+### Strategi 7: Siapkan APD yang Tepat dan Sistem Penyelamatan
+
+**Alat Pelindung Diri (APD) wajib untuk pekerjaan di ruang terbatas:**
+
+| APD | Fungsi |
+|-----|--------|
+| **SCBA (*Self-Contained Breathing Apparatus*)** | Suplai udara mandiri — wajib jika atmosfer tidak aman atau tidak diketahui |
+| **APD Supplied Air Respirator** | Alternatif SCBA untuk pekerjaan durasi panjang |
+| **Harness Penyelamatan (Body Harness)** | Wajib jika ada risiko jatuh atau perlu ditarik keluar cepat |
+| **Tripod dan Winch** | Alat angkat/evakuasi tanpa petugas perlu masuk |
+| **Gas Detector Personal** | Pemantauan real-time di dalam ruang |
+| **Lampu Intrinsically Safe** | Pencahayaan anti-ledakan |
+| **Helm, Sepatu Safety, Sarung Tangan** | APD dasar |
+| **Alat Komunikasi (Radio/Sinyal)** | Komunikasi dua arah antara Entrant dan Attendant |
+
+**Sistem Penyelamatan Non-Entry:**
+
+Penyelamatan tanpa harus masuk ke dalam ruang adalah **prioritas utama**. Pasang sistem tripod dan winch di atas lubang masuk sehingga Attendant bisa menarik korban ke atas menggunakan harness — tanpa harus ada penyelamat yang masuk ke dalam ruang berbahaya.
+
+---
+
+### Strategi 8: Pelatihan, Sertifikasi, dan Latihan Darurat Rutin
+
+Strategi terbaik tidak akan berjalan tanpa **sumber daya manusia yang terlatih**. Pastikan:
+
+**Pelatihan Wajib:**
+
+- Semua personel yang terlibat harus mengikuti pelatihan K3 Ruang Terbatas yang bersertifikat
+- Pelatihan penggunaan gas detector, SCBA, dan alat LOTO
+- Pelatihan pertolongan pertama dan CPR
+- Refresher training minimal setiap 1 tahun
+
+**Latihan Penyelamatan (*Rescue Drill*):**
+
+Lakukan simulasi penyelamatan minimal setiap **6 bulan sekali**. Catat waktu respons dan evaluasi prosedur yang perlu diperbaiki.
+
+**Investigasi Near-Miss:**
+
+Setiap insiden "hampir celaka" (*near-miss*) harus diinvestigasi and didokumentasikan. Near-miss adalah sinyal peringatan — jangan abaikan.
+
+---
+
+## Checklist Keselamatan Ruang Terbatas Sebelum Masuk
+
+Gunakan checklist ini sebagai panduan operasional harian:
+
+**✅ Persiapan (H-1 atau sebelum pekerjaan):**
+
+- [ ] Identifikasi dan klasifikasi ruang terbatas
+- [ ] Buat dan otorisasi Surat Izin Masuk
+- [ ] Tetapkan Authorized Entrant, Attendant, dan Entry Supervisor
+- [ ] Siapkan dan kalibrasi gas detector
+- [ ] Siapkan APD yang sesuai dan pastikan berfungsi baik
+- [ ] Susun rencana penyelamatan darurat
+
+**✅ Sebelum Masuk:**
+
+- [ ] Laksanakan LOTO untuk semua sumber energi
+- [ ] Uji atmosfer (O₂, gas mudah terbakar, gas beracun)
+- [ ] Lakukan ventilasi jika diperlukan dan uji ulang atmosfer
+- [ ] Pastikan sistem komunikasi berfungsi
+- [ ] Pastikan tripod/winch dan harness terpasang
+- [ ] Briefing singkat semua personel tentang bahaya dan prosedur darurat
+
+**✅ Selama Pekerjaan:**
+
+- [ ] Pantau atmosfer secara berkala (setiap 30–60 menit)
+- [ ] Attendant tetap di pos dan aktif berkomunikasi
+- [ ] Laporkan setiap perubahan kondisi yang mencurigakan
+- [ ] Pastikan ventilasi terus berjalan
+
+**✅ Setelah Pekerjaan:**
+
+- [ ] Hitung dan pastikan semua pekerja sudah keluar
+- [ ] Tutup dan amankan kembali semua akses masuk
+- [ ] Lepas LOTO sesuai prosedur
+- [ ] Tutup dan arsipkan Surat Izin Masuk
+- [ ] Catat temuan dan potensi perbaikan prosedur
+
+---
+
+## Studi Kasus: Tragedi yang Bisa Dicegah
+
+Salah satu kecelakaan paling umum di ruang terbatas adalah **efek domino penyelamatan** — ketika pekerja pertama pingsan di dalam ruang, rekan kerja yang panik langsung masuk tanpa APD untuk menolong, dan ikut menjadi korban. Dalam banyak kasus, jumlah korban dari "penyelamat" justru melebihi korban awal.
+
+**Pelajaran:** Attendant yang terlatih dengan baik tahu bahwa tugasnya adalah **memanggil bantuan darurat** — bukan masuk ke dalam ruang. Inilah mengapa pelatihan dan kedisiplinan prosedur jauh lebih berharga daripada keberanian tanpa persiapan.
+
+---
+
+## Kesimpulan
+
+Mencegah kecelakaan kerja di ruang terbatas bukan soal satu langkah ajaib — melainkan kombinasi sistem yang saling mendukung:
+
+1. **Identifikasi dan klasifikasi** semua ruang terbatas di fasilitas Anda
+2. **Terapkan sistem izin masuk** yang ketat tanpa pengecualian
+3. **Uji atmosfer** sebelum dan selama pekerjaan berlangsung
+4. **Ventilasi** ruang hingga kondisi aman terkonfirmasi
+5. **Isolasi semua energi** dengan prosedur LOTO yang benar
+6. **Tetapkan peran yang jelas** untuk setiap personel yang terlibat
+7. **Siapkan APD dan sistem rescue** yang siap pakai
+8. **Latih dan sertifikasi** seluruh tim secara berkala
+
+Investasi dalam sistem K3 yang baik bukan hanya soal kepatuhan regulasi — ini adalah **investasi dalam nyawa manusia**. Kecelakaan satu kali di ruang terbatas bisa merenggut nyawa, menghancurkan keluarga, dan membawa konsekuensi hukum serta finansial yang besar bagi perusahaan.
+
+Mulai audit ruang terbatas di fasilitas Anda hari ini. Jangan tunggu sampai ada korban.
+
+---
+
+## FAQ: Pertanyaan Umum tentang Keselamatan Ruang Terbatas
+
+**Q: Apa perbedaan ruang terbatas dan ruang terbatas berbahaya?**
+
+Ruang terbatas biasa (*non-permit confined space*) tidak mengandung bahaya yang mengancam jiwa secara langsung. Sedangkan ruang terbatas berbahaya (*permit-required confined space*) mengandung atau berpotensi mengandung bahaya atmosferik serius, risiko terjebak, atau bahaya mematikan lainnya — sehingga memerlukan izin masuk formal.
+
+**Q: Apakah boleh masuk ruang terbatas tanpa gas detector?**
+
+Tidak. Gas detector adalah peralatan wajib sebelum masuk to ruang terbatas berbahaya. Banyak gas beracun tidak terlihat dan tidak berbau — mengandalkan indera manusia saja bisa berakibat fatal.
+
+**Q: Siapa yang boleh menandatangani izin masuk ruang terbatas?**
+
+Hanya *Entry Supervisor* yang berwenang dan berkompeten yang boleh menandatangani izin masuk. Orang ini harus memahami bahaya spesifik ruang tersebut dan memastikan semua kondisi aman telah terpenuhi.
+
+**Q: Berapa kadar oksigen yang aman untuk bekerja di ruang terbatas?**
+
+Kadar oksigen yang aman berada pada rentang **19,5% hingga 23,5%**. Di bawah 19,5% dianggap kekurangan oksigen (*oxygen deficient*). Di atas 23,5% dianggap berlebih (*oxygen enriched*) yang meningkatkan risiko kebakaran dan ledakan.
+
+**Q: Bolehkah menggunakan masker biasa (dust mask) saat masuk ruang terbatas?**
+
+Tidak. Masker debu biasa tidak melindungi dari kekurangan oksigen atau gas beracun. Jika atmosfer tidak aman, harus menggunakan SCBA (*Self-Contained Breathing Apparatus*) atau *Supplied Air Respirator* yang sesuai.
+
+**Q: Apa yang harus dilakukan jika pekerja pingsan di dalam ruang terbatas?**
+
+Attendant harus segera **mengaktifkan alarm darurat** dan memanggil tim rescue terlatih. Jangan masuk ke dalam ruang tanpa APD yang tepat. Gunakan sistem tripod dan winch untuk menarik korban keluar jika memungkinkan. Berikan pertolongan pertama setelah korban berhasil dievakuasi ke udara segar.
+
+---
+
+*Artikel ini disusun berdasarkan standar K3 nasional (UU No.1/1970, Permenaker No.5/2018) dan internasional (OSHA 29 CFR 1910.146, ISO 45001:2018). Untuk implementasi di lapangan, selalu konsultasikan dengan ahli K3 bersertifikat.*`,
+    contentEn: `# Strategies to Prevent Workplace Incidents in Confined Spaces: A Complete OHS Guide
+
+A confined space is one of the most dangerous work environments in any industry. In a matter of minutes — or even seconds — conditions inside can become fatal: oxygen depletion, toxic gas accumulation, or structure collapses.
+
+This article provides a comprehensive overview of safety prevention strategies in confined spaces, including hazard identification, permit-to-entry procedures, gas testing, PPE selection, and energy isolation.
+
+---
+
+## What is a Confined Space and Why is It So Dangerous?
+
+A **confined space** is defined by three main characteristics:
+
+1. **Large enough** for an employee to enter and perform work.
+2. **Has limited or restricted means for entry or exit** (not designed for continuous occupancy).
+3. **Contains or has a potential to contain serious hazards** to worker health and safety.
+
+Common examples include storage tanks, silos, sewers, boilers, reaction vessels, and utility vaults.
+
+### Three Major Hazard Categories in Confined Spaces
+
+#### 1. Atmospheric Hazards
+
+This is the leading cause of fatalities, including:
+
+- **Oxygen Deficiency:** Levels below 19.5% are hazardous. Below 16%, workers quickly lose consciousness.
+- **Oxygen Enrichment:** Levels above 23.5% exponentially increase fire and explosion risks.
+- **Flammable Gas:** Gases like methane, hydrogen sulfide, or fuel vapors can reach the LEL (Lower Explosive Limit) and explode.
+- **Toxic Gas:** CO, H2S, and SO2 can kill in very low concentrations.
+
+#### 2. Physical Hazards
+
+- Slippery and dark surfaces
+- Extreme temperatures
+- Excess noise interfering with communications
+- Entrapment and engulfment hazards
+
+#### 3. Ergonomic & Process Hazards
+
+- Cramped movement restricting swift evacuations
+- Flowing bulk materials (sand, grain, liquids)
+- Nearby operational activities generating fumes or heat
+
+---
+
+## 8 Effective Confined Space Incident Prevention Strategies
+
+### Strategy 1: Identification and Classification
+
+Inventory and map all confined spaces in your facility. Label them permanently as **Non-Permit** or **Permit-Required Confined Spaces (PRCS)**.
+
+### Strategy 2: Implement a Permit-to-Entry System
+
+No one should enter a permit-required confined space without a signed entry permit documenting safety protocols, gas readings, LOTO, and authorized personnel.
+
+### Strategy 3: Conduct Atmospheric Testing Before and During Work
+
+Test for oxygen, flammables, carbon monoxide, and hydrogen sulfide in that order, using calibrated portable detectors from outside the space.
+
+### Strategy 4: Implement Adequate Ventilation
+
+Use forced mechanical ventilation (supply or exhaust) to displace toxic fumes and supply fresh clean air. Do not ventilate with pure oxygen.
+
+### Strategy 5: Energy Isolation (Lockout/Tagout - LOTO)
+
+Isolate all energy inputs — electrical, mechanical, pneumatic, and chemical feeds — before entry using strict LOTO lock systems.
+
+### Strategy 6: Establish Clear Roles and Responsibilities
+
+Assign distinct roles to the **Authorized Entrant** (inside worker), **Attendant** (observer outside who never leaves their post), and **Entry Supervisor** (permit signer).
+
+### Strategy 7: Prepare Proper PPE and Rescue Systems
+
+Equip workers with body harnesses, life-lines, portable gas detectors, intrinsically safe lights, and SCBA (Self-Contained Breathing Apparatus) if necessary. Install non-entry retrieval systems (tripod/winch) to pull entrants out safely.
+
+### Strategy 8: Training and Regular Rescue Drills
+
+Ensure all personnel are certified and execute regular rescue simulation drills at least every 6 months.
+
+---
+
+## Conclusion
+
+Preventing confined space incidents requires strict compliance with OHS standards. Proper hazard mapping, permit control, gas monitoring, LOTO, and certified personnel form a critical shield that saves lives.
+
+*Consult with OHS experts for implementation of safety guidelines in the workplace.*`
+  },
+];s. Proper hazard mapping, permit control, gas monitoring, LOTO, and certified personnel form a critical shield that saves lives.
+
+*Consult with OHS experts for implementation of safety guidelines in the workplace.*`
   },
 ];
