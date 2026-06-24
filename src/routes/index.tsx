@@ -625,9 +625,9 @@ export function Nav() {
             href={WA}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 bg-[#25D366] px-5 py-2.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+            className="inline-flex items-center gap-1.5 bg-[#25D366] px-4 py-1.5 text-[11px] font-bold uppercase tracking-wider text-white transition-transform hover:-translate-y-0.5"
           >
-            {t("Konsultasi Gratis", "Free Consultation")} <WhatsappIcon size={14} />
+            {t("Konsultasi Gratis", "Free Consultation")} <WhatsappIcon size={12} />
           </a>
         </div>
         <div className="flex items-center gap-3 lg:hidden">
