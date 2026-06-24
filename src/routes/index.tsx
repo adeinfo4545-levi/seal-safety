@@ -38,8 +38,8 @@ import logopertamina from "@/assets/logo-pertamina.png";
 import logophe from "@/assets/logo-phe.png";
 import logovale from "@/assets/logo-vale.png";
 import logoLspPromigas from "@/assets/logo-lsp-promigas.png";
-import logoLspBkk from "@/assets/logo-lsp-bkk.png";
-import logoLspTti from "@/assets/logo-lsp-tti.png";
+import logoLspBkk from "@/assets/logo-lsp-bkk.jpg";
+import logoLspTti from "@/assets/logo-lsp-tti.jpg";
 import { useT, LanguageToggle } from "@/lib/i18n";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1/Project-seal-ssh/api";
