@@ -42,7 +42,7 @@ import logoLspBkk from "@/assets/logo-lsp-bkk.jpg";
 import logoLspTti from "@/assets/logo-lsp-tti.jpg";
 import { useT, LanguageToggle } from "@/lib/i18n";
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1/Project-seal-ssh/api";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "/api";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -627,7 +627,7 @@ export function Nav() {
           <a
             href={WA}
             target="_blank"
-            rel="noreferrer"
+            rel="noreferrer noopener"
             className="inline-flex items-center gap-1.5 bg-[#25D366] px-4 py-1.5 text-[11px] font-bold uppercase tracking-wider text-white transition-transform hover:-translate-y-0.5"
           >
             {t("Konsultasi Gratis", "Free Consultation")} <WhatsappIcon size={12} />
@@ -659,7 +659,7 @@ export function Nav() {
             <a
               href={WA}
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
               onClick={() => setOpen(false)}
               className="mt-4 bg-[#25D366] px-5 py-3 text-center text-sm font-semibold text-white"
             >
@@ -703,7 +703,7 @@ function Hero() {
             <a
               href={WA}
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
               className="inline-flex items-center gap-2 bg-[#25D366] px-7 py-4 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
             >
               {t("Konsultasi Gratis", "Free Consultation")} <WhatsappIcon size={16} />
@@ -1468,7 +1468,7 @@ function LeadCTA() {
           <a
             href={WA}
             target="_blank"
-            rel="noreferrer"
+            rel="noreferrer noopener"
             className="inline-flex items-center gap-2 bg-charcoal px-7 py-4 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
           >
             <WhatsappIcon size={16} /> {t("Hubungi via WhatsApp", "Contact via WhatsApp")}
@@ -1557,15 +1557,15 @@ export function Footer() {
             </div>
             <ul className="space-y-2 text-sm">
               {[
-                t("Tentang", "About"),
-                t("Program", "Programs"),
-                t("Jadwal", "Schedule"),
-                t("Corporate", "Corporate"),
-                t("Kontak", "Contact"),
+                { label: t("Tentang", "About"), href: "#why" },
+                { label: t("Program", "Programs"), href: "#programs" },
+                { label: t("Jadwal", "Schedule"), href: "#schedule" },
+                { label: t("Corporate", "Corporate"), href: "#corporate" },
+                { label: t("Kontak", "Contact"), href: "#contact" },
               ].map((x) => (
-                <li key={x}>
-                  <a href="#" className="hover:text-safety">
-                    {x}
+                <li key={x.label}>
+                  <a href={x.href} className="hover:text-safety">
+                    {x.label}
                   </a>
                 </li>
               ))}
@@ -1599,13 +1599,13 @@ export function Footer() {
         <div className="flex flex-col items-start justify-between gap-3 pt-8 text-xs text-white/55 sm:flex-row sm:items-center">
           <div>© {new Date().getFullYear()} SEAL Training Center. {t("Semua hak dilindungi.", "All rights reserved.")}</div>
           <div className="flex gap-5">
-            <a href="#" className="hover:text-safety">
+            <a href="https://www.linkedin.com/company/seal-training-center" target="_blank" rel="noreferrer noopener" className="hover:text-safety">
               LinkedIn
             </a>
-            <a href="#" className="hover:text-safety">
+            <a href="https://www.instagram.com/sealtrainingcenter" target="_blank" rel="noreferrer noopener" className="hover:text-safety">
               Instagram
             </a>
-            <a href="#" className="hover:text-safety">
+            <a href="https://www.youtube.com/@sealtrainingcenter" target="_blank" rel="noreferrer noopener" className="hover:text-safety">
               YouTube
             </a>
           </div>
@@ -1621,7 +1621,7 @@ export function WhatsAppFAB() {
     <a
       href={WA}
       target="_blank"
-      rel="noreferrer"
+      rel="noreferrer noopener"
       aria-label={t("Hubungi via WhatsApp", "Contact via WhatsApp")}
       className="fixed bottom-6 right-6 z-40 grid h-14 w-14 place-items-center bg-[#25D366] text-white rounded-[12px] shadow-2xl transition-transform hover:-translate-y-1"
     >
@@ -1785,7 +1785,7 @@ function Contact() {
                     "Permintaan Anda telah kami terima. Tim konsultan SEAL akan segera menghubungi Anda. Untuk respons lebih cepat, silakan",
                     "We've received your request. The SEAL consulting team will reach out shortly. For faster response, please",
                   )}{" "}
-                  <a href={WA} target="_blank" className="font-semibold text-charcoal underline">
+                  <a href={WA} target="_blank" rel="noreferrer noopener" className="font-semibold text-charcoal underline">
                     {t("chat via WhatsApp", "chat via WhatsApp")}
                   </a>
                   .

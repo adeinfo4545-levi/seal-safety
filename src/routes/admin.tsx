@@ -27,7 +27,7 @@ export const Route = createFileRoute("/admin")({
   component: AdminPage,
 });
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1/Project-seal-ssh/api";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "/api";
 
 const SESSION_TIMEOUT_MS = 30 * 60 * 1000;
 
@@ -137,11 +137,10 @@ function AdminPage() {
       fetchCertificates(searchCertRef.current);
       fetchRequests(searchReqRef.current);
 
-      // Polling setiap 0.5 detik (500ms) secara diam-diam (silent)
       const intervalId = setInterval(() => {
         fetchCertificates(searchCertRef.current, true);
         fetchRequests(searchReqRef.current, true);
-      }, 500);
+      }, 15_000);
 
       return () => clearInterval(intervalId);
     }
@@ -224,7 +223,7 @@ function AdminPage() {
       if (import.meta.env.DEV) {
         console.error(err);
       }
-      setLoginError(t(`Terjadi kesalahan koneksi ke server. (URL: ${API_BASE_URL}/login.php, Error: ${err instanceof Error ? err.message : String(err)})`, `A server connection error occurred. (URL: ${API_BASE_URL}/login.php, Error: ${String(err)})`));
+      setLoginError(t("Terjadi kesalahan koneksi ke server.", "A server connection error occurred."));
     }
   };
 
@@ -239,7 +238,7 @@ function AdminPage() {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${token}`
           },
-          body: JSON.stringify({ token })
+          body: JSON.stringify({})
         });
       } catch (err) {
         // Ignore error on logout
@@ -321,7 +320,7 @@ function AdminPage() {
         console.error(err);
       }
       setManualStatus("error");
-      setManualMessage(t("Error sistem: " + (err instanceof Error ? err.message : String(err)), "System error: " + String(err)));
+      setManualMessage(t("Terjadi kesalahan koneksi ke server.", "A server connection error occurred."));
     }
   };
 
@@ -924,9 +923,9 @@ function AdminPage() {
                         return (
                           <tr key={cert.nomor_sertifikat} className="border-b border-border hover:bg-lightgray/40 align-middle">
                             <td className="p-3 w-12 text-center font-bold text-midgray font-mono">{idx + 1}</td>
-                            <td className="p-3 font-bold text-charcoal uppercase">{cert.nama_peserta}</td>
-                            <td className="p-3 font-mono text-darkgray">{cert.nomor_sertifikat}</td>
-                            <td className="p-3 text-darkgray font-medium">{cert.nama_program}</td>
+                            <td className="p-3 font-bold text-charcoal uppercase max-w-[200px] truncate">{cert.nama_peserta}</td>
+                            <td className="p-3 font-mono text-darkgray max-w-[180px] truncate">{cert.nomor_sertifikat}</td>
+                            <td className="p-3 text-darkgray font-medium max-w-[200px] truncate">{cert.nama_program}</td>
                             <td className="p-3 text-darkgray">{formatDateForTable(cert.tanggal_terbit)}</td>
                             <td className="p-3">
                               <span className={`inline-flex px-2 py-0.5 font-bold uppercase tracking-wider text-[9px] ${isActive ? "bg-safety text-safety-foreground" : "bg-red-600 text-white"}`}>
