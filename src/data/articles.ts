@@ -403,15 +403,19 @@ Kehadiran AGT di lapangan mengirimkan pesan yang kuat kepada seluruh tim: kesela
 Banyak perusahaan, terutama yang berukuran kecil hingga menengah, masih meremehkan pentingnya sertifikasi AGT dengan alasan efisiensi biaya. Namun risiko yang ditanggung jauh lebih besar:
 
 ### Kesalahan Interpretasi Data
+
 Seseorang tanpa pelatihan yang memadai mungkin saja melihat angka di layar gas detector, tetapi tidak memahami konteks dan implikasinya. Misalnya, gas H2S dapat membius indera penciuman dalam konsentrasi tinggi — pekerja tanpa pengetahuan AGT mungkin merasa "tidak berbau" sebagai tanda aman, padahal kondisinya sudah sangat berbahaya.
 
 ### Alat Tidak Terkalibrasi
+
 AGT bersertifikat memahami pentingnya kalibrasi alat sebelum digunakan. Alat yang tidak terkalibrasi bisa memberikan pembacaan yang salah — baik terlalu rendah (false safe) maupun terlalu tinggi (false alarm).
 
 ### Tidak Memahami Prosedur Pengujian yang Benar
+
 Pengujian gas di *confined space* harus dilakukan dari berbagai titik ketinggian (atas, tengah, bawah) karena gas yang berbeda memiliki densitas berbeda. Pengujian yang tidak sistematis bisa melewatkan kantong gas berbahaya yang tidak terdeteksi.
 
 ### Tanggung Jawab Hukum Perusahaan
+
 Jika terjadi kecelakaan dan investigasi menemukan bahwa pengujian dilakukan oleh personel yang tidak berwenang, perusahaan dapat menghadapi konsekuensi hukum yang jauh lebih berat karena terbukti lalai secara administratif.
 
 ---
@@ -421,16 +425,19 @@ Jika terjadi kecelakaan dan investigasi menemukan bahwa pengujian dilakukan oleh
 Indonesia memiliki kerangka regulasi yang cukup komprehensif terkait keselamatan kerja di area berbahaya, termasuk kewajiban pengujian gas:
 
 ### Peraturan Kementerian Ketenagakerjaan
+
 - **Permenaker No. 5 Tahun 1996** tentang Sistem Manajemen K3 — mewajibkan identifikasi bahaya dan pengendalian risiko, termasuk bahaya gas
 - **Permenaker No. 9 Tahun 2016** tentang K3 dalam Pekerjaan pada Ketinggian — relevan untuk pekerjaan di area terbatas
 
 ### Standar Industri Internasional yang Diadopsi
+
 Banyak perusahaan multinasional dan BUMN di Indonesia mengadopsi standar internasional seperti:
 - **OSHA 1910.146** — Confined Space Entry Standard (Amerika Serikat)
 - **EN 60079** — Standar Eropa untuk atmosfer eksplosif
 - **API RP 500/505** — American Petroleum Institute untuk industri migas
 
 ### Regulasi Sektor Migas
+
 - **Peraturan Menteri ESDM** dan ketentuan **SKK Migas** secara spesifik mengatur persyaratan kompetensi untuk personel yang bekerja di fasilitas produksi minyak dan gas, termasuk kewajiban pengujian gas oleh personel yang kompeten dan berwenang.
 
 ---
@@ -440,18 +447,21 @@ Banyak perusahaan multinasional dan BUMN di Indonesia mengadopsi standar interna
 Seorang AGT memikul tanggung jawab yang besar dan spesifik. Berikut adalah lingkup tugasnya:
 
 ### Sebelum Pekerjaan Dimulai
+
 - Melakukan **pre-entry testing** pada area yang akan dimasuki
 - Memastikan semua alat deteksi gas dalam kondisi baik dan terkalibrasi
 - Berkoordinasi dengan Permit-to-Work (PTW) coordinator terkait hasil pengujian
 - Memberikan **clearance** (izin masuk) atau **rejection** (penolakan) berdasarkan hasil pengujian
 
 ### Selama Pekerjaan Berlangsung
+
 - Melakukan **continuous monitoring** atau pengujian berkala sesuai prosedur
 - Waspada terhadap perubahan kondisi atmosfer yang tiba-tiba
 - Memiliki otoritas untuk **menghentikan pekerjaan** dan mengevakuasi area jika kondisi atmosfer berubah menjadi berbahaya
 - Mendokumentasikan seluruh hasil pengujian secara akurat
 
 ### Setelah Pekerjaan Selesai
+
 - Mendokumentasikan seluruh data pengujian untuk keperluan audit dan pelaporan
 - Melaporkan anomali atau kondisi tidak normal kepada supervisor
 - Merawat dan menyimpan alat deteksi gas dengan benar
@@ -478,12 +488,14 @@ Seorang AGT harus hafal dan memahami karakteristik gas-gas berikut:
 Bagi profesional yang ingin menjadi AGT bersertifikat, berikut adalah jalur yang umumnya ditempuh:
 
 ### 1. Ikuti Pelatihan dari Lembaga Terakreditasi
+
 Carilah pelatihan AGT dari lembaga yang diakui oleh:
 - **BNSP (Badan Nasional Sertifikasi Profesi)**
 - **Kementerian Ketenagakerjaan RI**
 - Lembaga sertifikasi internasional yang diakui di industri (misalnya OPITO, LEEA, dll.)
 
 ### 2. Kuasai Materi Pelatihan
+
 Materi standar pelatihan AGT mencakup:
 - Teori gas dan sifat-sifat kimia gas berbahaya
 - Prinsip kerja dan pengoperasian gas detector
@@ -493,12 +505,15 @@ Materi standar pelatihan AGT mencakup:
 - Prosedur darurat dan evakuasi
 
 ### 3. Lulus Ujian Kompetensi
+
 Setelah pelatihan, peserta wajib mengikuti ujian kompetensi yang mencakup aspek teori dan praktik langsung di lapangan.
 
 ### 4. Dapatkan Sertifikat dan Otorisasi
+
 Setelah lulus, sertifikat diterbitkan dengan masa berlaku tertentu (biasanya 1–3 tahun). **Otorisasi dari perusahaan** juga diperlukan — sertifikat saja tidak cukup tanpa penunjukan resmi dari manajemen.
 
 ### 5. Renewal dan Continuous Learning
+
 AGT wajib memperbarui sertifikasinya sebelum masa berlaku habis dan mengikuti perkembangan regulasi serta teknologi terbaru dalam deteksi gas.
 
 ---
@@ -610,15 +625,19 @@ The presence of AGTs in the field sends a powerful message to the entire team: s
 Many companies, particularly small to medium-sized ones, still underestimate the importance of AGT certification citing cost efficiency. However, the risks far outweigh the savings:
 
 ### Data Misinterpretation
+
 Someone without adequate training may see numbers on a gas detector display but fail to understand their context and implications. For example, H2S can paralyze the sense of smell at high concentrations — a worker without AGT knowledge may interpret "no smell" as a sign of safety, when in fact conditions are already extremely dangerous.
 
 ### Uncalibrated Equipment
+
 Certified AGTs understand the importance of calibrating equipment before use. Uncalibrated instruments can give incorrect readings — either too low (false safe) or too high (false alarm).
 
 ### Not Understanding Proper Testing Procedures
+
 Gas testing in confined spaces must be conducted at various heights (top, middle, bottom) because different gases have different densities. Unsystematic testing can miss pockets of dangerous gas that go undetected.
 
 ### Company Legal Liability
+
 If an accident occurs and investigation reveals that testing was performed by unauthorized personnel, the company faces far more severe legal consequences for proven administrative negligence.
 
 ---
@@ -628,16 +647,19 @@ If an accident occurs and investigation reveals that testing was performed by un
 Indonesia has a fairly comprehensive regulatory framework regarding workplace safety in hazardous areas, including gas testing requirements:
 
 ### Ministry of Manpower Regulations
+
 - **Permenaker No. 5 of 1996** on Occupational Health and Safety Management Systems — requires hazard identification and risk control, including gas hazards
 - **Permenaker No. 9 of 2016** on Occupational Safety and Health in Work at Height — relevant for confined space work
 
 ### Adopted International Industry Standards
+
 Many multinational and state-owned companies in Indonesia adopt international standards such as:
 - **OSHA 1910.146** — Confined Space Entry Standard (United States)
 - **EN 60079** — European Standard for explosive atmospheres
 - **API RP 500/505** — American Petroleum Institute for oil and gas industry
 
 ### Oil & Gas Sector Regulations
+
 - **Ministry of Energy and Mineral Resources (ESDM) regulations** and **SKK Migas** requirements specifically govern competency requirements for personnel working in oil and gas production facilities, including mandatory gas testing by competent and authorized personnel.
 
 ---
@@ -647,18 +669,21 @@ Many multinational and state-owned companies in Indonesia adopt international st
 An AGT bears significant and specific responsibilities. Here is the scope of their duties:
 
 ### Before Work Begins
+
 - Conducting **pre-entry testing** in the area to be entered
 - Ensuring all gas detection equipment is in good condition and calibrated
 - Coordinating with the Permit-to-Work (PTW) coordinator regarding test results
 - Providing **clearance** (entry permit) or **rejection** based on test results
 
 ### During Work Operations
+
 - Performing **continuous monitoring** or periodic testing per procedure
 - Remaining alert to sudden changes in atmospheric conditions
 - Having the authority to **stop work** and evacuate the area if atmospheric conditions become hazardous
 - Accurately documenting all test results
 
 ### After Work Completion
+
 - Documenting all test data for audit and reporting purposes
 - Reporting anomalies or abnormal conditions to supervisors
 - Properly maintaining and storing gas detection equipment
@@ -685,12 +710,14 @@ An AGT must memorize and understand the characteristics of the following gases:
 For professionals seeking to become a certified AGT, here is the typical pathway:
 
 ### 1. Attend Training from an Accredited Institution
+
 Look for AGT training from institutions recognized by:
 - **BNSP (National Professional Certification Board)**
 - **Ministry of Manpower of the Republic of Indonesia**
 - Internationally recognized certification bodies (e.g., OPITO, LEEA, etc.)
 
 ### 2. Master the Training Material
+
 Standard AGT training material covers:
 - Gas theory and chemical properties of hazardous gases
 - Working principles and operation of gas detectors
@@ -700,12 +727,15 @@ Standard AGT training material covers:
 - Emergency and evacuation procedures
 
 ### 3. Pass the Competency Examination
+
 After training, participants must take a competency assessment covering both theoretical knowledge and practical field skills.
 
 ### 4. Obtain Your Certificate and Authorization
+
 Upon passing, certificates are issued with a specific validity period (typically 1–3 years). **Company authorization** is also required — a certificate alone is not sufficient without an official appointment from management.
 
 ### 5. Renewal and Continuous Learning
+
 AGTs must renew their certification before it expires and stay current with the latest regulations and gas detection technologies.
 
 ---
