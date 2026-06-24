@@ -1215,8 +1215,4 @@ Preventing confined space incidents requires strict compliance with OHS standard
 
 *Consult with OHS experts for implementation of safety guidelines in the workplace.*`
   },
-];s. Proper hazard mapping, permit control, gas monitoring, LOTO, and certified personnel form a critical shield that saves lives.
-
-*Consult with OHS experts for implementation of safety guidelines in the workplace.*`
-  },
 ];
